@@ -1,0 +1,99 @@
+{
+    "ModelName": "KevinHall",
+    "Nutrients": [
+        {
+            "Name": "Carbohydrate",
+            "Range": [0.0, 50.0],
+            "Energy": 4.0
+        },
+        {
+            "Name": "Fat",
+            "Range": [0.0, 50.0],
+            "Energy": 9.0
+        },
+        {
+            "Name": "Protein",
+            "Range": [0.0, 50.0],
+            "Energy": 4.0
+        },
+        {
+            "Name": "Sodium",
+            "Range": [0.0, 50.0],
+            "Energy": 0.0
+        }
+    ],
+    "Foods": [
+        {
+            "Name": "FoodCarbohydrate",
+            "Nutrients": {
+                "Carbohydrate": 1.0
+            },
+            "Price": null
+        },
+        {
+            "Name": "FoodFat",
+            "Nutrients": {
+                "Fat": 1.0
+            },
+            "Price": null
+        },
+        {
+            "Name": "FoodProtein",
+            "Nutrients": {
+                "Protein": 1.0
+            },
+            "Price": null
+        },
+        {
+            "Name": "FoodSodium",
+            "Nutrients": {
+                "Sodium": 1.0
+            },
+            "Price": null
+        }
+    ],
+    "FoodsDataFile": {
+        "name": "MAFFCODE_NUTRIENTS_NPM.csv",
+        "format": "csv",
+        "delimiter": ",",
+        "encoding": "UTF8",
+        "columns": {
+            "MAFF code": "integer",
+            "Description": "string"
+        }
+    },
+    "WeightQuantiles": {
+        "Female": {
+            "name": "weight_quantiles_NCDRisk_female.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "UTF8",
+            "columns": {
+                "quantile": "double"
+            }
+        },
+        "Male": {
+            "name": "weight_quantiles_NCDRisk_male.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "UTF8",
+            "columns": {
+                "quantile": "double"
+            }
+        }
+    },
+    "EnergyPhysicalActivityQuantiles": {
+        "name": "energy_physicalactivity_quantiles.csv",
+        "format": "csv",
+        "delimiter": ",",
+        "encoding": "UTF8",
+        "columns": {
+            "quantile": "double"
+        }
+    },
+    "HeightStdDev": {
+        "Female": 0.04,
+        "Male": 0.04
+    },
+    "HeightSlope": 0.11
+}
