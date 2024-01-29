@@ -138,7 +138,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/india",
+        "folder": "${HOME}/healthgps/example_ischemicheartdisease_output",
         "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
     }
 }
