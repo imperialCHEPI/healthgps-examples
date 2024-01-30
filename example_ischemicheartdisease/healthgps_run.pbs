@@ -7,17 +7,18 @@ module purge
 module load tools/dev
 module load GCCcore/12.2.0
 
-hgps_dir=$RDS_PROJECT/healthgps/live/james/healthgps_main
-data_dir=$(dirname $0)/data
-config_dir=$(dirname $0)
+my_dir=$RDS_PROJECT/healthgps/live/james
+hgps_dir=$my_dir/healthgps_main
+config_dir=$my_dir/healthgps-examples/example_ischemicheartdisease
+data_dir=$my_dir/healthgps-examples/example_ischemicheartdisease/data
 
 # Prepare temp space.
 tmp_hgps=$TMPDIR/healthgps_$PBS_ARRAY_INDEX
 cp -r $hgps_dir $tmp_hgps
-tmp_data=$tmp_hgps/india_data
-cp -r $data_dir $tmp_data
-tmp_config=$tmp_hgps/india_config
+tmp_config=$tmp_hgps/config
 cp -r $config_dir $tmp_config
+tmp_data=$tmp_hgps/data
+cp -r $data_dir $tmp_data
 cd $tmp_hgps
 
 # Run HGPS.
