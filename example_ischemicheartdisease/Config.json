@@ -46,54 +46,24 @@
                 "range": [0, 100]
             },
             {
-                "name": "Sector",
-                "level": 0,
-                "range": [0, 1]
-            },
-            {
-                "name": "Income",
-                "level": 0,
-                "range": [1, 3]
-            },
-            {
-                "name": "FoodCarbohydrate",
+                "name": "Carbohydrate",
                 "level": 1,
                 "range": [120.155, 774.2651]
             },
             {
-                "name": "FoodFat",
+                "name": "Fat",
                 "level": 1,
                 "range": [14.65918, 204.6782]
             },
             {
-                "name": "FoodProtein",
+                "name": "Protein",
                 "level": 1,
                 "range": [20.3546, 126.8509]
             },
             {
-                "name": "FoodSodium",
+                "name": "Sodium",
                 "level": 1,
                 "range": [984.7666, 8844.316]
-            },
-            {
-                "name": "PhysicalActivity",
-                "level": 2,
-                "range": [1.388473, 1.835487]
-            },
-            {
-                "name": "EnergyIntake",
-                "level": 2,
-                "range": [803.2424, 4885.412]
-            },
-            {
-                "name": "Weight",
-                "level": 3,
-                "range": [3.319358, 92.56391]
-            },
-            {
-                "name": "Height",
-                "level": 3,
-                "range": [51.87618, 189.5827]
             },
             {
                 "name": "BMI",
@@ -102,8 +72,8 @@
             }
         ],
         "risk_factor_models": {
-            "static": "StaticLinear.json",
-            "dynamic": "KevinHall.json"
+            "static": "Dummy.json",
+            "dynamic": "Dummy.json"
         },
         "baseline_adjustments": {
             "format": "csv",
