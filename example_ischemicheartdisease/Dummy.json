@@ -1,21 +1,9 @@
 {
     "ModelName": "Dummy",
     "ModelParameters": {
-        "Carbohydrate": {
-            "Value": 430.0,
-            "Policy": -30.0
-        },
-        "Fat": {
-            "Value": 83.0,
-            "Policy": -5.0
-        },
-        "Protein": {
-            "Value": 70.0,
-            "Policy": -5.0
-        },
         "Sodium": {
             "Value": 4370.0,
-            "Policy": -400.0
+            "Policy": 4000.0
         },
         "BMI": {
             "Value": 22.0,
