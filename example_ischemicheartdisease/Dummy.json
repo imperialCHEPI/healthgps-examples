@@ -2,12 +2,14 @@
     "ModelName": "Dummy",
     "ModelParameters": {
         "Sodium": {
-            "Value": 4370.0,
-            "Policy": 4000.0
+            "Value": 8370.0,
+            "Policy": -4000.0,
+            "PolicyStart": 2
         },
         "BMI": {
             "Value": 22.0,
-            "Policy": -0.0
+            "Policy": -0.0,
+            "PolicyStart": 2
         }
     }
 }
