@@ -1,0 +1,25 @@
+#PBS -l walltime=02:00:00
+#PBS -l select=1:ncpus=128:mem=180gb:ompthreads=16
+#PBS -J 1-50
+
+# Load correct modules (becareful when changing).
+module purge
+module load tools/dev
+module load GCCcore/12.2.0
+
+hgps_dir=$HOME/healthgps
+data_dir=$HOME/healthgps/data
+config_dir=$HOME/healthgps/example_india_frenchinput
+
+# Prepare temp space.
+tmp_hgps=$TMPDIR/healthgps
+cp -r $hgps_dir $tmp_hgps
+tmp_data=$tmp_hgps/data
+cp -r $data_dir $tmp_data
+tmp_config=$tmp_hgps/example_india_frenchinput
+cp -r $config_dir $tmp_config
+cd $tmp_hgps
+
+# Run HGPS.
+./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/India.Config.json -s $tmp_data -j $PBS_ARRAY_INDEX
+
