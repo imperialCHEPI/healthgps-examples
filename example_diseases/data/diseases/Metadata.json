@@ -1,0 +1,44 @@
+﻿{
+    "input_file": {
+        "running": {
+            "diseases": [
+                "intracerebralhemorrhage",
+                "ischemicheartdisease",
+                "ischemicstroke",
+                "subarachnoidhemorrhage",
+                "stomachcancer"
+            ]
+        }
+    },
+    "index_file": {
+        "diseases": {
+            "registry": [
+                {
+                    "group": "other",
+                    "id": "intracerebralhemorrhage",
+                    "name": "Intracerebral Hemorrhage"
+                },
+                {
+                    "group": "other",
+                    "id": "ischemicheartdisease",
+                    "name": "Ischemic Heart Disease"
+                },
+                {
+                    "group": "other",
+                    "id": "ischemicstroke",
+                    "Ischemic Stroke"
+                },
+                {
+                    "group": "other",
+                    "id": "subarachnoidhemorrhage",
+                    "name": "Subarachnoid Hemorrhage"
+                },
+                {
+                    "group": "cancer",
+                    "id": "stomachcancer",
+                    "name": "Stomach Cancer"
+                }
+            ]
+        }
+    }
+}
