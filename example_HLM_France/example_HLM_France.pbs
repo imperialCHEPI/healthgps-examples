@@ -1,8 +1,8 @@
-#PBS -l walltime=02:00:00
-#PBS -l select=1:ncpus=128:mem=180gb:ompthreads=16
+#PBS -l walltime=08:00:00
+#PBS -l select=1:ncpus=128:mem=180gb
 #PBS -J 1-50
 
-# Load correct modules (becareful when changing).
+# Load correct modules (be careful when changing).
 module purge
 module load tools/dev
 module load GCCcore/12.2.0
@@ -19,6 +19,9 @@ cp -r $data_dir $tmp_data
 tmp_config=$tmp_hgps/example
 cp -r $config_dir $tmp_config
 cd $tmp_hgps
+
+# Set thread limit.
+export OMP_THREAD_LIMIT=125
 
 # Run HGPS.
 ./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/France.Config.json -s $tmp_data -j $PBS_ARRAY_INDEX

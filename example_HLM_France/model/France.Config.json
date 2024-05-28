@@ -23,7 +23,7 @@
         },
         "settings": {
             "country_code": "FRA",
-            "size_fraction": 0.001,
+            "size_fraction": 0.0001,
             "age_range": [0, 100]
         }
     },
@@ -118,7 +118,7 @@
             "osteoarthritisknee"
         ],
         "interventions": {
-            "active_type_id": "food_labelling",
+            "active_type_id": null,
             "types": {
                 "simple": {
                     "active_period": {
@@ -261,6 +261,6 @@
     "output": {
         "comorbidities": 5,
         "folder": "${HOME}/healthgps/results/france",
-        "file_name": "HealthGPS_Result.json"
+        "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
     }
 }
