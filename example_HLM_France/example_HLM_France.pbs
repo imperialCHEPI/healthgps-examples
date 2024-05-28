@@ -25,4 +25,3 @@ export OMP_THREAD_LIMIT=125
 
 # Run HGPS.
 ./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/France.Config.json -s $tmp_data -j $PBS_ARRAY_INDEX
-
