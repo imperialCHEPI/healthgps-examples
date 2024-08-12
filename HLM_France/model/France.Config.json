@@ -1,6 +1,5 @@
 {
     "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
-    "version": 2,
     "data": {
         "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/20240624/data_20240624.zip",
         "checksum": "b68abc8d40b937d377aa7357bff66a1f4f5196da5b867f7ca88d02b37d2ebb5c"
