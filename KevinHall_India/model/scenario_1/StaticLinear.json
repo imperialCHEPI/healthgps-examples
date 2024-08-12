@@ -162,7 +162,7 @@
         "name": "residual_risk_factor_correlation.csv",
         "format": "csv",
         "delimiter": ",",
-        "encoding": "UTF8",
+        "encoding": "ASCII",
         "columns": {
             "FoodCarbohydrate": "double",
             "FoodFat": "double",
@@ -174,7 +174,7 @@
         "name": "residual_policy_covariance.csv",
         "format": "csv",
         "delimiter": ",",
-        "encoding": "UTF8",
+        "encoding": "ASCII",
         "columns": {
             "FoodCarbohydrate": "double",
             "FoodFat": "double",
