@@ -30,34 +30,52 @@
         "settings": {
             "country_code": "IND",
             "size_fraction": 0.0001,
-            "age_range": [0, 100]
+            "age_range": [
+                0,
+                100
+            ]
         }
     },
     "modelling": {
         "ses_model": {
             "function_name": "normal",
-            "function_parameters": [0.0, 1.0]
+            "function_parameters": [
+                0.0,
+                1.0
+            ]
         },
         "risk_factors": [
             {
                 "name": "Gender",
                 "level": 0,
-                "range": [0, 1]
+                "range": [
+                    0,
+                    1
+                ]
             },
             {
                 "name": "Age",
                 "level": 0,
-                "range": [0, 100]
+                "range": [
+                    0,
+                    100
+                ]
             },
             {
                 "name": "Sodium",
                 "level": 1,
-                "range": [984.7666, 8844.316]
+                "range": [
+                    984.7666,
+                    8844.316
+                ]
             },
             {
                 "name": "BMI",
                 "level": 3,
-                "range": [13.88, 39.48983]
+                "range": [
+                    13.88,
+                    39.48983
+                ]
             }
         ],
         "risk_factor_models": {
@@ -75,7 +93,9 @@
         }
     },
     "running": {
-        "seed": [12345],
+        "seed": [
+            12345
+        ],
         "start_time": 2022,
         "stop_time": 2030,
         "trial_runs": 1,
