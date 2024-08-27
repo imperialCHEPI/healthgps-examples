@@ -67,7 +67,7 @@
         "baseline_adjustments": {
             "format": "csv",
             "delimiter": ",",
-            "encoding": "UTF8",
+            "encoding": "ASCII",
             "file_names": {
                 "factorsmean_male": "FactorsMean.Male.csv",
                 "factorsmean_female": "FactorsMean.Female.csv"

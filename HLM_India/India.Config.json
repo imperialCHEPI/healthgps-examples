@@ -100,7 +100,7 @@
         "baseline_adjustments": {
             "format": "csv",
             "delimiter": ",",
-            "encoding": "UTF8",
+            "encoding": "ASCII",
             "file_names": {
                 "factorsmean_male": "India.FactorsMean.Male.csv",
                 "factorsmean_female": "India.FactorsMean.Female.csv"

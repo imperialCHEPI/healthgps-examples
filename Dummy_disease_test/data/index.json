@@ -3,7 +3,7 @@
     "country": {
         "format": "csv",
         "delimiter": ",",
-        "encoding": "UTF8",
+        "encoding": "ASCII",
         "description": "ISO 3166-1 country codes.",
         "source": "International Organization for Standardization",
         "url": "https://www.iso.org/iso-3166-country-codes.html",
@@ -14,7 +14,7 @@
     "demographic": {
         "format": "csv",
         "delimiter": ",",
-        "encoding": "UTF8",
+        "encoding": "ASCII",
         "description": "United Nations (UN) population estimates and projections.",
         "source": "UN Database - World Population Prospects 2019",
         "url": "https://population.un.org/wpp/",
@@ -42,7 +42,7 @@
     "diseases": {
         "format": "csv",
         "delimiter": ",",
-        "encoding": "UTF8",
+        "encoding": "ASCII",
         "description": "Diseases indicators, measures and relative risk factors.",
         "source": "The Institute for Health Metrics and Evaluation - IHME",
         "url": "http://www.healthdata.org/",
@@ -105,7 +105,7 @@
     "analysis": {
         "format": "csv",
         "delimiter": ",",
-        "encoding": "UTF8",
+        "encoding": "ASCII",
         "description": "Observed burden of disease measures and disability weigths.",
         "source": "The Institute for Health Metrics and Evaluation - IHME",
         "url": "http://www.healthdata.org/",
