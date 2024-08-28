@@ -8,14 +8,11 @@ module load tools/dev
 module load GCCcore/12.2.0
 
 hgps_dir=$HOME/healthgps
-data_dir=$HOME/healthgps/data
 config_dir=$HOME/healthgps/example
 
 # Prepare temp space.
 tmp_hgps=$TMPDIR/healthgps
 cp -r $hgps_dir $tmp_hgps
-tmp_data=$tmp_hgps/data
-cp -r $data_dir $tmp_data
 tmp_config=$tmp_hgps/example
 cp -r $config_dir $tmp_config
 cd $tmp_hgps
@@ -24,4 +21,4 @@ cd $tmp_hgps
 export OMP_THREAD_LIMIT=125
 
 # Run HGPS.
-./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/France.Config.json -s $tmp_data -j $PBS_ARRAY_INDEX
+./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/France.Config.json -j $PBS_ARRAY_INDEX
