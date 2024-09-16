@@ -20,4 +20,4 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Validate index.json
-        run: find -name '*Config.json'|xargs check-jsonschema --schemafile https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json
+        run: find -name config.json|xargs check-jsonschema --schemafile https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json
