@@ -22,4 +22,4 @@ cp -r $data_dir $tmp_data
 cd $tmp_hgps
 
 # Run HGPS.
-./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/Config.json -s $tmp_data -j $PBS_ARRAY_INDEX
+./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/config.json -s $tmp_data -j $PBS_ARRAY_INDEX

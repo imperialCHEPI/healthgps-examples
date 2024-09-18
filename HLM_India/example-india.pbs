@@ -21,4 +21,4 @@ cp -r $config_dir $tmp_config
 cd $tmp_hgps
 
 # Run HGPS.
-./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/India.Config.json -s $tmp_data -j $PBS_ARRAY_INDEX
+./out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/config.json -s $tmp_data -j $PBS_ARRAY_INDEX
