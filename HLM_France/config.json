@@ -95,8 +95,8 @@
             }
         ],
         "risk_factor_models": {
-            "static": "France.HLM.json",
-            "dynamic": "France.EBHLM.json"
+            "static": "static_model.json",
+            "dynamic": "dynamic_model.json"
         },
         "baseline_adjustments": {
             "format": "csv",

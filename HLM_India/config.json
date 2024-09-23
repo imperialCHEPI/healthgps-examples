@@ -95,8 +95,8 @@
             }
         ],
         "risk_factor_models": {
-            "static": "India.HLM.json",
-            "dynamic": "India.EBHLM.json"
+            "static": "static_model.json",
+            "dynamic": "dynamic_model.json"
         },
         "baseline_adjustments": {
             "format": "csv",
