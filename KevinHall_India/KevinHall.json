@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config/models/kevinhall.json",
     "ModelName": "KevinHall",
     "Nutrients": [
         {
