@@ -4,10 +4,4 @@ This configuration simulates a minimal example population to demonstrate an inst
 
 In [this comment](https://github.com/imperialCHEPI/healthgps/issues/277#issuecomment-1894621015), it can be seen that both baseline and intervention traces for some diseases appear to follow near identical trajectories.
 
-Run on HPC with `qsub example-jobscript.sh`. Note that you need to also have set the `HGPS_ROOT` environment variable to point to your `healthgps` repo and have built the executable like so:
-
-```sh
-cmake --build --preset release-build-linux --target install
-```
-
 Output files are placed in `$HOME/healthgps/example_diseases_output`.

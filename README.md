@@ -4,7 +4,7 @@ This repo contains example configurations for the [Health-GPS](../healthgps/) co
 
 ## Imperial HPC users
 
-For users of [Imperial College's HPC system](https://www.imperial.ac.uk/computational-methods/hpc/) there is [an example PBS job script with the `Dummy_disease_test` model](Dummy_disease_test/example-jobscript.sh).
+For users of [Imperial College's HPC system](https://www.imperial.ac.uk/computational-methods/hpc/) there is [an example PBS job script](example-jobscript.sh) in this repository.
 
 To get started, follow these instructions after logging into the HPC:
 
