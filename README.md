@@ -23,7 +23,13 @@ To get started, follow these instructions after logging into the HPC:
     module load GCCcore/12.3.0
     ```
 
-1. Install [vcpkg] following [these instructions] and set the `VCPKG_ROOT` environment variable to point to the `vcpkg` repo in your `.profile`
+1. Install [vcpkg] following [these instructions] and set the `VCPKG_ROOT` environment variable to point to the `vcpkg` repo in your `.profile`. E.g. if `vcpkg` is downloaded to `~/vcpkg`:
+
+    ```sh
+    echo export VCPKG_ROOT=~/vcpkg >> ~/.profile
+    ```
+
+    (You will need to log out and back in again for the change to take effect.)
 
 1. Configure the project
 
