@@ -62,8 +62,8 @@
             }
         ],
         "risk_factor_models": {
-            "static": "Dummy.json",
-            "dynamic": "Dummy.json"
+            "static": "static_model.json",
+            "dynamic": "dynamic_model.json"
         },
         "baseline_adjustments": {
             "format": "csv",
