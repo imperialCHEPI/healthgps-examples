@@ -22,7 +22,7 @@ config_dir="$(dirname "$0")"
 
 # Load correct modules (be careful when changing).
 module purge
-module load tools/dev
+module load tools/prod
 module load GCCcore/12.3.0
 
 # Run HGPS.
