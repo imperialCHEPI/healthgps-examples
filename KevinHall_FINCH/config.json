@@ -31,82 +31,82 @@
         "settings": {
             "country_code": "GBR",
             "size_fraction": 0.001,
-            "age_range": [ 0, 100 ]
+            "age_range": [0, 100]
         }
     },
     "modelling": {
         "ses_model": {
             "function_name": "normal",
-            "function_parameters": [ 0.0, 1.0 ]
+            "function_parameters": [0.0, 1.0]
         },
         "risk_factors": [
             {
                 "name": "Gender",
                 "level": 0,
-                "range": [ 0, 1 ]
+                "range": [0, 1]
             },
             {
                 "name": "Age",
                 "level": 0,
-                "range": [ 0, 0 ]
+                "range": [0, 0]
             },
             {
                 "name": "Age2",
                 "level": 0,
-                "range": [ 0, 0 ]
+                "range": [0, 0]
             },
             {
                 "name": "Age3",
                 "level": 0,
-                "range": [ 0, 0 ]
+                "range": [0, 0]
             },
             {
                 "name": "Region",
                 "level": 0,
-                "range": [ 1, 4 ],
+                "range": [1, 4],
                 "comment": "Region added for FINCH"
             },
             {
                 "name": "Sector",
                 "level": 0,
-                "range": [ 0, 0 ],
+                "range": [0, 0],
                 "comment": "Set to ZERO for FINCH"
             },
             {
                 "name": "Income",
                 "level": 0,
-                "range": [ 1, 4 ],
+                "range": [1, 4],
                 "comment": "Income made quartile"
             },
             {
                 "name": "Sodium",
                 "level": 1,
-                "range": [ 1.127384, 8.656519 ]
+                "range": [1.127384, 8.656519]
             },
             {
                 "name": "Protein",
                 "level": 1,
-                "range": [ 43.50682, 238.4145 ]
+                "range": [43.50682, 238.4145]
             },
             {
                 "name": "Fat",
                 "level": 1,
-                "range": [ 45.04756, 382.664098658922 ]
+                "range": [45.04756, 382.664098658922]
             },
             {
                 "name": "PA",
                 "level": 2,
-                "range": [ 22.22314, 9765.512 ]
+                "range": [22.22314, 9765.512]
             },
             {
                 "name": "Energy",
                 "level": 2,
-                "range": [ 1326.14051277588, 7522.496 ]
+                "range": [1326.14051277588, 7522.496]
             },
             {
                 "name": "BMI",
                 "level": 3,
-                "range": [ 13.88, 39.48983 ]
+                "range": [13.88, 39.48983]
             }
         ],
         "risk_factor_models": {
@@ -124,7 +124,7 @@
         }
     },
     "running": {
-        "seed": [ 123456789 ],
+        "seed": [123456789],
         "start_time": 2010,
         "stop_time": 2050,
         "trial_runs": 1,
@@ -215,7 +215,7 @@
                         "start_time": 2022,
                         "finish_time": 2050
                     },
-                    "dynamics": [ 0.15, 0.0, 0.0 ],
+                    "dynamics": [0.15, 0.0, 0.0],
                     "impacts": [
                         {
                             "risk_factor": "BMI",
@@ -242,8 +242,8 @@
                         "start_time": 2022,
                         "finish_time": 2050
                     },
-                    "coefficients": [ 0.012, 0.013, 0.014, 0.016 ],
-                    "coverage_rates": [ 0.26, 0.7 ],
+                    "coefficients": [0.012, 0.013, 0.014, 0.016],
+                    "coverage_rates": [0.26, 0.7],
                     "coverage_cutoff_time": 4,
                     "child_cutoff_age": 18,
                     "adjustments": [
@@ -266,7 +266,7 @@
                         "start_time": 2022,
                         "finish_time": 2050
                     },
-                    "coverage_rates": [ 0.9 ],
+                    "coverage_rates": [0.9],
                     "impacts": [
                         {
                             "risk_factor": "BMI",
