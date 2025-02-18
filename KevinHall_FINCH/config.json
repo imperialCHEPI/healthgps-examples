@@ -6,7 +6,7 @@
     },
     "inputs": {
         "dataset": {
-            "name": "FINCH.DataFile.csv",
+            "name": "Finch.DataFile.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
@@ -18,10 +18,30 @@
                 "Region": "integer",
                 "Sector": "integer",
                 "Income": "integer",
+                "Ethnicity": "integer",
                 "Carbohydrate": "double",
                 "Protein": "double",
                 "Sodium": "double",
                 "Fat": "double",
+                "PolyunsaturatedFattyAcid": "double",
+                "SaturatedFat": "double",
+                "MonounsaturatedFat": "double",
+                "Fibre": "double",
+                "FibreSouthgate": "double",
+                "FibreEnglyst": "double",
+                "VegetableProtein": "double",
+                "AnimalProtein": "double",
+                "Starch": "double",
+                "Sucrose": "double",
+                "NonMilkExtraSugar": "double",
+                "TotalSugar": "double",
+                "AddedSugar": "double",
+                "Calcium": "double",
+                "Iron": "double",
+                "VitaminC": "double",
+                "Folate": "double",
+                "Copper": "double",
+                "Zinc": "double",
                 "PhysicalActivity": "double",
                 "EnergyIntake": "double",
                 "Weight": "double",
@@ -30,8 +50,8 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.001,
-            "age_range": [0, 100]
+            "size_fraction": 0.01,
+            "age_range": [0, 110]
         }
     },
     "modelling": {
@@ -61,38 +81,120 @@
                 "range": [0, 0]
             },
             {
-                "name": "Region",
-                "level": 0,
-                "range": [1, 4],
-                "comment": "Region added for FINCH"
-            },
-            {
-                "name": "Sector",
-                "level": 0,
-                "range": [0, 0],
-                "comment": "Set to ZERO for FINCH"
-            },
-            {
-                "name": "Income",
-                "level": 0,
-                "range": [1, 4],
-                "comment": "Income made quartile"
+                "name": "Carbohydrate",
+                "level": 1,
+                "range": [0, 0]
             },
             {
                 "name": "Sodium",
                 "level": 1,
-                "range": [1.127384, 8.656519]
+                "range": [0, 0]
             },
             {
                 "name": "Protein",
                 "level": 1,
-                "range": [43.50682, 238.4145]
+                "range": [0, 0]
             },
             {
                 "name": "Fat",
                 "level": 1,
-                "range": [45.04756, 382.664098658922]
+                "range": [0, 0]
             },
+            {
+                "name": "PolyunsaturatedFattyAcid",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "SaturatedFat",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "MonounsaturatedFat",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Fibre",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "FibreSouthgate",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "FibreEnglyst",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "VegetableProtein",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "AnimalProtein",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Starch",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Sucrose",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "NonMilkExtraSugar",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "TotalSugar",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "AddedSugar",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Calcium",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Iron",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "VitaminC",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Folate",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Copper",
+                "level": 1,
+                "range": [0, 0]  
+            },
+            {
+                "name": "Zinc",
+                "level": 1,
+                "range": [0, 0]  
+            }, 
             {
                 "name": "PA",
                 "level": 2,
@@ -123,6 +225,114 @@
             }
         }
     },
+    "Categories": {
+        "Region": ["England", "Wales", "Scotland", "NorthernIreland"],
+        "Income": ["Low", "LowerMiddle", "UpperMiddle", "High"],
+        "Ethnicity": ["White", "Asian", "Black", "Other"]
+    },
+    "RegionModels": [
+        {
+            "Value": "England",
+            "Intercept": 0.4,
+            "Comment": "Prediction = Intercept + (Age_Coefficient × Age) + (Income_Coefficient × Income)",
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Income", "Value": 0.02}
+            ]
+        },
+        {
+            "Value": "Wales",
+            "Intercept": 0.2,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Income", "Value": -0.01}
+            ]
+        },
+        {
+            "Value": "Scotland",
+            "Intercept": 0.2,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Income", "Value": -0.01}
+            ]
+        },
+        {
+            "Value": "NorthernIreland",
+            "Intercept": 0.2,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Income", "Value": -0.01}
+            ]
+        }
+    ],
+    "IncomeModels": [
+        {
+            "Value": "Low",
+            "Intercept": 0.3,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.002},
+                {"Name": "Education", "Value": -0.1}
+            ]
+        },
+        {
+            "Value": "LowerMiddle",
+            "Intercept": 0.3,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.002},
+                {"Name": "Education", "Value": -0.05}
+            ]
+        },
+        {
+            "Value": "UpperMiddle",
+            "Intercept": 0.2,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.002},
+                {"Name": "Education", "Value": 0.05}
+            ]
+        },
+        {
+            "Value": "High",
+            "Intercept": 0.2,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.002},
+                {"Name": "Education", "Value": 0.1}
+            ]
+        }
+    ],
+    "EthnicityModels": [
+        {
+            "Value": "White",
+            "Intercept": 0.7,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Region", "Value": 0.02}
+            ]
+        },
+        {
+            "Value": "Asian",
+            "Intercept": 0.1,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Region", "Value": 0.02}
+            ]
+        },
+        {
+            "Value": "Black",
+            "Intercept": 0.1,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Region", "Value": 0.02}
+            ]
+        },
+        {
+            "Value": "Other",
+            "Intercept": 0.1,
+            "Coefficients": [
+                {"Name": "Age", "Value": 0.001},
+                {"Name": "Region", "Value": 0.02}
+            ]
+        }
+    ],
     "running": {
         "seed": [123456789],
         "start_time": 2010,
