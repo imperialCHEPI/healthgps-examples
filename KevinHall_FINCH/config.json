@@ -59,7 +59,7 @@
             "age_range": [0, 110]
         }
     },
- "modelling": {
+    "modelling": {
         "ses_model": {
             "function_name": "normal",
             "function_parameters": [0.0, 1.0]
@@ -372,8 +372,8 @@
                 "factorsmean_female": "Finch.FactorsMean.Female.csv"
             }
         }
-     },
-    
+    },
+
     "running": {
         "seed": [123456789],
         "start_time": 2010,
