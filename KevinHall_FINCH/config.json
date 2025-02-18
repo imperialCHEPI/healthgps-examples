@@ -23,6 +23,11 @@
                 "Protein": "double",
                 "Sodium": "double",
                 "Fat": "double",
+                "ProcessedMeat": "double",
+                "RedMeat": "double",
+                "Fruit": "double",
+                "Vegetable": "double",
+                "Legume": "double",
                 "PolyunsaturatedFattyAcid": "double",
                 "SaturatedFat": "double",
                 "MonounsaturatedFat": "double",
@@ -97,6 +102,31 @@
             },
             {
                 "name": "Fat",
+                "level": 1,
+                "range": [0, 0]
+            },
+            {
+                "name": "ProcessedMeat",
+                "level": 1,
+                "range": [0, 0]
+            },
+            {
+                "name": "RedMeat",
+                "level": 1,
+                "range": [0, 0]
+            },
+            {
+                "name": "Fruit",
+                "level": 1,
+                "range": [0, 0]
+            },
+            {
+                "name": "Vegetable",
+                "level": 1,
+                "range": [0, 0]
+            },
+            {
+                "name": "Legume",
                 "level": 1,
                 "range": [0, 0]
             },
