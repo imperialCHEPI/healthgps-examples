@@ -59,10 +59,128 @@
             "age_range": [0, 110]
         }
     },
-    "modelling": {
+ "modelling": {
         "ses_model": {
             "function_name": "normal",
             "function_parameters": [0.0, 1.0]
+        },
+        "Categories": {
+            "Region": {
+                "values": ["England", "Wales", "Scotland", "NorthernIreland"],
+                "updateAge": 18
+            },
+            "Income": {
+                "values": ["Low", "LowerMiddle", "UpperMiddle", "High"],
+                "updateAge": 18
+            },
+            "Ethnicity": {
+                "values": ["White", "Asian", "Black", "Other"],
+                "updateAge": null
+            }
+        },
+        "CategoryModels": {
+            "Region": [
+                {
+                    "Value": "England",
+                    "Intercept": 0.4,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Income", "Value": 0.02 }
+                    ]
+                },
+                {
+                    "Value": "Wales",
+                    "Intercept": 0.2,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Income", "Value": -0.01 }
+                    ]
+                },
+                {
+                    "Value": "Scotland",
+                    "Intercept": 0.2,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Income", "Value": -0.01 }
+                    ]
+                },
+                {
+                    "Value": "NorthernIreland",
+                    "Intercept": 0.2,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Income", "Value": -0.01 }
+                    ]
+                }
+            ],
+            "Income": [
+                {
+                    "Value": "Low",
+                    "Intercept": 0.3,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.002 },
+                        { "Name": "Education", "Value": -0.1 }
+                    ]
+                },
+                {
+                    "Value": "LowerMiddle",
+                    "Intercept": 0.3,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.002 },
+                        { "Name": "Education", "Value": -0.05 }
+                    ]
+                },
+                {
+                    "Value": "UpperMiddle",
+                    "Intercept": 0.2,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.002 },
+                        { "Name": "Education", "Value": 0.05 }
+                    ]
+                },
+                {
+                    "Value": "High",
+                    "Intercept": 0.2,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.002 },
+                        { "Name": "Education", "Value": 0.1 }
+                    ]
+                }
+            ],
+            "Ethnicity": [
+                {
+                    "Value": "White",
+                    "Intercept": 0.7,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Region", "Value": 0.02 }
+                    ]
+                },
+                {
+                    "Value": "Asian",
+                    "Intercept": 0.1,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Region", "Value": 0.02 }
+                    ]
+                },
+                {
+                    "Value": "Black",
+                    "Intercept": 0.1,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Region", "Value": 0.02 }
+                    ]
+                },
+                {
+                    "Value": "Other",
+                    "Intercept": 0.1,
+                    "Coefficients": [
+                        { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Region", "Value": 0.02 }
+                    ]
+                }
+            ]
         },
         "risk_factors": [
             {
@@ -254,115 +372,8 @@
                 "factorsmean_female": "Finch.FactorsMean.Female.csv"
             }
         }
-    },
-    "Categories": {
-        "Region": ["England", "Wales", "Scotland", "NorthernIreland"],
-        "Income": ["Low", "LowerMiddle", "UpperMiddle", "High"],
-        "Ethnicity": ["White", "Asian", "Black", "Other"]
-    },
-    "RegionModels": [
-        {
-            "Value": "England",
-            "Intercept": 0.4,
-            "Comment": "Prediction = Intercept + (Age_Coefficient × Age) + (Income_Coefficient × Income)",
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Income", "Value": 0.02 }
-            ]
-        },
-        {
-            "Value": "Wales",
-            "Intercept": 0.2,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Income", "Value": -0.01 }
-            ]
-        },
-        {
-            "Value": "Scotland",
-            "Intercept": 0.2,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Income", "Value": -0.01 }
-            ]
-        },
-        {
-            "Value": "NorthernIreland",
-            "Intercept": 0.2,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Income", "Value": -0.01 }
-            ]
-        }
-    ],
-    "IncomeModels": [
-        {
-            "Value": "Low",
-            "Intercept": 0.3,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.002 },
-                { "Name": "Education", "Value": -0.1 }
-            ]
-        },
-        {
-            "Value": "LowerMiddle",
-            "Intercept": 0.3,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.002 },
-                { "Name": "Education", "Value": -0.05 }
-            ]
-        },
-        {
-            "Value": "UpperMiddle",
-            "Intercept": 0.2,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.002 },
-                { "Name": "Education", "Value": 0.05 }
-            ]
-        },
-        {
-            "Value": "High",
-            "Intercept": 0.2,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.002 },
-                { "Name": "Education", "Value": 0.1 }
-            ]
-        }
-    ],
-    "EthnicityModels": [
-        {
-            "Value": "White",
-            "Intercept": 0.7,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Region", "Value": 0.02 }
-            ]
-        },
-        {
-            "Value": "Asian",
-            "Intercept": 0.1,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Region", "Value": 0.02 }
-            ]
-        },
-        {
-            "Value": "Black",
-            "Intercept": 0.1,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Region", "Value": 0.02 }
-            ]
-        },
-        {
-            "Value": "Other",
-            "Intercept": 0.1,
-            "Coefficients": [
-                { "Name": "Age", "Value": 0.001 },
-                { "Name": "Region", "Value": 0.02 }
-            ]
-        }
-    ],
+     },
+    
     "running": {
         "seed": [123456789],
         "start_time": 2010,
