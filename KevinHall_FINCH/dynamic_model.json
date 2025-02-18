@@ -21,33 +21,33 @@
             "Name": "Sodium",
             "Range": [0.0, 50.0],
             "Energy": 0.0
-        }, 
-         {
+        },
+        {
             "Name": "ProcessedMeat",
             "Range": [0.0, 50.0],
             "Energy": 0.0
-        }, 
-         {
+        },
+        {
             "Name": "RedMeat",
             "Range": [0.0, 50.0],
             "Energy": 0.0
-        }, 
-         {
+        },
+        {
             "Name": "Fruit",
             "Range": [0.0, 50.0],
             "Energy": 0.0
-        }, 
-         {
+        },
+        {
             "Name": "Vegetable",
             "Range": [0.0, 50.0],
             "Energy": 0.0
-        }, 
-         {
+        },
+        {
             "Name": "Legume",
             "Range": [0.0, 50.0],
             "Energy": 0.0
-        }, 
-         {
+        },
+        {
             "Name": "PolyunsaturatedFattyAcid",
             "Range": [0.0, 0.0],
             "Energy": 0.0
@@ -171,7 +171,7 @@
                 "Sodium": 1.0
             },
             "Price": null
-        }, 
+        },
         {
             "Name": "FoodProcessedMeat",
             "Nutrients": {
