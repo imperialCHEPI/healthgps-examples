@@ -59,6 +59,7 @@
             "age_range": [0, 110]
         }
     },
+    
     "modelling": {
         "ses_model": {
             "function_name": "normal",
@@ -70,7 +71,12 @@
                 "updateAge": 18
             },
             "Income": {
-                "values": ["Low", "LowerMiddle", "UpperMiddle", "High"],
+                "values": [
+                    {"name": "Low", "threshold": 20000},
+                    {"name": "LowerMiddle", "threshold": 35000},
+                    {"name": "UpperMiddle", "threshold": 50000},
+                    {"name": "High", "threshold": 100000}
+                ],
                 "updateAge": 18
             },
             "Ethnicity": {
@@ -85,6 +91,8 @@
                     "Intercept": 0.4,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
+                        { "Name": "Gender", "Value": 0.02 },
+                        { "Name": "Ethnicity", "Value": 0.03 },
                         { "Name": "Income", "Value": 0.02 }
                     ]
                 },
@@ -93,7 +101,9 @@
                     "Intercept": 0.2,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
-                        { "Name": "Income", "Value": -0.01 }
+                        { "Name": "Gender", "Value": 0.02 },
+                        { "Name": "Ethnicity", "Value": 0.03 },
+                        { "Name": "Income", "Value": 0.02 }
                     ]
                 },
                 {
@@ -101,7 +111,9 @@
                     "Intercept": 0.2,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
-                        { "Name": "Income", "Value": -0.01 }
+                        { "Name": "Gender", "Value": 0.02 },
+                        { "Name": "Ethnicity", "Value": 0.03 },
+                        { "Name": "Income", "Value": 0.02 }
                     ]
                 },
                 {
@@ -109,7 +121,9 @@
                     "Intercept": 0.2,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
-                        { "Name": "Income", "Value": -0.01 }
+                        { "Name": "Gender", "Value": 0.02 },
+                        { "Name": "Ethnicity", "Value": 0.03 },
+                        { "Name": "Income", "Value": 0.02 }
                     ]
                 }
             ],
@@ -119,7 +133,9 @@
                     "Intercept": 0.3,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.002 },
-                        { "Name": "Education", "Value": -0.1 }
+                        { "Name": "Gender", "Value": -0.1 },
+                        { "Name": "Region", "Value": -0.05 },
+                        { "Name": "Ethnicity", "Value": 0.02 }
                     ]
                 },
                 {
@@ -127,7 +143,9 @@
                     "Intercept": 0.3,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.002 },
-                        { "Name": "Education", "Value": -0.05 }
+                        { "Name": "Gender", "Value": -0.1 },
+                        { "Name": "Region", "Value": -0.05 },
+                        { "Name": "Ethnicity", "Value": 0.02 }
                     ]
                 },
                 {
@@ -135,7 +153,9 @@
                     "Intercept": 0.2,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.002 },
-                        { "Name": "Education", "Value": 0.05 }
+                        { "Name": "Gender", "Value": -0.1 },
+                        { "Name": "Region", "Value": -0.05 },
+                        { "Name": "Ethnicity", "Value": 0.02 }
                     ]
                 },
                 {
@@ -143,7 +163,9 @@
                     "Intercept": 0.2,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.002 },
-                        { "Name": "Education", "Value": 0.1 }
+                        { "Name": "Gender", "Value": -0.1 },
+                        { "Name": "Region", "Value": -0.05 },
+                        { "Name": "Ethnicity", "Value": 0.02 }
                     ]
                 }
             ],
@@ -153,7 +175,9 @@
                     "Intercept": 0.7,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
-                        { "Name": "Region", "Value": 0.02 }
+                        { "Name": "Gender", "Value": 0.03 },
+                        { "Name": "Region", "Value": 0.02 },
+                        { "Name": "Income", "Value": 0.01 }
                     ]
                 },
                 {
@@ -161,7 +185,9 @@
                     "Intercept": 0.1,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
-                        { "Name": "Region", "Value": 0.02 }
+                        { "Name": "Gender", "Value": 0.03 },
+                        { "Name": "Region", "Value": 0.02 },
+                        { "Name": "Income", "Value": 0.01 }
                     ]
                 },
                 {
@@ -169,7 +195,9 @@
                     "Intercept": 0.1,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
-                        { "Name": "Region", "Value": 0.02 }
+                        { "Name": "Gender", "Value": 0.03 },
+                        { "Name": "Region", "Value": 0.02 },
+                        { "Name": "Income", "Value": 0.01 }
                     ]
                 },
                 {
@@ -177,11 +205,34 @@
                     "Intercept": 0.1,
                     "Coefficients": [
                         { "Name": "Age", "Value": 0.001 },
-                        { "Name": "Region", "Value": 0.02 }
+                        { "Name": "Gender", "Value": 0.03 },
+                        { "Name": "Region", "Value": 0.02 },
+                        { "Name": "Income", "Value": 0.01 }
                     ]
                 }
             ]
         },
+        "Models": {
+            "HouseholdIncome": {
+                "Intercept": 10.0,
+                "Coefficients": [
+                    { "Name": "Age", "Value": 0.02 },
+                    { "Name": "Gender", "Value": 0.15 },
+                    { "Name": "Region", "Value": -0.2 },
+                    { "Name": "Ethnicity", "Value": -0.1 }
+                ]
+            },
+            "PhysicalActivity": {
+                "Intercept": 1.5,
+                "Coefficients": [
+                    { "Name": "Age", "Value": -0.01 },
+                    { "Name": "Gender", "Value": 0.2 },
+                    { "Name": "Region", "Value": 0.1 },
+                    { "Name": "Ethnicity", "Value": -0.05 },
+                    { "Name": "Income", "Value": 0.15 }
+                ]
+            }
+        }, 
         "risk_factors": [
             {
                 "name": "Gender",
