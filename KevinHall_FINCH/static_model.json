@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v2/config/models/staticlinear.json",
-    "ModelName": "StaticLinear", 
+    "ModelName": "StaticLinear",
     "InformationSpeed": 0.1,
     "PhysicalActivityStdDev": 0.06,
     "RuralPrevalence": [
@@ -89,8 +89,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -153,8 +153,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -217,8 +217,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -281,8 +281,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -345,8 +345,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -409,8 +409,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -473,8 +473,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -537,8 +537,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
@@ -601,8 +601,8 @@
                     "FoodVegetable": 0.0,
                     "FoodLegume": 0.0
                 }
-            }, 
-             "Trend": {
+            },
+            "Trend": {
                 "Intercept": 0.0,
                 "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
