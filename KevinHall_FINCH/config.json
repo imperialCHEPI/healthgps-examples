@@ -59,7 +59,7 @@
             "age_range": [0, 110]
         }
     },
-    
+
     "modelling": {
         "ses_model": {
             "function_name": "normal",
@@ -72,10 +72,10 @@
             },
             "Income": {
                 "values": [
-                    {"name": "Low", "threshold": 20000},
-                    {"name": "LowerMiddle", "threshold": 35000},
-                    {"name": "UpperMiddle", "threshold": 50000},
-                    {"name": "High", "threshold": 100000}
+                    { "name": "Low", "threshold": 20000 },
+                    { "name": "LowerMiddle", "threshold": 35000 },
+                    { "name": "UpperMiddle", "threshold": 50000 },
+                    { "name": "High", "threshold": 100000 }
                 ],
                 "updateAge": 18
             },
@@ -232,7 +232,7 @@
                     { "Name": "Income", "Value": 0.15 }
                 ]
             }
-        }, 
+        },
         "risk_factors": [
             {
                 "name": "Gender",
