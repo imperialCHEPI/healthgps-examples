@@ -66,59 +66,59 @@
             "function_parameters": [0.0, 1.0]
         },
         "demographic_models": {
-    "region": {
-        "probabilities": {
-            "coefficients": {
-                "age": "",
-                "gender": ""
-            }
-        },
-        "coefficients": {
-            "PhysicalActivity": "",
-            "Income": ""
-        }
-    },
-    "ethnicity": {
-        "probabilities": {
-            "coefficients": {
-                "age": "",
-                "gender": "",
-                "region": {
-                    "England": "",
-                    "Wales": "",
-                    "Scotland": "",
-                    "NorthernIreland": ""
+            "region": {
+                "probabilities": {
+                    "coefficients": {
+                        "age": "",
+                        "gender": ""
+                    }
+                },
+                "coefficients": {
+                    "PhysicalActivity": "",
+                    "Income": ""
                 }
+            },
+            "ethnicity": {
+                "probabilities": {
+                    "coefficients": {
+                        "age": "",
+                        "gender": "",
+                        "region": {
+                            "England": "",
+                            "Wales": "",
+                            "Scotland": "",
+                            "NorthernIreland": ""
+                        }
+                    }
+                },
+                "coefficients": {
+                    "PhysicalActivity": "",
+                    "Income": ""
+                }
+            },
+            "income": {
+                "continuous": {
+                    "coefficients": {
+                        "Age": "",
+                        "Gender": "",
+                        "PhysicalActivity": ""
+                    },
+                    "standard_deviation": 0.5,
+                    "update_frequency": 5
+                },
+                "categories": {
+                    "method": "quartiles",
+                    "update_frequency": 5
+                }
+            },
+            "physical_activity": {
+                "coefficients": {
+                    "age": "",
+                    "gender": ""
+                },
+                "standard_deviation": 0.5
             }
         },
-        "coefficients": {
-            "PhysicalActivity": "",
-            "Income": ""
-        }
-    },
-    "income": {
-        "continuous": {
-            "coefficients": {
-                "Age": "",
-                "Gender": "",
-                "PhysicalActivity": ""
-            },
-            "standard_deviation": 0.5,
-            "update_frequency": 5
-        },
-        "categories": {
-            "method": "quartiles",
-            "update_frequency": 5
-        }
-    },
-    "physical_activity": {
-        "coefficients": {
-            "age": "",
-            "gender": ""
-        },
-        "standard_deviation": 0.5
-    }
-}, 
         "risk_factors": [
             {
                 "name": "Gender",
