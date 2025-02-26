@@ -70,7 +70,10 @@
                 "probabilities": {
                     "coefficients": {
                         "age": "",
-                        "gender": ""
+                        "gender": {
+                            "male": 0.0,
+                            "female": 0.0
+                }
                     }
                 },
                 "coefficients": {
@@ -82,7 +85,10 @@
                 "probabilities": {
                     "coefficients": {
                         "age": "",
-                        "gender": "",
+                        "gender": {
+                            "male": 0.0,
+                            "female": 0.0
+                        }
                         "region": {
                             "England": "",
                             "Wales": "",
@@ -100,7 +106,10 @@
                 "continuous": {
                     "coefficients": {
                         "Age": "",
-                        "Gender": "",
+                        "gender": {
+                            "male": 0.0,
+                            "female": 0.0
+                        }
                         "PhysicalActivity": ""
                     },
                     "standard_deviation": 0.5,
@@ -114,7 +123,10 @@
             "physical_activity": {
                 "coefficients": {
                     "age": "",
-                    "gender": ""
+                    "gender": {
+                        "male": 0.0,
+                        "female": 0.0
+                    }
                 },
                 "standard_deviation": 0.5
             }
