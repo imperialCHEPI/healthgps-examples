@@ -26,7 +26,7 @@
                 "Gender": 0.032217497176628,
                 "Over18": 0.298055376100666,
                 "Region": -0.383372795038086,
-                "Ethnicity": 0,
+                "Ethnicity": 0.0,
                 "Sector": 0.0
             }
         },
@@ -36,7 +36,7 @@
                 "Gender": 0.0447125663820498,
                 "Over18": 0.619113033863595,
                 "Region": -0.69829336452055,
-                "Ethnicity": 0,
+                "Ethnicity": 0.0,
                 "Sector": 0.0
             }
         },
@@ -46,7 +46,7 @@
                 "Gender": 0.0447125663820498,
                 "Over18": 0.619113033863595,
                 "Region": -1.39658672904111,
-                "Ethnicity": 0,
+                "Ethnicity": 0.0,
                 "Sector": 0.0
             }
         }
@@ -55,7 +55,7 @@
         "FoodCarbohydrate": {
             "Lambda": 0.303030303030303,
             "StdDev": 0.323546436042623,
-            "Range": [22.09977, 1797.988],
+            "Range": [ 22.09977, 1797.988 ],
             "Intercept": -0.163564941825921,
             "Coefficients": {
                 "Gender": 0.001909201186864,
@@ -65,10 +65,10 @@
                 "Region": 0.0583895658455863,
                 "Sector": 0.0,
                 "Income": 0.0516596927242407,
-                "Ethnicity": 0
+                "Ethnicity": 0.0
             },
             "Policy": {
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Intercept": -0.545028558229148,
                 "Coefficients": {
                     "Gender": 0.0133489382363474,
@@ -87,12 +87,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -109,7 +110,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -119,7 +121,7 @@
         "FoodFat": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.464325512741348,
-            "Range": [1.093948, 561.4858],
+            "Range": [ 1.093948, 561.4858 ],
             "Intercept": -0.554488757309044,
             "Coefficients": {
                 "Gender": 0.00102119865887904,
@@ -132,7 +134,7 @@
                 "Ethnicity": 0
             },
             "Policy": {
-                "Range": [-6.081, 0.003],
+                "Range": [ -6.081, 0.003 ],
                 "Intercept": 2.45864732857747,
                 "Coefficients": {
                     "Gender": 0.0267815224912835,
@@ -151,12 +153,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -173,7 +176,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -183,7 +187,7 @@
         "FoodProtein": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [3.649882, 309.119],
+            "Range": [ 3.649882, 309.119 ],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -196,7 +200,7 @@
                 "Ethnicity": 0
             },
             "Policy": {
-                "Range": [-6.157, 0.05],
+                "Range": [ -6.157, 0.05 ],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -215,12 +219,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -237,7 +242,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -247,7 +253,7 @@
         "FoodSodium": {
             "Lambda": 0.181818181818182,
             "StdDev": 0.42022134002726,
-            "Range": [9.986686, 45379.46],
+            "Range": [ 9.986686, 45379.46 ],
             "Intercept": -0.186646397184792,
             "Coefficients": {
                 "Gender": 0.00324988697857038,
@@ -260,7 +266,7 @@
                 "Ethnicity": 0
             },
             "Policy": {
-                "Range": [-7.156, 0.002],
+                "Range": [ -7.156, 0.002 ],
                 "Intercept": -1.55739784524229,
                 "Coefficients": {
                     "Gender": 0.0149488641982196,
@@ -279,12 +285,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -301,7 +308,74 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
+                }
+            },
+            "ExpectedTrend": 0.0,
+            "ExpectedTrendBoxCox": 0.0,
+            "TrendSteps": 0
+        },
+        "FoodAlcohol": {
+            "Lambda": 0.181818181818182,
+            "StdDev": 0.42022134002726,
+            "Range": [ 9.986686, 45379.46 ],
+            "Intercept": -0.186646397184792,
+            "Coefficients": {
+                "Gender": 0.00324988697857038,
+                "Age": -0.000823686051671132,
+                "Age2": 1.08381456533309e-5,
+                "Age3": -8.59404983799456e-8,
+                "Region": 0.00601589219498129,
+                "Sector": 0.0,
+                "Income": 0.0661571251934935,
+                "Ethnicity": 0.0
+            },
+            "Policy": {
+                "Range": [ -7.156, 0.002 ],
+                "Intercept": -1.55739784524229,
+                "Coefficients": {
+                    "Gender": 0.0149488641982196,
+                    "Age": 0.000719857937084561,
+                    "Region": 0.161298561882375,
+                    "Sector": 0.0,
+                    "Income": -0.161520956953894,
+                    "Ethnicity": 0
+                },
+                "LogCoefficients": {
+                    "FoodCarbohydrate": -0.221938040292169,
+                    "FoodFat": -0.23131806566771,
+                    "FoodProtein": -0.0154651142158498,
+                    "FoodSodium": 0.423426264478488,
+                    "FoodProcessedMeat": 0.0,
+                    "FoodRedMeat": 0.0,
+                    "FoodFruit": 0.0,
+                    "FoodVegetable": 0.0,
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
+                }
+            },
+            "Trend": {
+                "Intercept": 0.0,
+                "Range": [ -4.942, 0.06 ],
+                "Lambda": 0.303030303030303,
+                "Coefficients": {
+                    "Gender": 0.0,
+                    "Age": 0.0,
+                    "Region": 0.0,
+                    "Income": 0.0
+                },
+                "LogCoefficients": {
+                    "FoodCarbohydrate": 0.0,
+                    "FoodFat": 0.0,
+                    "FoodProtein": 0.0,
+                    "FoodSodium": 0.0,
+                    "FoodProcessedMeat": 0.0,
+                    "FoodRedMeat": 0.0,
+                    "FoodFruit": 0.0,
+                    "FoodVegetable": 0.0,
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -311,7 +385,7 @@
         "FoodProcessedMeat": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [0, 0],
+            "Range": [ 0, 0 ],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -324,7 +398,7 @@
                 "Ethnicity": 0
             },
             "Policy": {
-                "Range": [0, 0],
+                "Range": [ 0, 0 ],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -332,7 +406,7 @@
                     "Region": 0.0,
                     "Sector": 0.0,
                     "Income": 0.0,
-                    "Ethnicity": 0
+                    "Ethnicity": 0.0
                 },
                 "LogCoefficients": {
                     "FoodCarbohydrate": 0,
@@ -343,12 +417,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -365,7 +440,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -375,7 +451,7 @@
         "FoodRedMeat": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [0, 0],
+            "Range": [ 0, 0 ],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -385,10 +461,10 @@
                 "Region": 0.0,
                 "Sector": 0.0,
                 "Income": 0.0,
-                "Ethnicity": 0
+                "Ethnicity": 0.0
             },
             "Policy": {
-                "Range": [0, 0],
+                "Range": [ 0, 0 ],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -407,12 +483,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -429,7 +506,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -439,7 +517,7 @@
         "FoodFruit": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [0, 0],
+            "Range": [ 0, 0 ],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -449,10 +527,10 @@
                 "Region": 0.0,
                 "Sector": 0.0,
                 "Income": 0.0,
-                "Ethnicity": 0
+                "Ethnicity": 0.0
             },
             "Policy": {
-                "Range": [0, 0],
+                "Range": [ 0, 0 ],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -460,7 +538,7 @@
                     "Region": 0.0,
                     "Sector": 0.0,
                     "Income": 0.0,
-                    "Ethnicity": 0
+                    "Ethnicity": 0.0
                 },
                 "LogCoefficients": {
                     "FoodCarbohydrate": 0,
@@ -471,12 +549,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -493,7 +572,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -503,7 +583,7 @@
         "FoodVegetable": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [0, 0],
+            "Range": [ 0, 0 ],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -513,10 +593,10 @@
                 "Region": 0.0,
                 "Sector": 0.0,
                 "Income": 0.0,
-                "Ethnicity": 0
+                "Ethnicity": 0.0
             },
             "Policy": {
-                "Range": [0, 0],
+                "Range": [ 0, 0 ],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -524,7 +604,7 @@
                     "Region": 0.0,
                     "Sector": 0.0,
                     "Income": 0.0,
-                    "Ethnicity": 0
+                    "Ethnicity": 0.0
                 },
                 "LogCoefficients": {
                     "FoodCarbohydrate": 0,
@@ -535,12 +615,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -557,7 +638,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -567,7 +649,7 @@
         "FoodLegume": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [0, 0],
+            "Range": [ 0, 0 ],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -577,10 +659,10 @@
                 "Region": 0.0,
                 "Sector": 0.0,
                 "Income": 0.0,
-                "Ethnicity": 0
+                "Ethnicity": 0.0
             },
             "Policy": {
-                "Range": [0, 0],
+                "Range": [ 0, 0 ],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -588,7 +670,7 @@
                     "Region": 0.0,
                     "Sector": 0.0,
                     "Income": 0.0,
-                    "Ethnicity": 0
+                    "Ethnicity": 0.0
                 },
                 "LogCoefficients": {
                     "FoodCarbohydrate": 0,
@@ -599,12 +681,13 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [-4.942, 0.06],
+                "Range": [ -4.942, 0.06 ],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -621,7 +704,8 @@
                     "FoodRedMeat": 0.0,
                     "FoodFruit": 0.0,
                     "FoodVegetable": 0.0,
-                    "FoodLegume": 0.0
+                    "FoodLegume": 0.0,
+                    "FoodAlcohol": 0.0
                 }
             },
             "ExpectedTrend": 0.0,
@@ -639,6 +723,7 @@
             "FoodFat": "double",
             "FoodProtein": "double",
             "FoodSodium": "double",
+            "FoodAlcohol": "double",
             "FoodProcessedMeat": "double",
             "FoodRedMeat": "double",
             "FoodFruit": "double",
@@ -660,7 +745,8 @@
             "FoodRedMeat": "double",
             "FoodFruit": "double",
             "FoodVegetable": "double",
-            "FoodLegume": "double"
+            "FoodLegume": "double",
+            "FoodAlcohol": "double"
         }
     }
-}
+} 
