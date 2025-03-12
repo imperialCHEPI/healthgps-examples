@@ -19,8 +19,13 @@
         },
         {
             "Name": "Sodium",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
+        },
+        {
+            "Name": "Alcohol",
+            "Range": [ 0.0, 100.0 ],
+            "Energy": 7.0
         },
         {
             "Name": "ProcessedMeat",
@@ -173,6 +178,13 @@
             "Price": null
         },
         {
+            "Name": "FoodAlcohol",
+            "Nutrients": {
+                "Alcohol": 1.0
+            },
+            "Price": null
+        },
+        {
             "Name": "FoodProcessedMeat",
             "Nutrients": {
                 "ProcessedMeat": 1.0
@@ -245,4 +257,4 @@
         "Female": 0.3564,
         "Male": 0.3718
     }
-}
+} 
