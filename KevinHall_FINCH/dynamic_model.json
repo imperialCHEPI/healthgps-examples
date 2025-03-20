@@ -4,82 +4,82 @@
     "Nutrients": [
         {
             "Name": "Carbohydrate",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "Protein",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "Fat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "Sodium",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Alcohol",
-            "Range": [ 0.0, 100.0 ],
+            "Range": [0.0, 100.0],
             "Energy": 7.0
         },
         {
             "Name": "ProcessedMeat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "RedMeat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Legume",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Fruit",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Vegetable",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "AddedSugar",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "TotalSugar",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "MonounsaturatedFat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "PolyunsaturatedFattyAcid",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "SaturatedFat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "Fibre",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 2.0
         }
     ],
@@ -186,4 +186,4 @@
         "Female": 0.3564,
         "Male": 0.3718
     }
-} 
+}
