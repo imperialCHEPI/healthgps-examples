@@ -4,148 +4,83 @@
     "Nutrients": [
         {
             "Name": "Carbohydrate",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
+            "Energy": 4.0
+        },
+        {
+            "Name": "Protein",
+            "Range": [ 0.0, 50.0 ],
             "Energy": 4.0
         },
         {
             "Name": "Fat",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 9.0
         },
         {
-            "Name": "Protein",
-            "Range": [0.0, 50.0],
-            "Energy": 4.0
-        },
-        {
             "Name": "Sodium",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
         },
         {
             "Name": "Alcohol",
-            "Range": [0.0, 100.0],
+            "Range": [ 0.0, 100.0 ],
             "Energy": 7.0
         },
         {
             "Name": "ProcessedMeat",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
         },
         {
             "Name": "RedMeat",
-            "Range": [0.0, 50.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Fruit",
-            "Range": [0.0, 50.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Vegetable",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
         },
         {
             "Name": "Legume",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
         },
         {
-            "Name": "PolyunsaturatedFattyAcid",
-            "Range": [0.0, 0.0],
+            "Name": "Fruit",
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
         },
         {
-            "Name": "SaturatedFat",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "MonounsaturatedFat",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Fibre",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "FibreSouthgate",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "FibreEnglyst",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "VegetableProtein",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "AnimalProtein",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Starch",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Sucrose",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "NonMilkExtraSugar",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "TotalSugar",
-            "Range": [0.0, 0.0],
+            "Name": "Vegetable",
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
         },
         {
             "Name": "AddedSugar",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
+            "Range": [ 0.0, 50.0 ],
+            "Energy": 4.0
         },
         {
-            "Name": "Calcium",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
+            "Name": "TotalSugar",
+            "Range": [ 0.0, 50.0 ],
+            "Energy": 4.0
         },
         {
-            "Name": "Iron",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
+            "Name": "MonounsaturatedFat",
+            "Range": [ 0.0, 50.0 ],
+            "Energy": 9.0
         },
         {
-            "Name": "VitaminC",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
+            "Name": "PolyunsaturatedFattyAcid",
+            "Range": [ 0.0, 50.0 ],
+            "Energy": 9.0
         },
         {
-            "Name": "Folate",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
+            "Name": "SaturatedFat",
+            "Range": [ 0.0, 50.0 ],
+            "Energy": 9.0
         },
         {
-            "Name": "Copper",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Zinc",
-            "Range": [0.0, 0.0],
-            "Energy": 0.0
+            "Name": "Fibre",
+            "Range": [ 0.0, 50.0 ],
+            "Energy": 2.0
         }
     ],
     "Foods": [
@@ -159,18 +94,18 @@
             "TrendSteps": 0
         },
         {
-            "Name": "FoodFat",
+            "Name": "FoodProtein",
             "Nutrients": {
-                "Fat": 1.0
+                "Protein": 1.0
             },
             "Price": null,
             "ExpectedTrend": 0.0,
             "TrendSteps": 0
         },
         {
-            "Name": "FoodProtein",
+            "Name": "FoodFat",
             "Nutrients": {
-                "Protein": 1.0
+                "Fat": 1.0
             },
             "Price": null,
             "ExpectedTrend": 0.0,
@@ -195,45 +130,19 @@
             "TrendSteps": 0
         },
         {
-            "Name": "FoodProcessedMeat",
+            "Name": "FoodLegume",
             "Nutrients": {
-                "ProcessedMeat": 1.0
+                "Legume": 1.0
             },
             "Price": null,
             "ExpectedTrend": 0.0,
             "TrendSteps": 0
         },
-        {
-            "Name": "FoodRedMeat",
-            "Nutrients": {
-                "RedMeat": 1.0
-            },
-            "Price": null,
-            "ExpectedTrend": 0.0,
-            "TrendSteps": 0
-        },
-        {
-            "Name": "FoodFruit",
-            "Nutrients": {
-                "Fruit": 1.0
-            },
-            "Price": null,
-            "ExpectedTrend": 0.0,
-            "TrendSteps": 0
-        },
+
         {
             "Name": "FoodVegetable",
             "Nutrients": {
                 "Vegetable": 1.0
-            },
-            "Price": null,
-            "ExpectedTrend": 0.0,
-            "TrendSteps": 0
-        },
-        {
-            "Name": "FoodLegume",
-            "Nutrients": {
-                "Legume": 1.0
             },
             "Price": null,
             "ExpectedTrend": 0.0,
@@ -277,4 +186,4 @@
         "Female": 0.3564,
         "Male": 0.3718
     }
-}
+} 
