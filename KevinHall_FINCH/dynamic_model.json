@@ -1,9 +1,14 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config/models/kevinhall.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v2/config/models/kevinhall.json",
     "ModelName": "KevinHall",
     "Nutrients": [
         {
             "Name": "Carbohydrate",
+            "Range": [0.0, 50.0],
+            "Energy": 4.0
+        },
+        {
+            "Name": "Protein",
             "Range": [0.0, 50.0],
             "Energy": 4.0
         },
@@ -13,14 +18,69 @@
             "Energy": 9.0
         },
         {
-            "Name": "Protein",
+            "Name": "Sodium",
+            "Range": [0.0, 50.0],
+            "Energy": 0.0
+        },
+        {
+            "Name": "Alcohol",
+            "Range": [0.0, 100.0],
+            "Energy": 7.0
+        },
+        {
+            "Name": "ProcessedMeat",
+            "Range": [0.0, 50.0],
+            "Energy": 0.0
+        },
+        {
+            "Name": "RedMeat",
+            "Range": [0.0, 50.0],
+            "Energy": 0.0
+        },
+        {
+            "Name": "Legume",
+            "Range": [0.0, 50.0],
+            "Energy": 0.0
+        },
+        {
+            "Name": "Fruit",
+            "Range": [0.0, 50.0],
+            "Energy": 0.0
+        },
+        {
+            "Name": "Vegetable",
+            "Range": [0.0, 50.0],
+            "Energy": 0.0
+        },
+        {
+            "Name": "AddedSugar",
             "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
-            "Name": "Sodium",
+            "Name": "TotalSugar",
             "Range": [0.0, 50.0],
-            "Energy": 0.0
+            "Energy": 4.0
+        },
+        {
+            "Name": "MonounsaturatedFat",
+            "Range": [0.0, 50.0],
+            "Energy": 9.0
+        },
+        {
+            "Name": "PolyunsaturatedFattyAcid",
+            "Range": [0.0, 50.0],
+            "Energy": 9.0
+        },
+        {
+            "Name": "SaturatedFat",
+            "Range": [0.0, 50.0],
+            "Energy": 9.0
+        },
+        {
+            "Name": "Fibre",
+            "Range": [0.0, 50.0],
+            "Energy": 2.0
         }
     ],
     "Foods": [
@@ -29,28 +89,64 @@
             "Nutrients": {
                 "Carbohydrate": 1.0
             },
-            "Price": null
-        },
-        {
-            "Name": "FoodFat",
-            "Nutrients": {
-                "Fat": 1.0
-            },
-            "Price": null
+            "Price": null,
+            "ExpectedTrend": 0.0,
+            "TrendSteps": 0
         },
         {
             "Name": "FoodProtein",
             "Nutrients": {
                 "Protein": 1.0
             },
-            "Price": null
+            "Price": null,
+            "ExpectedTrend": 0.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodFat",
+            "Nutrients": {
+                "Fat": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 0.0,
+            "TrendSteps": 0
         },
         {
             "Name": "FoodSodium",
             "Nutrients": {
                 "Sodium": 1.0
             },
-            "Price": null
+            "Price": null,
+            "ExpectedTrend": 0.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodAlcohol",
+            "Nutrients": {
+                "Alcohol": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 0.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodLegume",
+            "Nutrients": {
+                "Legume": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 0.0,
+            "TrendSteps": 0
+        },
+
+        {
+            "Name": "FoodVegetable",
+            "Nutrients": {
+                "Vegetable": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 0.0,
+            "TrendSteps": 0
         }
     ],
     "WeightQuantiles": {
