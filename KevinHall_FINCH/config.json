@@ -1,12 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
+    "version": 2,
     "data": {
         "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/20240624/data_20240624.zip",
         "checksum": "b68abc8d40b937d377aa7357bff66a1f4f5196da5b867f7ca88d02b37d2ebb5c"
     },
     "inputs": {
         "dataset": {
-            "name": "FINCH.DataFile.csv",
+            "name": "Finch.DataFile.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
@@ -18,10 +19,23 @@
                 "Region": "integer",
                 "Sector": "integer",
                 "Income": "integer",
+                "Ethnicity": "integer",
                 "Carbohydrate": "double",
                 "Protein": "double",
                 "Sodium": "double",
                 "Fat": "double",
+                "Alcohol": "double",
+                "ProcessedMeat": "double",
+                "RedMeat": "double",
+                "Fruit": "double",
+                "Vegetable": "double",
+                "Legume": "double",
+                "PolyunsaturatedFattyAcid": "double",
+                "SaturatedFat": "double",
+                "MonounsaturatedFat": "double",
+                "Fibre": "double",
+                "TotalSugar": "double",
+                "AddedSugar": "double",
                 "PhysicalActivity": "double",
                 "EnergyIntake": "double",
                 "Weight": "double",
@@ -30,10 +44,11 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.001,
-            "age_range": [0, 100]
+            "size_fraction": 0.01,
+            "age_range": [0, 110]
         }
     },
+
     "modelling": {
         "ses_model": {
             "function_name": "normal",
@@ -48,50 +63,162 @@
             {
                 "name": "Age",
                 "level": 0,
-                "range": [0, 0]
+                "range": [0, 110]
             },
             {
                 "name": "Age2",
                 "level": 0,
-                "range": [0, 0]
+                "range": [0, 12100]
             },
             {
                 "name": "Age3",
                 "level": 0,
-                "range": [0, 0]
+                "range": [0, 1331000]
             },
             {
-                "name": "Region",
-                "level": 0,
-                "range": [1, 4],
-                "comment": "Region added for FINCH"
-            },
-            {
-                "name": "Sector",
-                "level": 0,
-                "range": [0, 0],
-                "comment": "Set to ZERO for FINCH"
-            },
-            {
-                "name": "Income",
-                "level": 0,
-                "range": [1, 4],
-                "comment": "Income made quartile"
+                "name": "Carbohydrate",
+                "level": 1,
+                "range": [50, 500]
             },
             {
                 "name": "Sodium",
                 "level": 1,
-                "range": [1.127384, 8.656519]
+                "range": [500, 5000]
             },
             {
                 "name": "Protein",
                 "level": 1,
-                "range": [43.50682, 238.4145]
+                "range": [20, 200]
             },
             {
                 "name": "Fat",
                 "level": 1,
-                "range": [45.04756, 382.664098658922]
+                "range": [10, 150]
+            },
+            {
+                "name": "Alcohol",
+                "level": 1,
+                "range": [0, 100]
+            },
+            {
+                "name": "ProcessedMeat",
+                "level": 1,
+                "range": [0, 100]
+            },
+            {
+                "name": "RedMeat",
+                "level": 1,
+                "range": [0, 150]
+            },
+            {
+                "name": "Fruit",
+                "level": 1,
+                "range": [0, 500]
+            },
+            {
+                "name": "Vegetable",
+                "level": 1,
+                "range": [0, 500]
+            },
+            {
+                "name": "Legume",
+                "level": 1,
+                "range": [0, 100]
+            },
+            {
+                "name": "PolyunsaturatedFattyAcid",
+                "level": 1,
+                "range": [0, 50]
+            },
+            {
+                "name": "SaturatedFat",
+                "level": 1,
+                "range": [0, 50]
+            },
+            {
+                "name": "MonounsaturatedFat",
+                "level": 1,
+                "range": [0, 50]
+            },
+            {
+                "name": "Fibre",
+                "level": 1,
+                "range": [0, 50]
+            },
+            {
+                "name": "FibreSouthgate",
+                "level": 1,
+                "range": [0, 50]
+            },
+            {
+                "name": "FibreEnglyst",
+                "level": 1,
+                "range": [0, 50]
+            },
+            {
+                "name": "VegetableProtein",
+                "level": 1,
+                "range": [0, 100]
+            },
+            {
+                "name": "AnimalProtein",
+                "level": 1,
+                "range": [0, 100]
+            },
+            {
+                "name": "Starch",
+                "level": 1,
+                "range": [0, 300]
+            },
+            {
+                "name": "Sucrose",
+                "level": 1,
+                "range": [0, 150]
+            },
+            {
+                "name": "NonMilkExtraSugar",
+                "level": 1,
+                "range": [0, 150]
+            },
+            {
+                "name": "TotalSugar",
+                "level": 1,
+                "range": [0, 200]
+            },
+            {
+                "name": "AddedSugar",
+                "level": 1,
+                "range": [0, 150]
+            },
+            {
+                "name": "Calcium",
+                "level": 1,
+                "range": [0, 2000]
+            },
+            {
+                "name": "Iron",
+                "level": 1,
+                "range": [0, 50]
+            },
+            {
+                "name": "VitaminC",
+                "level": 1,
+                "range": [0, 500]
+            },
+            {
+                "name": "Folate",
+                "level": 1,
+                "range": [0, 1000]
+            },
+            {
+                "name": "Copper",
+                "level": 1,
+                "range": [0, 10]
+            },
+            {
+                "name": "Zinc",
+                "level": 1,
+                "range": [0, 50]
             },
             {
                 "name": "PA",
@@ -123,6 +250,7 @@
             }
         }
     },
+
     "running": {
         "seed": [123456789],
         "start_time": 2010,
