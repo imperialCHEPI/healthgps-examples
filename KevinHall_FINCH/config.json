@@ -91,6 +91,11 @@
                 "range": [0, 100000000]
             },
             {
+                "name": "incomme_category",
+                "level": 0,
+                "range": [0,4]
+            }
+            {
                 "name": "Carbohydrate",
                 "level": 1,
                 "range": [50, 500]
