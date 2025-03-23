@@ -66,13 +66,13 @@
         {
             "Name": "Over18",
             "Female": {
-                "White": 0.80,
+                "White": 0.8,
                 "Asian": 0.12,
                 "Black": 0.05,
                 "Others": 0.03
             },
             "Male": {
-                "White": 0.80,
+                "White": 0.8,
                 "Asian": 0.12,
                 "Black": 0.05,
                 "Others": 0.03
@@ -123,82 +123,82 @@
     "Nutrients": [
         {
             "Name": "Carbohydrate",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "Protein",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "Fat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "Sodium",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Alcohol",
-            "Range": [ 0.0, 100.0 ],
+            "Range": [0.0, 100.0],
             "Energy": 7.0
         },
         {
             "Name": "ProcessedMeat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "RedMeat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Legume",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Fruit",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "Vegetable",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 0.0
         },
         {
             "Name": "AddedSugar",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "TotalSugar",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 4.0
         },
         {
             "Name": "MonounsaturatedFat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "PolyunsaturatedFattyAcid",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "SaturatedFat",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 9.0
         },
         {
             "Name": "Fibre",
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Energy": 2.0
         }
     ],
@@ -206,7 +206,7 @@
         "FoodCarbohydrate": {
             "Lambda": 0.303030303030303,
             "StdDev": 0.323546436042623,
-            "Range": [ -6.157, 0.05 ],
+            "Range": [-6.157, 0.05],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.0267815224912835,
@@ -221,7 +221,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0267815224912835,
@@ -257,7 +257,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -296,7 +296,7 @@
         "FoodFat": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.464325512741348,
-            "Range": [ 1.093948, 561.4858 ],
+            "Range": [1.093948, 561.4858],
             "Intercept": -0.554488757309044,
             "Coefficients": {
                 "Gender": 0.00102119865887904,
@@ -312,7 +312,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.081, 0.003 ],
+                "Range": [-6.081, 0.003],
                 "Intercept": 2.45864732857747,
                 "Coefficients": {
                     "Gender": 0.0267815224912835,
@@ -348,7 +348,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -387,7 +387,7 @@
         "FoodProtein": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [ 3.649882, 309.119 ],
+            "Range": [3.649882, 309.119],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -403,7 +403,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -439,7 +439,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -479,7 +479,7 @@
         "FoodSodium": {
             "Lambda": 0.181818181818182,
             "StdDev": 0.42022134002726,
-            "Range": [ 9.986686, 45379.46 ],
+            "Range": [9.986686, 45379.46],
             "Intercept": -0.186646397184792,
             "Coefficients": {
                 "Gender": 0.00324988697857038,
@@ -495,7 +495,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -7.156, 0.002 ],
+                "Range": [-7.156, 0.002],
                 "Intercept": -1.55739784524229,
                 "Coefficients": {
                     "Gender": 0.0149488641982196,
@@ -531,7 +531,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -570,7 +570,7 @@
         "FoodAlcohol": {
             "Lambda": 0.181818181818182,
             "StdDev": 0.42022134002726,
-            "Range": [ 9.986686, 45379.46 ],
+            "Range": [9.986686, 45379.46],
             "Intercept": -0.186646397184792,
             "Coefficients": {
                 "Gender": 0.00324988697857038,
@@ -586,7 +586,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -7.156, 0.002 ],
+                "Range": [-7.156, 0.002],
                 "Intercept": -1.55739784524229,
                 "Coefficients": {
                     "Gender": 0.0149488641982196,
@@ -622,7 +622,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -661,7 +661,7 @@
         "FoodProcessedMeat": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [ 0, 0 ],
+            "Range": [0, 0],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -677,7 +677,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ 0, 0 ],
+                "Range": [0, 0],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -713,7 +713,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -752,7 +752,7 @@
         "FoodRedMeat": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [ 0, 0 ],
+            "Range": [0, 0],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -768,7 +768,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ 0, 0 ],
+                "Range": [0, 0],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -804,7 +804,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -843,7 +843,7 @@
         "FoodFruit": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [ 0, 0 ],
+            "Range": [0, 0],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -859,7 +859,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ 0, 0 ],
+                "Range": [0, 0],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -895,7 +895,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -934,7 +934,7 @@
         "FoodVegetable": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [ 0, 0 ],
+            "Range": [0, 0],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -950,7 +950,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ 0, 0 ],
+                "Range": [0, 0],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -986,7 +986,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1025,7 +1025,7 @@
         "FoodLegume": {
             "Lambda": 0,
             "StdDev": 0,
-            "Range": [ 0, 0 ],
+            "Range": [0, 0],
             "Intercept": 0.0,
             "Coefficients": {
                 "Gender": 0.0,
@@ -1041,7 +1041,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ 0, 0 ],
+                "Range": [0, 0],
                 "Intercept": 0.0,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1077,7 +1077,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1116,7 +1116,7 @@
         "FoodFibre": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -1132,7 +1132,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -1168,7 +1168,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1207,7 +1207,7 @@
         "FoodTotalSugar": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [ 0.0, 200.0 ],
+            "Range": [0.0, 200.0],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -1223,7 +1223,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -1259,7 +1259,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1298,7 +1298,7 @@
         "FoodAddedSugar": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [ 0.0, 150.0 ],
+            "Range": [0.0, 150.0],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -1314,7 +1314,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -1350,7 +1350,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1389,7 +1389,7 @@
         "FoodSaturatedFat": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -1405,7 +1405,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -1441,7 +1441,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1480,7 +1480,7 @@
         "FoodPolyunsaturatedFattyAcid": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -1496,7 +1496,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -1532,7 +1532,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1571,7 +1571,7 @@
         "FoodMonounsaturatedFat": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [ 0.0, 50.0 ],
+            "Range": [0.0, 50.0],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -1587,7 +1587,7 @@
                 "Others": 0.0
             },
             "Policy": {
-                "Range": [ -6.157, 0.05 ],
+                "Range": [-6.157, 0.05],
                 "Intercept": 0.374083190720533,
                 "Coefficients": {
                     "Gender": 0.0244874125691816,
@@ -1623,7 +1623,7 @@
             },
             "Trend": {
                 "Intercept": 0.0,
-                "Range": [ -4.942, 0.06 ],
+                "Range": [-4.942, 0.06],
                 "Lambda": 0.303030303030303,
                 "Coefficients": {
                     "Gender": 0.0,
@@ -1708,4 +1708,4 @@
             "FoodMonounsaturatedFat": "double"
         }
     }
-} 
+}
