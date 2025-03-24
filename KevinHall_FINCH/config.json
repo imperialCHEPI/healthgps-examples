@@ -45,20 +45,20 @@
         "settings": {
             "country_code": "GBR",
             "size_fraction": 0.000001,
-            "age_range": [ 0, 110 ]
+            "age_range": [0, 110]
         }
     },
 
     "modelling": {
         "ses_model": {
             "function_name": "normal",
-            "function_parameters": [ 0.0, 1.0 ]
+            "function_parameters": [0.0, 1.0]
         },
         "risk_factors": [
             {
                 "name": "Gender",
                 "level": 0,
-                "range": [ 0, 1 ]
+                "range": [0, 1]
             },
             {
                 "name": "Age",
