@@ -1,12 +1,13 @@
 {
     "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
+    "version": 2,
     "data": {
-        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/20240624/data_20240624.zip",
-        "checksum": "b68abc8d40b937d377aa7357bff66a1f4f5196da5b867f7ca88d02b37d2ebb5c"
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/dummy-data-v1/dummy-disease-data.zip",
+        "checksum": "186e45d273c51b6ed6b9febda749b245948248b3b3dec97b87967fac4a3aeb52"
     },
     "inputs": {
         "dataset": {
-            "name": "FINCH.DataFile.csv",
+            "name": "Finch.DataFile.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
@@ -18,10 +19,23 @@
                 "Region": "integer",
                 "Sector": "integer",
                 "Income": "integer",
+                "Ethnicity": "integer",
                 "Carbohydrate": "double",
                 "Protein": "double",
                 "Sodium": "double",
                 "Fat": "double",
+                "Alcohol": "double",
+                "ProcessedMeat": "double",
+                "RedMeat": "double",
+                "Fruit": "double",
+                "Vegetable": "double",
+                "Legume": "double",
+                "PolyunsaturatedFattyAcid": "double",
+                "SaturatedFat": "double",
+                "MonounsaturatedFat": "double",
+                "Fibre": "double",
+                "TotalSugar": "double",
+                "AddedSugar": "double",
                 "PhysicalActivity": "double",
                 "EnergyIntake": "double",
                 "Weight": "double",
@@ -30,10 +44,11 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.001,
-            "age_range": [0, 100]
+            "size_fraction": 0.000001,
+            "age_range": [0, 110]
         }
     },
+
     "modelling": {
         "ses_model": {
             "function_name": "normal",
@@ -48,65 +63,142 @@
             {
                 "name": "Age",
                 "level": 0,
-                "range": [0, 0]
+                "range": [0, 110]
             },
             {
                 "name": "Age2",
                 "level": 0,
-                "range": [0, 0]
+                "range": [0, 12100]
             },
             {
                 "name": "Age3",
                 "level": 0,
-                "range": [0, 0]
+                "range": [0, 1331000]
             },
             {
                 "name": "Region",
                 "level": 0,
-                "range": [1, 4],
-                "comment": "Region added for FINCH"
+                "range": [1, 4]
             },
             {
-                "name": "Sector",
+                "name": "Ethnicity",
                 "level": 0,
-                "range": [0, 0],
-                "comment": "Set to ZERO for FINCH"
+                "range": [1, 4]
             },
             {
                 "name": "Income",
                 "level": 0,
-                "range": [1, 4],
-                "comment": "Income made quartile"
+                "range": [23, 2375]
+            },
+            {
+                "name": "incomme_category",
+                "level": 0,
+                "range": [1, 4]
+            },
+            {
+                "name": "Carbohydrate",
+                "level": 1,
+                "range": [0.018864257, 1781.290527]
             },
             {
                 "name": "Sodium",
                 "level": 1,
-                "range": [1.127384, 8.656519]
+                "range": [0.000200005, 16.34803581]
             },
             {
                 "name": "Protein",
                 "level": 1,
-                "range": [43.50682, 238.4145]
+                "range": [0.008585715, 359.7049561]
             },
             {
                 "name": "Fat",
                 "level": 1,
-                "range": [45.04756, 382.664098658922]
+                "range": [0, 1232.129272]
             },
             {
-                "name": "PA",
-                "level": 2,
-                "range": [22.22314, 9765.512]
+                "name": "Alcohol",
+                "level": 1,
+                "range": [0, 306.9281311]
             },
             {
-                "name": "Energy",
+                "name": "ProcessedMeat",
+                "level": 1,
+                "range": [0, 932.5]
+            },
+            {
+                "name": "RedMeat",
+                "level": 1,
+                "range": [0, 476.6325559]
+            },
+            {
+                "name": "Fruit",
+                "level": 1,
+                "range": [0, 1720.489525]
+            },
+            {
+                "name": "Vegetable",
+                "level": 1,
+                "range": [0, 2046.825704]
+            },
+            {
+                "name": "Legume",
+                "level": 1,
+                "range": [0, 433.6983613]
+            },
+            {
+                "name": "PolyunsaturatedFattyAcid",
+                "level": 1,
+                "range": [0, 473.1528015]
+            },
+            {
+                "name": "SaturatedFat",
+                "level": 1,
+                "range": [0, 276.9013672]
+            },
+            {
+                "name": "MonounsaturatedFat",
+                "level": 1,
+                "range": [0, 483.5317688]
+            },
+            {
+                "name": "Fibre",
+                "level": 1,
+                "range": [0, 189.5542603]
+            },
+            {
+                "name": "TotalSugar",
+                "level": 1,
+                "range": [0.019693965, 819.5865479]
+            },
+            {
+                "name": "AddedSugar",
+                "level": 1,
+                "range": [0, 758.3163452]
+            },
+            {
+                "name": "PhysicalActivity",
                 "level": 2,
-                "range": [1326.14051277588, 7522.496]
+                "range": [1.4, 2.5]
+            },
+            {
+                "name": "EnergyIntake",
+                "level": 2,
+                "range": [0.3, 19072.7793]
+            },
+            {
+                "name": "Weight",
+                "level": 3,
+                "range": [1, 210]
+            },
+            {
+                "name": "Height",
+                "level": 3,
+                "range": [44, 203.2]
             },
             {
                 "name": "BMI",
                 "level": 3,
-                "range": [13.88, 39.48983]
+                "range": [14.26126, 45.84575]
             }
         ],
         "risk_factor_models": {
@@ -123,12 +215,13 @@
             }
         }
     },
+
     "running": {
         "seed": [123456789],
-        "start_time": 2010,
-        "stop_time": 2050,
+        "start_time": 2022,
+        "stop_time": 2035,
         "trial_runs": 1,
-        "sync_timeout_ms": 3000000,
+        "sync_timeout_ms": 15000,
         "diseases": [
             "alzheimer",
             "asthma",
@@ -136,178 +229,25 @@
             "diabetes",
             "lowbackpain",
             "osteoarthritisknee",
-            "anxiety",
-            "dermatitis",
-            "cataract",
-            "pulmonar",
-            "pancreatitis",
-            "cirrhosis",
+            "osteoarthritiship",
             "gallbladder",
-            "reflux",
-            "gout",
-            "depression",
-            "migraine",
-            "multiplesclerosis",
-            "parkinson",
-            "psoriasis",
-            "arthritis",
-            "visionimpairment",
-            "intracerebralhemorrhage",
+            "chronickidneydisease",
             "ischemicheartdisease",
-            "ischemicstroke",
-            "subarachnoidhemorrhage",
-            "breastcancer",
+            "stroke",
             "esophaguscancer",
-            "gallbladdercancer",
             "kidneycancer",
-            "livercancer",
-            "ovarycancer",
-            "pancreascancer",
-            "stomachcancer",
-            "thyroidcancer"
+            "breastcancer"
         ],
         "interventions": {
-            "active_type_id": "food_labelling",
+            "active_type_id": "simple",
             "types": {
                 "simple": {
                     "active_period": {
                         "start_time": 2022,
-                        "finish_time": 2022
+                        "finish_time": null
                     },
                     "impact_type": "absolute",
-                    "impacts": [
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -1.0,
-                            "from_age": 0,
-                            "to_age": null
-                        }
-                    ]
-                },
-                "marketing": {
-                    "active_period": {
-                        "start_time": 2022,
-                        "finish_time": 2050
-                    },
-                    "impacts": [
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.12,
-                            "from_age": 5,
-                            "to_age": 12
-                        },
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.31,
-                            "from_age": 13,
-                            "to_age": 18
-                        },
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.16,
-                            "from_age": 19,
-                            "to_age": null
-                        }
-                    ]
-                },
-                "dynamic_marketing": {
-                    "active_period": {
-                        "start_time": 2022,
-                        "finish_time": 2050
-                    },
-                    "dynamics": [0.15, 0.0, 0.0],
-                    "impacts": [
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.12,
-                            "from_age": 5,
-                            "to_age": 12
-                        },
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.31,
-                            "from_age": 13,
-                            "to_age": 18
-                        },
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.16,
-                            "from_age": 19,
-                            "to_age": null
-                        }
-                    ]
-                },
-                "food_labelling": {
-                    "active_period": {
-                        "start_time": 2022,
-                        "finish_time": 2050
-                    },
-                    "coefficients": [0.012, 0.013, 0.014, 0.016],
-                    "coverage_rates": [0.26, 0.7],
-                    "coverage_cutoff_time": 4,
-                    "child_cutoff_age": 18,
-                    "adjustments": [
-                        {
-                            "risk_factor": "Energy",
-                            "value": 0.55
-                        }
-                    ],
-                    "impacts": [
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.0103,
-                            "from_age": 1,
-                            "to_age": null
-                        }
-                    ]
-                },
-                "physical_activity": {
-                    "active_period": {
-                        "start_time": 2022,
-                        "finish_time": 2050
-                    },
-                    "coverage_rates": [0.9],
-                    "impacts": [
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.16,
-                            "from_age": 6,
-                            "to_age": 15
-                        },
-                        {
-                            "risk_factor": "BMI",
-                            "impact_value": -0.08,
-                            "from_age": 16,
-                            "to_age": null
-                        }
-                    ]
-                },
-                "fiscal": {
-                    "active_period": {
-                        "start_time": 2022,
-                        "finish_time": 2050
-                    },
-                    "impact_type": "optimist",
-                    "impacts": [
-                        {
-                            "risk_factor": "Energy",
-                            "impact_value": -0.01742,
-                            "from_age": 5,
-                            "to_age": 9
-                        },
-                        {
-                            "risk_factor": "Energy",
-                            "impact_value": -0.01812,
-                            "from_age": 10,
-                            "to_age": 17
-                        },
-                        {
-                            "risk_factor": "Energy",
-                            "impact_value": -0.00563,
-                            "from_age": 18,
-                            "to_age": null
-                        }
-                    ]
+                    "impacts": []
                 }
             }
         }
