@@ -2,8 +2,8 @@
     "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
     "version": 2,
     "data": {
-        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/dummy-data-v1/dummy-disease-data.zip",
-        "checksum": "186e45d273c51b6ed6b9febda749b245948248b3b3dec97b87967fac4a3aeb52"
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/disease_finch_data/disease_finch_data.zip",
+        "checksum": "dfee84e22f611c7ba55548d6985bb3556e21a005c3db6967667f6a260546c48d"
     },
     "inputs": {
         "dataset": {
@@ -44,7 +44,7 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.000001,
+            "size_fraction": 0.0001,
             "age_range": [0, 110]
         }
     },
@@ -91,7 +91,7 @@
                 "range": [23, 2375]
             },
             {
-                "name": "incomme_category",
+                "name": "income_category",
                 "level": 0,
                 "range": [1, 4]
             },
@@ -219,7 +219,7 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2035,
+        "stop_time": 2055,
         "trial_runs": 1,
         "sync_timeout_ms": 15000,
         "diseases": [
@@ -233,7 +233,6 @@
             "gallbladder",
             "chronickidneydisease",
             "ischemicheartdisease",
-            "stroke",
             "esophaguscancer",
             "kidneycancer",
             "breastcancer"
@@ -243,7 +242,7 @@
             "types": {
                 "simple": {
                     "active_period": {
-                        "start_time": 2022,
+                        "start_time": 2025,
                         "finish_time": null
                     },
                     "impact_type": "absolute",
