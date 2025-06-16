@@ -1,0 +1,11 @@
+,min,max
+Gender,0,1
+Age,0,110
+Age2,0,12100
+Age3,0,1331000
+Region,1,4
+Ethnicity,1,4
+EnergyIntake,0.3,19072.7793
+Weight,1,210
+Height,44,203.2
+BMI,14.26126,45.84575
