@@ -44,7 +44,7 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.001,
+            "size_fraction": 0.01,
             "age_range": [0, 110]
         }
     },
