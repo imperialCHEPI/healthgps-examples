@@ -36,6 +36,11 @@
                 "Fibre": "double",
                 "TotalSugar": "double",
                 "AddedSugar": "double",
+                "Calcium": "double",
+                "Iron": "double",
+                "VitaminC": "double",
+                "Copper": "double",
+                "Zinc": "double",
                 "PhysicalActivity": "double",
                 "EnergyIntake": "double",
                 "Weight": "double",
@@ -44,7 +49,7 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.01,
+            "size_fraction": 0.001,
             "age_range": [0, 110]
         }
     },
@@ -176,6 +181,31 @@
                 "range": [0, 758.3163452]
             },
             {
+                "name": "Calcium",
+                "level": 1,
+                "range": [0.737887883, 6684.71119]
+            },
+            {
+                "name": "Iron",
+                "level": 1,
+                "range": [0.005067779, 98.2867514]
+            },
+            {
+                "name": "VitaminC",
+                "level": 1,
+                "range": [0.007861946, 493.1192256]
+            },
+            {
+                "name": "Copper",
+                "level": 1,
+                "range": [0.0, 17.2348732]
+            },
+            {
+                "name": "Zinc",
+                "level": 1,
+                "range": [0.0, 42.68661953]
+            },
+            {
                 "name": "PhysicalActivity",
                 "level": 2,
                 "range": [1.4, 2.5]
@@ -219,7 +249,7 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2050,
+        "stop_time": 2030,
         "trial_runs": 1,
         "sync_timeout_ms": 15000,
         "diseases": [
@@ -234,9 +264,6 @@
             "chronickidneydisease",
             "ischemicheartdisease",
             "stroke",
-            "ischemicstroke",
-            "intracerebralhemorrhage",
-            "subarachnoidhemorrhage",
             "esophaguscancer",
             "kidneycancer",
             "breastcancer"

@@ -81,6 +81,31 @@
             "Name": "Fibre",
             "Range": [0.0, 189.5542603],
             "Energy": 0.0
+        },
+        {
+            "Name": "Calcium",
+            "Range": [0.737887883, 6684.71119],
+            "Energy": 0.0
+        },
+        {
+            "Name": "Iron",
+            "Range": [0.005067779, 98.2867514],
+            "Energy": 0.0
+        },
+        {
+            "Name": "VitaminC",
+            "Range": [0.007861946, 493.1192256],
+            "Energy": 0.0
+        },
+        {
+            "Name": "Copper",
+            "Range": [0.0, 17.2348732],
+            "Energy": 0.0
+        },
+        {
+            "Name": "Zinc",
+            "Range": [0.0, 42.68661953],
+            "Energy": 0.0
         }
     ],
     "Foods": [
@@ -221,6 +246,51 @@
         },
         {
             "Name": "FoodMonounsaturatedFat",
+            "Nutrients": {
+                "MonounsaturatedFat": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 1.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodIron",
+            "Nutrients": {
+                "MonounsaturatedFat": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 1.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodCalcium",
+            "Nutrients": {
+                "MonounsaturatedFat": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 1.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodZinc",
+            "Nutrients": {
+                "MonounsaturatedFat": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 1.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodVitaminC",
+            "Nutrients": {
+                "MonounsaturatedFat": 1.0
+            },
+            "Price": null,
+            "ExpectedTrend": 1.0,
+            "TrendSteps": 0
+        },
+        {
+            "Name": "FoodCopper",
             "Nutrients": {
                 "MonounsaturatedFat": 1.0
             },
