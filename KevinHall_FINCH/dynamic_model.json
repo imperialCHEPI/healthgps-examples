@@ -256,7 +256,7 @@
         {
             "Name": "FoodIron",
             "Nutrients": {
-                "MonounsaturatedFat": 1.0
+                "Iron": 1.0
             },
             "Price": null,
             "ExpectedTrend": 1.0,
@@ -265,7 +265,7 @@
         {
             "Name": "FoodCalcium",
             "Nutrients": {
-                "MonounsaturatedFat": 1.0
+                "Calcium": 1.0
             },
             "Price": null,
             "ExpectedTrend": 1.0,
@@ -274,7 +274,7 @@
         {
             "Name": "FoodZinc",
             "Nutrients": {
-                "MonounsaturatedFat": 1.0
+                "Zinc": 1.0
             },
             "Price": null,
             "ExpectedTrend": 1.0,
@@ -283,7 +283,7 @@
         {
             "Name": "FoodVitaminC",
             "Nutrients": {
-                "MonounsaturatedFat": 1.0
+                "VitaminC": 1.0
             },
             "Price": null,
             "ExpectedTrend": 1.0,
@@ -292,7 +292,7 @@
         {
             "Name": "FoodCopper",
             "Nutrients": {
-                "MonounsaturatedFat": 1.0
+                "Copper": 1.0
             },
             "Price": null,
             "ExpectedTrend": 1.0,

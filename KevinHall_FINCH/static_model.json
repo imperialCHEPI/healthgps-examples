@@ -1734,6 +1734,11 @@
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
                     "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0,
                     "EnergyIntake": 0.285551804967712
                 }
             },
@@ -1768,7 +1773,12 @@
                     "FoodAddedSugar": 0.0,
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
-                    "FoodMonounsaturatedFat": 0.0
+                    "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0
                 }
             },
             "ExpectedTrend": 1,
@@ -1825,6 +1835,11 @@
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
                     "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0,
                     "EnergyIntake": 0.285551804967712
                 }
             },
@@ -1859,7 +1874,12 @@
                     "FoodAddedSugar": 0.0,
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
-                    "FoodMonounsaturatedFat": 0.0
+                    "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0
                 }
             },
             "ExpectedTrend": 1,
@@ -1916,6 +1936,11 @@
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
                     "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0,
                     "EnergyIntake": 0.285551804967712
                 }
             },
@@ -1950,7 +1975,12 @@
                     "FoodAddedSugar": 0.0,
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
-                    "FoodMonounsaturatedFat": 0.0
+                    "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0
                 }
             },
             "ExpectedTrend": 1,
@@ -2007,6 +2037,11 @@
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
                     "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0,
                     "EnergyIntake": 0.285551804967712
                 }
             },
@@ -2041,7 +2076,12 @@
                     "FoodAddedSugar": 0.0,
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
-                    "FoodMonounsaturatedFat": 0.0
+                    "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0
                 }
             },
             "ExpectedTrend": 1,
@@ -2098,6 +2138,11 @@
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
                     "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0,
                     "EnergyIntake": -0.117527309
                 }
             },
@@ -2132,7 +2177,12 @@
                     "FoodAddedSugar": 0.0,
                     "FoodSaturatedFat": 0.0,
                     "FoodPolyunsaturatedFattyAcid": 0.0,
-                    "FoodMonounsaturatedFat": 0.0
+                    "FoodMonounsaturatedFat": 0.0,
+                    "FoodCalcium": 0.0,
+                    "FoodIron": 0.0,
+                    "FoodVitaminC": 0.0,
+                    "FoodCopper": 0.0,
+                    "FoodZinc": 0.0
                 }
             },
             "ExpectedTrend": 1,
