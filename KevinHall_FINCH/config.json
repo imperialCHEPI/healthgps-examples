@@ -2,8 +2,8 @@
     "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
     "version": 2,
     "data": {
-        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/data-finch/data.zip",
-        "checksum": "8f007cc677a4edc4dca01ed7bdc80d377e998928e29f0b2b053b089519442855"
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/finch-v3/data.zip",
+        "checksum": "ed93ed909e35331e45c3543d229d7ce721bba4899e7ccf592f5809fbb85ef155"
     },
     "inputs": {
         "dataset": {
@@ -265,6 +265,7 @@
             "ischemicheartdisease",
             "stroke",
             "esophaguscancer",
+            "trachealbronchuslungcancer",
             "kidneycancer",
             "breastcancer"
         ],
