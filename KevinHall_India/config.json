@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/india/final/schemas/v1/config.json",
     "version": 2,
     "data": {
         "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/20240624/data_20240624.zip",
@@ -205,3 +205,5 @@
         "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
     }
 }
+
+

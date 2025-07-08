@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config/models/staticlinear.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/india/final/schemas/v1/config/models/staticlinear.json",
     "ModelName": "StaticLinear",
     "InformationSpeed": 0.1,
     "PhysicalActivityStdDev": 0.06,
@@ -41,7 +41,7 @@
         "FoodCarbohydrate": {
             "Lambda": 0.303030303030303,
             "StdDev": 0.323546436042623,
-            "Range": [22.09977, 1797.988],
+            "Range": [ 22.09977, 1797.988 ],
             "Intercept": -0.163564941825921,
             "Coefficients": {
                 "Gender": 0.001909201186864,
@@ -52,7 +52,7 @@
                 "Income": 0.0516596927242407
             },
             "Policy": {
-                "Range": [-5.069, 0.049],
+                "Range": [ -5.069, 0.049 ],
                 "Intercept": -0.752558038845618,
                 "Coefficients": {
                     "Gender": 0.0160659831875423,
@@ -71,7 +71,7 @@
         "FoodFat": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.464325512741348,
-            "Range": [1.093948, 561.4858],
+            "Range": [ 1.093948, 561.4858 ],
             "Intercept": -0.554488757309044,
             "Coefficients": {
                 "Gender": 0.00102119865887904,
@@ -82,7 +82,7 @@
                 "Income": 0.302938242093029
             },
             "Policy": {
-                "Range": [-7.085, -0.001],
+                "Range": [ -7.085, -0.001 ],
                 "Intercept": 0.493520587517932,
                 "Coefficients": {
                     "Gender": 0.0217062319638245,
@@ -101,7 +101,7 @@
         "FoodProtein": {
             "Lambda": 0.141414141414141,
             "StdDev": 0.316612639385793,
-            "Range": [3.649882, 309.119],
+            "Range": [ 3.649882, 309.119 ],
             "Intercept": -0.253982902057632,
             "Coefficients": {
                 "Gender": 0.00230009880181239,
@@ -112,7 +112,7 @@
                 "Income": 0.113898881231242
             },
             "Policy": {
-                "Range": [-6.342, 0.037],
+                "Range": [ -6.342, 0.037 ],
                 "Intercept": 0.538021424253574,
                 "Coefficients": {
                     "Gender": 0.0268611020353026,
@@ -131,7 +131,7 @@
         "FoodSodium": {
             "Lambda": 0.181818181818182,
             "StdDev": 0.42022134002726,
-            "Range": [9.986686, 45379.46],
+            "Range": [ 9.986686, 45379.46 ],
             "Intercept": -0.186646397184792,
             "Coefficients": {
                 "Gender": 0.00324988697857038,
@@ -142,7 +142,7 @@
                 "Income": 0.0661571251934935
             },
             "Policy": {
-                "Range": [-7.368, 0.0],
+                "Range": [ -7.368, 0.0 ],
                 "Intercept": -1.63110170608154,
                 "Coefficients": {
                     "Gender": 0.0153150058690346,
@@ -184,3 +184,5 @@
         }
     }
 }
+
+

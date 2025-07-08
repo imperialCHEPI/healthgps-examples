@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v2/config/models/kevinhall.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/finch/final/schemas/v2/config/models/kevinhall.json",
     "ModelName": "KevinHall",
     "Nutrients": [
         {
@@ -337,3 +337,7 @@
         "Male": 0.268517056586274
     }
 }
+
+
+
+
