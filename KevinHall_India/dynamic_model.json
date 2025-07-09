@@ -1,25 +1,25 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/india/final/schemas/v1/config/models/kevinhall.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config/models/kevinhall.json",
     "ModelName": "KevinHall",
     "Nutrients": [
         {
             "Name": "Carbohydrate",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 4.0
         },
         {
             "Name": "Fat",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 9.0
         },
         {
             "Name": "Protein",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 4.0
         },
         {
             "Name": "Sodium",
-            "Range": [0.0, 50.0],
+            "Range": [ 0.0, 50.0 ],
             "Energy": 0.0
         }
     ],

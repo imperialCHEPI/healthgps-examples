@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/india/final/schemas/v1/config/models/staticlinear.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config/models/staticlinear.json",
     "ModelName": "StaticLinear",
     "InformationSpeed": 0.1,
     "PhysicalActivityStdDev": 0.06,
