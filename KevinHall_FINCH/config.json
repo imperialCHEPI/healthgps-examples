@@ -1,5 +1,5 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/finch/final/schemas/v1/config.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
     "version": 2,
     "data": {
         "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/finch-v4/data.zip",
