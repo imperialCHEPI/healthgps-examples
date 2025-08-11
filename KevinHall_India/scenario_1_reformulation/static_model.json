@@ -1,18 +1,18 @@
 {
-    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/india/final/schemas/v1/config/models/staticlinear.json",
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config/models/staticlinear.json",
     "ModelName": "StaticLinear",
     "InformationSpeed": 0.1,
     "PhysicalActivityStdDev": 0.06,
     "RuralPrevalence": [
         {
             "Name": "Under18",
-            "Female": 0.626739964429027,
-            "Male": 0.624047373841401
+            "Female": 0.672228919040143,
+            "Male": 0.667299104261855
         },
         {
             "Name": "Over18",
-            "Female": 0.587936516771846,
-            "Male": 0.583313018464474
+            "Female": 0.606400629412174,
+            "Male": 0.606301925187672
         }
     ],
     "IncomeModels": {
@@ -21,50 +21,50 @@
             "Coefficients": {}
         },
         "Middle": {
-            "Intercept": -0.0683240814272077,
+            "Intercept": 0.327170777008506,
             "Coefficients": {
-                "Gender": 0.032217497176628,
-                "Over18": 0.298055376100666,
-                "Sector": -0.383372795038086
+                "Gender": 0.0285512663816259,
+                "Over18": 0.264154809434942,
+                "Sector": -0.986648669162981
             }
         },
         "High": {
-            "Intercept": -0.0427919974409829,
+            "Intercept": 0.30075468267761,
             "Coefficients": {
-                "Gender": 0.0447125663820498,
-                "Over18": 0.619113033863595,
-                "Sector": -1.39658672904111
+                "Gender": 0.0333993528569252,
+                "Over18": 0.573910674008975,
+                "Sector": -2.07028076838905
             }
         }
     },
     "RiskFactorModels": {
         "FoodCarbohydrate": {
-            "Lambda": 0.303030303030303,
-            "StdDev": 0.323546436042623,
-            "Range": [22.09977, 1797.988],
-            "Intercept": -0.163564941825921,
+            "Lambda": 0.060606060606061,
+            "StdDev": 0.249816052254951,
+            "Range": [18.98039, 1314.469065984],
+            "Intercept": -0.231053893004596,
             "Coefficients": {
-                "Gender": 0.001909201186864,
-                "Age": -0.000212546757902497,
-                "Age2": 1.87236401928853e-7,
-                "Age3": -1.13592924060027e-8,
-                "Sector": 0.0583895658455863,
-                "Income": 0.0516596927242407
+                "Gender": 0.00143163408211703,
+                "Age": -0.000195996731579503,
+                "Age2": -0.0000041744597530218,
+                "Age3": 0.0000000296051505809439,
+                "Sector": 0.0955608042565559,
+                "Income": 0.0809885669494078
             },
             "Policy": {
-                "Range": [-41.444, 0.077],
-                "Intercept": -0.73379149617237,
+                "Range": [-3.639, 0.225],
+                "Intercept": -0.432318605429319,
                 "Coefficients": {
-                    "Gender": 0.0069842699762764,
-                    "Age": 0.00102198575109184,
-                    "Sector": 0.198772528168519,
-                    "Income": -0.120467822768572
+                    "Gender": 0.00955253506696203,
+                    "Age": 0.0011678124202187,
+                    "Sector": 0.112933357483385,
+                    "Income": -0.145018074830513
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.454546269937962,
-                    "FoodFat": -0.166130701321434,
-                    "FoodProtein": -0.26400506143186,
-                    "FoodSodium": -0.0704755229389615
+                    "FoodCarbohydrate": 0.324686129830993,
+                    "FoodFat": -0.362245496540018,
+                    "FoodProtein": 0.0184267362169992,
+                    "FoodSodium": -0.0432753871686967
                 }
             },
             "Trend": {
@@ -87,59 +87,59 @@
                 }
             },
             "IncomeTrend": {
-                "Intercept": 1.0,
-                "Range": [1, 1],
-                "Lambda": 0,
+                "Intercept": 0.0134840332225973,
+                "Range": [1.011593, 1.035943],
+                "Lambda": 2,
                 "Coefficients": {
-                    "Gender": 0.0,
-                    "Age": 0.0,
-                    "Age2": 0.0,
-                    "Age3": 0.0,
-                    "Income": 0.0,
-                    "Sector": 0.0
+                    "Gender": -0.000116625867382393,
+                    "Age": -0.0000706312259267845,
+                    "Age2": 1.36577565433736e-6,
+                    "Age3": -8.83620010017189e-9,
+                    "Income": -0.00509251740896248,
+                    "Sector": -0.0000279087804260677
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.0,
-                    "FoodFat": 0.0,
-                    "FoodProtein": 0.0,
-                    "FoodSodium": 0.0
+                    "FoodCarbohydrate": -0.00412221166725609,
+                    "FoodFat": 0.0028892171048067,
+                    "FoodProtein": 0.00185351596036866,
+                    "FoodSodium": 0.000182557392874031
                 }
             },
             "ExpectedTrend": 1,
             "ExpectedTrendBoxCox": 1,
             "TrendSteps": 0,
-            "ExpectedIncomeTrend": 0,
-            "ExpectedIncomeTrendBoxCox": 0,
-            "IncomeTrendSteps": 20,
-            "IncomeDecayFactor": 0
+            "ExpectedIncomeTrend": 1.022688803,
+            "ExpectedIncomeTrendBoxCox": 1.023005742,
+            "IncomeTrendSteps": 100,
+            "IncomeDecayFactor": -0.0003735
         },
         "FoodFat": {
-            "Lambda": 0.141414141414141,
-            "StdDev": 0.464325512741348,
-            "Range": [1.093948, 561.4858],
-            "Intercept": -0.554488757309044,
+            "Lambda": 0.060606060606061,
+            "StdDev": 0.342037905929935,
+            "Range": [1.354973, 529.6070132192],
+            "Intercept": -0.482544887697517,
             "Coefficients": {
-                "Gender": 0.00102119865887904,
-                "Age": -0.00462679326537629,
-                "Age2": 5.47946635530975e-5,
-                "Age3": -2.39659075915002e-7,
-                "Sector": -0.0863212060348545,
-                "Income": 0.302938242093029
+                "Gender": 0.00101637701165451,
+                "Age": -0.0025714385011071,
+                "Age2": 0.0000134329196726932,
+                "Age3": 0.0000000242280562349668,
+                "Sector": -0.00311709150209071,
+                "Income": 0.255484551269212
             },
             "Policy": {
-                "Range": [-29.335, 0.108],
-                "Intercept": 1.98540736963768,
+                "Range": [-4.649, 0.22],
+                "Intercept": 1.29575315588546,
                 "Coefficients": {
-                    "Gender": 0.0180630328867841,
-                    "Age": 0.00207457239510798,
-                    "Sector": 0.164784294788991,
-                    "Income": -0.359395947099641
+                    "Gender": 0.0195454921922083,
+                    "Age": 0.00230388363749891,
+                    "Sector": 0.070317585195257,
+                    "Income": -0.116407551625437
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": -0.80027215301403,
-                    "FoodFat": 0.612226897561697,
-                    "FoodProtein": 0.293184026318119,
-                    "FoodSodium": -0.181613164129842
+                    "FoodCarbohydrate": -0.871035855878274,
+                    "FoodFat": 0.103885000739328,
+                    "FoodProtein": 0.781249681682945,
+                    "FoodSodium": -0.0870963214188062
                 }
             },
             "Trend": {
@@ -162,59 +162,59 @@
                 }
             },
             "IncomeTrend": {
-                "Intercept": 1.0,
-                "Range": [1, 1],
-                "Lambda": 0,
+                "Intercept": 0.0258653176084794,
+                "Range": [1.018818, 1.05046],
+                "Lambda": -2,
                 "Coefficients": {
-                    "Gender": 0.0,
-                    "Age": 0.0,
-                    "Age2": 0.0,
-                    "Age3": 0.0,
-                    "Income": 0.0,
-                    "Sector": 0.0
+                    "Gender": -0.000106511077697942,
+                    "Age": -0.0000611935248073222,
+                    "Age2": 0.00000107953857308468,
+                    "Age3": -0.00000000723115300108868,
+                    "Income": -0.0066333002883873,
+                    "Sector": 0.0000566279543638843
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.0,
-                    "FoodFat": 0.0,
-                    "FoodProtein": 0.0,
-                    "FoodSodium": 0.0
+                    "FoodCarbohydrate": -0.00665964365413016,
+                    "FoodFat": -0.00260042439948341,
+                    "FoodProtein": 0.010456389621078,
+                    "FoodSodium": -0.000671053069012952
                 }
             },
             "ExpectedTrend": 1,
             "ExpectedTrendBoxCox": 1,
             "TrendSteps": 0,
-            "ExpectedIncomeTrend": 0,
-            "ExpectedIncomeTrendBoxCox": 0,
-            "IncomeTrendSteps": 20,
-            "IncomeDecayFactor": 0
+            "ExpectedIncomeTrend": 1.030771604,
+            "ExpectedIncomeTrendBoxCox": 1.032216474,
+            "IncomeTrendSteps": 100,
+            "IncomeDecayFactor": -0.0007958
         },
         "FoodProtein": {
-            "Lambda": 0.141414141414141,
-            "StdDev": 0.316612639385793,
-            "Range": [3.649882, 309.119],
-            "Intercept": -0.253982902057632,
+            "Lambda": -0.0202020202020201,
+            "StdDev": 0.238664492187395,
+            "Range": [4.091681, 445.473773784],
+            "Intercept": -0.318651628741866,
             "Coefficients": {
-                "Gender": 0.00230009880181239,
-                "Age": -0.000940138272923037,
-                "Age2": 6.05566801607947e-6,
-                "Age3": -2.30866807307216e-8,
-                "Sector": 0.0228382301683487,
-                "Income": 0.113898881231242
+                "Gender": 0.00100379670066849,
+                "Age": -0.000880101922016469,
+                "Age2": -0.00000113001797991251,
+                "Age3": 0.0000000484012005521709,
+                "Sector": 0.0711908810523287,
+                "Income": 0.143685867265526
             },
             "Policy": {
-                "Range": [-45.342, 0.103],
-                "Intercept": 0.197725550455694,
+                "Range": [-3.916, 0.251],
+                "Intercept": -0.320857656183788,
                 "Coefficients": {
-                    "Gender": 0.0201463123147501,
-                    "Age": 0.00135490340906676,
-                    "Sector": 0.219938240347033,
-                    "Income": -0.164195177178375
+                    "Gender": 0.0153597692365838,
+                    "Age": 0.000663412406522287,
+                    "Sector": 0.0928333532012826,
+                    "Income": -0.0752996125935173
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.0993069683657911,
-                    "FoodFat": -0.163967828028588,
-                    "FoodProtein": 0.152781232371621,
-                    "FoodSodium": -0.16204285285063
+                    "FoodCarbohydrate": 0.395894223963408,
+                    "FoodFat": -0.189436851948115,
+                    "FoodProtein": -0.239945701865734,
+                    "FoodSodium": -0.0866281807876853
                 }
             },
             "Trend": {
@@ -237,59 +237,59 @@
                 }
             },
             "IncomeTrend": {
-                "Intercept": 1.0,
-                "Range": [1, 1],
-                "Lambda": 0,
+                "Intercept": 0.0287708900052767,
+                "Range": [1.014923, 1.04215],
+                "Lambda": 2,
                 "Coefficients": {
-                    "Gender": 0.0,
-                    "Age": 0.0,
-                    "Age2": 0.0,
-                    "Age3": 0.0,
-                    "Income": 0.0,
-                    "Sector": 0.0
+                    "Gender": -0.0000731223575162672,
+                    "Age": -0.0000418298077804212,
+                    "Age2": 0.000000812341967111986,
+                    "Age3": -0.00000000577710972550349,
+                    "Income": -0.00650223166847188,
+                    "Sector": 0.0000977202271074587
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.0,
-                    "FoodFat": 0.0,
-                    "FoodProtein": 0.0,
-                    "FoodSodium": 0.0
+                    "FoodCarbohydrate": -0.011142599121658,
+                    "FoodFat": 0.00221276838587561,
+                    "FoodProtein": 0.00876966340881197,
+                    "FoodSodium": 0.000484376017812251
                 }
             },
             "ExpectedTrend": 1,
             "ExpectedTrendBoxCox": 1,
             "TrendSteps": 0,
-            "ExpectedIncomeTrend": 0,
-            "ExpectedIncomeTrendBoxCox": 0,
-            "IncomeTrendSteps": 20,
-            "IncomeDecayFactor": 0
+            "ExpectedIncomeTrend": 1.027170796,
+            "ExpectedIncomeTrendBoxCox": 1.027701151,
+            "IncomeTrendSteps": 100,
+            "IncomeDecayFactor": -0.0003768
         },
         "FoodSodium": {
-            "Lambda": 0.181818181818182,
-            "StdDev": 0.42022134002726,
-            "Range": [9.986686, 45379.46],
-            "Intercept": -0.186646397184792,
+            "Lambda": 0.101010101010101,
+            "StdDev": 0.393288575807023,
+            "Range": [5.515374, 61238.5989752],
+            "Intercept": -0.2708919696535,
             "Coefficients": {
-                "Gender": 0.00324988697857038,
-                "Age": -0.000823686051671132,
-                "Age2": 1.08381456533309e-5,
-                "Age3": -8.59404983799456e-8,
-                "Sector": 0.00601589219498129,
-                "Income": 0.0661571251934935
+                "Gender": 0.00232816246053466,
+                "Age": -0.000542268956360428,
+                "Age2": -0.00000472154964087503,
+                "Age3": 0.0000000446395736022199,
+                "Sector": 0.0399955897070697,
+                "Income": 0.104689483555819
             },
             "Policy": {
-                "Range": [-47.31, 0.113],
-                "Intercept": -2.81273894909209,
+                "Range": [-5.38, 0.22],
+                "Intercept": -1.96685080327687,
                 "Coefficients": {
-                    "Gender": 0.00301235361134313,
-                    "Age": 0.000600406770610924,
-                    "Sector": 0.218127606244537,
-                    "Income": -0.158494510466509
+                    "Gender": 0.00940487376550076,
+                    "Age": 0.00171771618376788,
+                    "Sector": 0.119587440483499,
+                    "Income": -0.129038954303992
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": -0.531026925370266,
-                    "FoodFat": -0.236949131165221,
-                    "FoodProtein": -0.0680307353139894,
-                    "FoodSodium": 0.830164224452222
+                    "FoodCarbohydrate": -0.428648550548628,
+                    "FoodFat": -0.302803386359069,
+                    "FoodProtein": 0.12638730737383,
+                    "FoodSodium": 0.561300490151989
                 }
             },
             "Trend": {
@@ -312,31 +312,31 @@
                 }
             },
             "IncomeTrend": {
-                "Intercept": 1.0,
-                "Range": [1, 1],
-                "Lambda": 0,
+                "Intercept": 0.0191973284030236,
+                "Range": [1.015122, 1.040828],
+                "Lambda": 0.545454545454546,
                 "Coefficients": {
-                    "Gender": 0.0,
-                    "Age": 0.0,
-                    "Age2": 0.0,
-                    "Age3": 0.0,
-                    "Income": 0.0,
-                    "Sector": 0.0
+                    "Gender": -0.0000857668204136925,
+                    "Age": -0.0000364382349548236,
+                    "Age2": 0.000000624008288912682,
+                    "Age3": -0.0000000043187221467578,
+                    "Income": -0.0047711804088293,
+                    "Sector": -0.0000914558364070475
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.0,
-                    "FoodFat": 0.0,
-                    "FoodProtein": 0.0,
-                    "FoodSodium": 0.0
+                    "FoodCarbohydrate": 0.00170859597847611,
+                    "FoodFat": 0.00163874760605853,
+                    "FoodProtein": 0.000895889584406027,
+                    "FoodSodium": -0.0037353246709987
                 }
             },
             "ExpectedTrend": 1,
             "ExpectedTrendBoxCox": 1,
             "TrendSteps": 0,
-            "ExpectedIncomeTrend": 0,
-            "ExpectedIncomeTrendBoxCox": 0,
-            "IncomeTrendSteps": 20,
-            "IncomeDecayFactor": 0
+            "ExpectedIncomeTrend": 1.024260745,
+            "ExpectedIncomeTrendBoxCox": 1.025060187,
+            "IncomeTrendSteps": 100,
+            "IncomeDecayFactor": -0.0004687
         }
     },
     "RiskFactorCorrelationFile": {
@@ -352,7 +352,7 @@
         }
     },
     "PolicyCovarianceFile": {
-        "name": "residual_policy_covariance.csv",
+        "name": "scenario_1/residual_policy_covariance.csv",
         "format": "csv",
         "delimiter": ",",
         "encoding": "ASCII",

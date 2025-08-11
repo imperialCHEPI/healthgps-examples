@@ -64,42 +64,42 @@
             {
                 "name": "FoodCarbohydrate",
                 "level": 1,
-                "range": [120.155, 774.2651]
+                "range": [18.98039, 1314.469065984]
             },
             {
                 "name": "FoodFat",
                 "level": 1,
-                "range": [14.65918, 204.6782]
+                "range": [1.354973, 529.6070132192]
             },
             {
                 "name": "FoodProtein",
                 "level": 1,
-                "range": [20.3546, 126.8509]
+                "range": [4.091681, 445.473773784]
             },
             {
                 "name": "FoodSodium",
                 "level": 1,
-                "range": [984.7666, 8844.316]
+                "range": [5.515374, 61238.5989752]
             },
             {
                 "name": "Carbohydrate",
                 "level": 1,
-                "range": [120.155, 774.2651]
+                "range": [18.98039, 1314.469065984]
             },
             {
                 "name": "Fat",
                 "level": 1,
-                "range": [14.65918, 204.6782]
+                "range": [1.354973, 529.6070132192]
             },
             {
                 "name": "Protein",
                 "level": 1,
-                "range": [20.3546, 126.8509]
+                "range": [4.091681, 445.473773784]
             },
             {
                 "name": "Sodium",
                 "level": 1,
-                "range": [984.7666, 8844.316]
+                "range": [5.515374, 61238.5989752]
             },
             {
                 "name": "PhysicalActivity",
@@ -109,7 +109,7 @@
             {
                 "name": "EnergyIntake",
                 "level": 2,
-                "range": [803.2424, 4885.412]
+                "range": [148.44214, 6783.8416544739]
             },
             {
                 "name": "Weight",
@@ -153,38 +153,8 @@
             "intracerebralhemorrhage",
             "ischemicstroke",
             "asthma",
-            "stomachcancer",
             "subarachnoidhemorrhage",
-            "chronickidneydisease",
-            "pancreatitis",
-            "parkinson",
-            "reflux",
-            "alzheimer",
-            "anxiety",
-            "arthritis",
-            "breastcancer",
-            "colorectalcancer",
-            "depression",
-            "dermatitis",
-            "esophaguscancer",
-            "gallbladder",
-            "gallbladdercancer",
-            "gout",
-            "kidneycancer",
-            "livercancer",
-            "lowbackpain",
-            "migraine",
-            "multiplesclerosis",
-            "osteoarthritiship",
-            "osteoarthritisknee",
-            "ovarycancer",
-            "pancreascancer",
-            "thyroidcancer",
-            "psoriasis",
-            "pulmonar",
-            "visionimpairment",
-            "cataract",
-            "cirrhosis"
+            "chronickidneydisease"
         ],
         "interventions": {
             "active_type_id": "simple",
