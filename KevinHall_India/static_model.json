@@ -352,7 +352,7 @@
         }
     },
     "PolicyCovarianceFile": {
-        "name": "scenario_1/residual_policy_covariance.csv",
+        "name": "residual_policy_covariance.csv",
         "format": "csv",
         "delimiter": ",",
         "encoding": "ASCII",
