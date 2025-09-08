@@ -4,8 +4,8 @@
 ## Date: 23 June 2025
 
 ### Working directory ###
-setwd("C:/Users/jzhu5/OneDrive - Imperial College London/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ")
-#setwd("C:/Users/dlaydon/OneDrive - Imperial College London/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ")
+#setwd("C:/Users/jzhu5/OneDrive - Imperial College London/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ")
+setwd("C:/Users/dlaydon/OneDrive - Imperial College London/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ")
 #setwd("/Users/jasmine/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ")
 
 #######################################################################################################################
@@ -1375,34 +1375,49 @@ ConvertToHGPSname = function(OldName)
 	else if (OldName ==  "legume"		) HGPSName = "Legume"
 	else if (OldName ==  "red_meat"		) HGPSName = "RedMeat"
 	else if (OldName ==  "proc_meat"	) HGPSName = "ProcessedMeat"
-	else if (OldName ==  "calcium"	) HGPSName = "Calcium"
-	else if (OldName ==  "iron"	) HGPSName = "Iron"
-	else if (OldName ==  "vitaminc"	) HGPSName = "VitaminC"
-	else if (OldName ==  "copper"	) HGPSName = "Copper"
-	else if (OldName ==  "zinc"	) HGPSName = "Zinc"
+	else if (OldName ==  "calcium"		) HGPSName = "Calcium"
+	else if (OldName ==  "iron"			) HGPSName = "Iron"
+	else if (OldName ==  "vitaminc"		) HGPSName = "VitaminC"
+	else if (OldName ==  "copper"		) HGPSName = "Copper"
+	else if (OldName ==  "zinc"			) HGPSName = "Zinc"
 	return(HGPSName)
 }
 
+ConvertBackToOldName = function(HGPSName)
+{
+	OldName = HGPSName ## default to old name.
+		 if (HGPSName ==  "Carbohydrate"              ) OldName = "carb"			
+	else if (HGPSName ==  "Fat"                       ) OldName = "fat"			
+	else if (HGPSName ==  "Protein"                   ) OldName = "protein"		
+	else if (HGPSName ==  "Alcohol"                   ) OldName = "alcohol"		
+	else if (HGPSName ==  "Sodium"                    ) OldName = "sodium"		
+	else if (HGPSName ==  "Fibre"                     ) OldName = "fibre"		
+	else if (HGPSName ==  "MonounsaturatedFat"        ) OldName = "monounsats"	
+	else if (HGPSName ==  "PolyunsaturatedFattyAcid"  ) OldName = "polyunsats"	
+	else if (HGPSName ==  "SaturatedFat"              ) OldName = "saturates"	
+	else if (HGPSName ==  "TotalSugar"                ) OldName = "totalsugar"	
+	else if (HGPSName ==  "AddedSugar"                ) OldName = "addedsugar"	
+	else if (HGPSName ==  "Fruit"                     ) OldName = "fruit"		
+	else if (HGPSName ==  "Vegetable"                 ) OldName = "vegetable"	
+	else if (HGPSName ==  "Legume"                    ) OldName = "legume"		
+	else if (HGPSName ==  "RedMeat"                   ) OldName = "red_meat"		
+	else if (HGPSName ==  "ProcessedMeat"             ) OldName = "proc_meat"	
+	else if (HGPSName ==  "Calcium"                   ) OldName = "calcium"		
+	else if (HGPSName ==  "Iron"                      ) OldName = "iron"			
+	else if (HGPSName ==  "VitaminC"                  ) OldName = "vitaminc"		
+	else if (HGPSName ==  "Copper"                    ) OldName = "copper"		
+	else if (HGPSName ==  "Zinc"                      ) OldName = "zinc"			
+	return(OldName)
+	
+}
+
+
 #setwd("C:/Users/jzhu5/OneDrive - Imperial College London/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ/Outputs")
-setwd(file.path(getwd(), "Outputs"))
+#setwd(file.path(getwd(), "Outputs"))
+setwd(file.path("C:", "healthgps-examples", "KevinHall_FINCH"))
+
 
 # Save the coefficients from regression models for transformed variables ('carb', 'fat', 'protein', 'sodium') using Box-Cox transformation
-#write.csv(reg_carb$coefficients, "boxcox_carb_coefficients.csv")
-#write.csv(reg_fat$coefficients, "boxcox_fat_coefficients.csv")
-#write.csv(reg_protein$coefficients, "boxcox_protein_coefficients.csv")
-#write.csv(reg_sodium$coefficients, "boxcox_sodium_coefficients.csv")
-#write.csv(reg_fibre$coefficients, "boxcox_fibre_coefficients.csv")
-#write.csv(reg_monounsats$coefficients, "boxcox_monounsats_coefficients.csv")
-#write.csv(reg_polyunsats$coefficients, "boxcox_polyunsats_coefficients.csv")
-#write.csv(reg_saturates$coefficients, "boxcox_saturates_coefficients.csv")
-#write.csv(reg_totalsugar$coefficients, "boxcox_totalsugar_coefficients.csv")
-#write.csv(reg_alcohol$coefficients, "boxcox_alcohol_coefficients.csv")
-#write.csv(reg_addedsugar$coefficients, "boxcox_addedsugar_coefficients.csv")
-#write.csv(reg_fruit$coefficients, "boxcox_fruit_coefficients.csv")
-#write.csv(reg_vegetable$coefficients, "boxcox_vegetable_coefficients.csv")
-#write.csv(reg_legume$coefficients, "boxcox_legume_coefficients.csv")
-#write.csv(reg_red_meat$coefficients, "boxcox_red_meat_coefficients.csv")
-#write.csv(reg_proc_meat$coefficients, "boxcox_proc_meat_coefficients.csv")
 
 BoxCoxCoeffs_Combined = data.frame(
 		
@@ -1428,58 +1443,25 @@ BoxCoxCoeffs_Combined = data.frame(
 		FoodCopper 						= c(reg_copper$coefficients			,  stddev = sd_copper		,	lambda = lambda_copper		)	, 
 		FoodZinc 						= c(reg_zinc$coefficients			,  stddev = sd_zinc			,   lambda = lambda_zinc		)	)  
 
-#
-#BoxCoxCoeffs_Combined = data.frame(
-#		
-#		FoodCarbohydrate				= reg_carb$coefficients			,     
-#		FoodFat	 						= reg_fat$coefficients			,      
-#		FoodProtein	 					= reg_protein$coefficients		,   
-#		FoodSodium	 					= reg_sodium$coefficients		,    
-#		FoodAlcohol	 					= reg_alcohol$coefficients		,   
-#		FoodFibre	 					= reg_fibre$coefficients		,     
-#		FoodMonounsaturatedFat	 		= reg_monounsats$coefficients	, 
-#		FoodPolyunsaturatedFattyAcid	= reg_polyunsats$coefficients	, 
-#		FoodSaturatedFat	 			= reg_saturates$coefficients	,  
-#		FoodTotalSugar	 				= reg_totalsugar$coefficients	, 
-#		FoodAddedSugar	 				= reg_addedsugar$coefficients	, 
-#		FoodFruit	 					= reg_fruit$coefficients		,     
-#		FoodVegetable	 				= reg_vegetable$coefficients	,  
-#		FoodLegume	 					= reg_legume$coefficients		,    
-#		FoodRedMeat	 					= reg_red_meat$coefficients		,  
-#		FoodProcessedMeat				= reg_proc_meat$coefficients,
-#		FoodCalcium 					= reg_calcium$coefficients,
-#		FoodIron 						= reg_iron$coefficients,
-#		FoodVitaminC 					= reg_vitaminc$coefficients,
-#		FoodCopper 						= reg_copper$coefficients,
-#		FoodZinc 						= reg_zinc$coefficients
-#)  
-#
-#
-#
-### combine lambda and sd with coefficients
-#lambda = c(lambda_carb,lambda_fat,lambda_protein,lambda_alcohol,lambda_sodium, lambda_fibre, 
-#		lambda_monounsats, lambda_polyunsats, lambda_saturates, lambda_totalsugar, 
-#		lambda_addedsugar, lambda_fruit, lambda_vegetable,lambda_legume,
-#		lambda_red_meat,lambda_proc_meat, lambda_calcium, lambda_iron,
-#		lambda_vitaminc, lambda_copper, lambda_zinc)
-#sd = c(sd_carb,sd_fat,sd_protein,sd_alcohol,sd_sodium, sd_fibre, sd_monounsats, sd_polyunsats,
-#		sd_saturates, sd_totalsugar,sd_addedsugar,sd_fruit,sd_vegetable,sd_legume,
-#		sd_red_meat,sd_proc_meat, sd_calcium, sd_iron, sd_vitaminc, sd_copper, sd_zinc)
-#
-#boxcoxparameters = data.frame(lambda,sd)
-#rownames(boxcoxparameters) = c("carb","fat","protein","alcohol","sodium", "fibre","monounsats",
-#		"polyunsats","saturates","totalsugar","addedsugar","fruit",
-#		"vegetable","legume","red_meat","proc_meat", "calcium",
-#		"iron","vitaminc","copper","zinc")
+# Get ranges in data of each nutrient, ensuring names match. 
+NamesWithoutFoodPrefix 				= gsub("Food", "", colnames(BoxCoxCoeffs_Combined))
+OldNamesWithoutFoodPrefix 			= sapply(NamesWithoutFoodPrefix, ConvertBackToOldName)
+names(OldNamesWithoutFoodPrefix) 	= NULL
+ranges_nutrients 					= sapply(df[, OldNamesWithoutFoodPrefix], range)  
+# check - should be TRUE
+all(paste0("Food", sapply(colnames(ranges_nutrients), ConvertToHGPSname)) == colnames(BoxCoxCoeffs_Combined))
+# reset old names to match new HGPS ones. 
+colnames(ranges_nutrients) = colnames(BoxCoxCoeffs_Combined)
+rownames(ranges_nutrients) = c("min", "max")
 
-
-
-
+# combine
+BoxCoxCoeffs_Combined = rbind(BoxCoxCoeffs_Combined, ranges_nutrients)
 
 # fix rownames
 rownames(BoxCoxCoeffs_Combined) = gsub("\\(Intercept\\)", "Intercept", rownames(BoxCoxCoeffs_Combined))
 rownames(BoxCoxCoeffs_Combined) = gsub("inc", "income", rownames(BoxCoxCoeffs_Combined))
 rownames(BoxCoxCoeffs_Combined) = gsub("sex2", "gender2", rownames(BoxCoxCoeffs_Combined))
+# write
 write.csv(BoxCoxCoeffs_Combined, "boxcox_coefficients.csv")
 
 # fix rownames of logistic coefficients
@@ -1488,41 +1470,8 @@ rownames(logistic_parameters) = gsub("inc", "income", rownames(logistic_paramete
 rownames(logistic_parameters) = gsub("sex2", "gender2", rownames(logistic_parameters))
 write.csv(logistic_parameters, "logistic_regression.csv")
 
-
-# Save Box-Cox transformation parameters to a CSV file
-rownames(boxcoxparameters) = paste0("Food", sapply(rownames(boxcoxparameters), ConvertToHGPSname))
-write.csv(boxcoxparameters, "boxcox_parameters.csv")
-
 # Save correlation matrix to a CSV file
 rownames(correlation_matrix) = paste0("Food", sapply(rownames(correlation_matrix), ConvertToHGPSname))
 colnames(correlation_matrix) = paste0("Food", sapply(colnames(correlation_matrix), ConvertToHGPSname))
 write.csv(correlation_matrix, "Finch_residual_risk_factor_correlation.csv")
-
-#####################################################################################
-########################### Boundaries of nutrients ##################################
-
-# Calculate min and max values for nutrients and policy effects
-#min_nutrients = c(min(df$carb), min(df$fat), min(df$protein), min(df$alcohol), min(df$sodium), 
-#                  min(df$fibre), min(df$polyunsats), min(df$monounsats), min(df$saturates), min(df$totalsugar), min(df$addedsugar),
-#                  min(df$fruit), min(df$vegetable), min(df$legume), min(df$red_meat), min(df$proc_meat))
-#max_nutrients = c(max(df$carb), max(df$fat), max(df$protein), max(df$alcohol), max(df$sodium),
-#                  max(df$fibre), max(df$polyunsats), max(df$monounsats), max(df$saturates), max(df$totalsugar), max(df$addedsugar),
-#                  max(df$fruit), max(df$vegetable), max(df$legume), max(df$red_meat), max(df$proc_meat))
-#boundaries_nutrients = data.frame(min_nutrients, max_nutrients)
-#rownames(boundaries_nutrients) = c("carb", "fat", "protein", "alcohol", "sodium", "fibre", "polyunsats",
-#		"monounsats", "saturates", "totalsugar", "addedsugar", "fruit",
-#		"vegetable", "legume", "red_meat", "proc_meat")
-
-boundaries_nutrients = t(sapply(df[, c("carb", "fat", "protein", "sodium", "alcohol", "fibre", 
-							  "monounsats", "polyunsats", "saturates", "totalsugar", "addedsugar", "fruit", "vegetable", 
-							  "legume", "red_meat", "proc_meat", "calcium", "iron", "vitaminc", "copper","zinc")], range))  
-rownames(boundaries_nutrients) = sapply(rownames(boundaries_nutrients), ConvertToHGPSname)
-colnames(boundaries_nutrients) = c("min", "max")
-
-# Create dataframes for boundaries of effects and nutrients
-write.csv(boundaries_nutrients, "ranges_riskfactors.csv")
-
-
-#####################################################################################
-#####################################################################################
 
