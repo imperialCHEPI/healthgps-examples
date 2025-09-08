@@ -15,7 +15,7 @@ rm(list = ls())
 
 library('stargazer')
 library(ggplot2)
-library(dplyr) 
+library(dplyr)
 library(nnet)
 library(zoo)
 library(moments)
@@ -52,8 +52,8 @@ age1 <- data$age_person
 age2 <- data$age_person * data$age_person
 age3 <- data$age_person * data$age_person * data$age_person
 inc <- data$hhinc_pc # household income per equalised person
-ethnicity <- ifelse(data$ethnicity_person == 3, 2, 
-                    ifelse(data$ethnicity_person == 4, 3, 
+ethnicity <- ifelse(data$ethnicity_person == 3, 2,
+                    ifelse(data$ethnicity_person == 4, 3,
                            ifelse(data$ethnicity_person %in% c(2, 5), 4, data$ethnicity_person)))
 ethnicity <- as.factor(ethnicity)
 region <- as.factor(data$country)
@@ -91,10 +91,10 @@ energy <- 4 * carb + 9 * fat + 4 * protein + 7 * alcohol
 ######################## Filtering ##########################################################
 
 # Create 'subdata' dataframe
-subdata_all <- data.frame(sex, age, age1, age2, age3, inc, ethnicity, region, carb, fat, 
-                          protein, alcohol, energy, energy_original, sodium, polyunsats, 
-                          saturates, monounsats, totalsugar, addedsugar, fibre, 
-                          calcium, iron, vitaminc, copper, zinc, 
+subdata_all <- data.frame(sex, age, age1, age2, age3, inc, ethnicity, region, carb, fat,
+                          protein, alcohol, energy, energy_original, sodium, polyunsats,
+                          saturates, monounsats, totalsugar, addedsugar, fibre,
+                          calcium, iron, vitaminc, copper, zinc,
                           proc_meat, red_meat, fruit, vegetable, legume)
 str(subdata_all)
 
@@ -117,8 +117,8 @@ df <- subdata
 head(df)
 str(df)
 # Set lower and upper quantiles
-#upper_q <- 0.99			
-#lower_q <- 1-upper_q 
+#upper_q <- 0.99
+#lower_q <- 1-upper_q
 
 # Filter 'subdata' based on conditions - gets rid of >20k entries
 #df <- subdata %>%
@@ -203,7 +203,7 @@ write.table(IncomeDFrame, "Outputs/income_model.csv", sep = ",", col.names = F)
 #incomemean <- merged_df |>
  # group_by(age, sex) |>
   #summarise(income_mean = mean(inc))
-  
+
 #write.table(incomemean, "Outputs/income_factorsmean.csv", row.names = FALSE)
 
 
@@ -220,7 +220,7 @@ x	<- merged_df$carb / merged_df$carb_mean
 
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_carb 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'carb' and create a new variable 'new_x_exact'
@@ -252,7 +252,7 @@ plot(density(scale(reg_carb$residuals)), col="red", main="Carb Residuals", lwd=3
 carb_transformed <- scale(reg_carb$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'carb' residuals and random values from a normal distribution
@@ -299,7 +299,7 @@ plot(density(scale(reg_fat$residuals)), col="red", main="Fat Residuals",lwd=3)
 fat_transformed <- scale(reg_fat$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'fat' residuals and random values from a normal distribution
@@ -341,7 +341,7 @@ plot(density(scale(reg_protein$residuals)), col="red", main="Protein Residuals",
 protein_transformed <- scale(reg_protein$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'protein' residuals and random values from a normal distribution
@@ -384,7 +384,7 @@ plot(density(scale(reg_sodium$residuals)), col="red", main="Sodium Residuals",lw
 sodium_transformed <- scale(reg_sodium$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'sodium' residuals and random values from a normal distribution
@@ -430,7 +430,7 @@ plot(density(scale(reg_monounsats$residuals)), col="red", main="monounsats Resid
 monounsats_transformed <- scale(reg_monounsats$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'monounsats' residuals and random values from a normal distribution
@@ -474,7 +474,7 @@ plot(density(scale(reg_polyunsats$residuals)), col="red", main="polyunsats Resid
 polyunsats_transformed <- scale(reg_polyunsats$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'polyunsats' residuals and random values from a normal distribution
@@ -520,7 +520,7 @@ plot(density(scale(reg_saturates$residuals)), col="red", main="saturates Residua
 saturates_transformed <- scale(reg_saturates$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'saturates' residuals and random values from a normal distribution
@@ -564,7 +564,7 @@ plot(density(scale(reg_totalsugar$residuals)), col="red", main="totalsugar Resid
 totalsugar_transformed <- scale(reg_totalsugar$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'totalsugar' residuals and random values from a normal distribution
@@ -583,7 +583,7 @@ merged_df$fibre <- ifelse(merged_df$fibre == 0, 0.00001, merged_df$fibre)
 x 				<- merged_df$fibre / merged_df$fibre_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_fibre 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'fibre' and create a new variable 'new_x_exact'
@@ -612,7 +612,7 @@ plot(density(scale(reg_fibre$residuals)), col="red", main="fibre Residuals", lwd
 fibre_transformed <- scale(reg_fibre$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'fibre' residuals and random values from a normal distribution
@@ -630,7 +630,7 @@ logistic_df <- merged_df |>
 str(logistic_df)
 DFRAME = data.frame(Alchohol = logistic_df$alcohol, Binary = logistic_df$alcohol_bi)
 
-logistic_alcohol <- glm(alcohol_bi ~ sex + age1 + age2 + ethnicity + inc + region, 
+logistic_alcohol <- glm(alcohol_bi ~ sex + age1 + age2 + ethnicity + inc + region,
                         data = logistic_df,
                         family = binomial)
 summary(logistic_alcohol)
@@ -671,7 +671,7 @@ plot(density(scale(reg_alcohol$residuals)), col="red", main="Alcohol Residuals",
 alcohol_transformed <- scale(reg_alcohol$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'alcohol' residuals and random values from a normal distribution
@@ -687,7 +687,7 @@ lines(density(random_values), col="blue", lwd=3)
 logistic_df <- merged_df |>
   mutate(addedsugar_bi = ifelse(addedsugar == 0, 1, 0))
 
-logistic_addedsugar <- glm(addedsugar_bi ~ sex + age1 + age2 + ethnicity + inc + region, 
+logistic_addedsugar <- glm(addedsugar_bi ~ sex + age1 + age2 + ethnicity + inc + region,
                         data = logistic_df,
                         family = binomial)
 summary(logistic_addedsugar)
@@ -728,7 +728,7 @@ plot(density(scale(reg_addedsugar$residuals)), col="red", main="addedsugar Resid
 addedsugar_transformed <- scale(reg_addedsugar$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'addedsugar' residuals and random values from a normal distribution
@@ -744,7 +744,7 @@ lines(density(random_values), col="blue", lwd=3)
 logistic_df <- merged_df |>
   mutate(fruit_bi = ifelse(fruit == 0, 1, 0))
 
-logistic_fruit <- glm(fruit_bi ~ sex + age1 + age2 + ethnicity + inc + region, 
+logistic_fruit <- glm(fruit_bi ~ sex + age1 + age2 + ethnicity + inc + region,
                            data = logistic_df,
                            family = binomial)
 summary(logistic_fruit)
@@ -758,7 +758,7 @@ merged_fruit <- merged_df[merged_df$fruit>0,]
 x 				<- merged_fruit$fruit / merged_fruit$fruit_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_fruit 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'fruit' and create a new variable 'new_x_exact'
@@ -787,7 +787,7 @@ plot(density(scale(reg_fruit$residuals)), col="red", main="fruit Residuals", lwd
 fruit_transformed <- scale(reg_fruit$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'fruit' residuals and random values from a normal distribution
@@ -803,7 +803,7 @@ lines(density(random_values), col="blue", lwd=3)
 logistic_df <- merged_df |>
   mutate(vegetable_bi = ifelse(vegetable == 0, 1, 0))
 
-logistic_vegetable <- glm(vegetable_bi ~ sex + age1 + age2 + ethnicity + inc + region, 
+logistic_vegetable <- glm(vegetable_bi ~ sex + age1 + age2 + ethnicity + inc + region,
                       data = logistic_df,
                       family = binomial)
 summary(logistic_vegetable)
@@ -818,7 +818,7 @@ merged_vegetable <- merged_df[merged_df$vegetable>0, ]
 x 				<- merged_vegetable$vegetable / merged_vegetable$vegetable_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_vegetable 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'vegetable' and create a new variable 'new_x_exact'
@@ -847,7 +847,7 @@ plot(density(scale(reg_vegetable$residuals)), col="red", main="vegetable Residua
 vegetable_transformed <- scale(reg_vegetable$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'vegetable' residuals and random values from a normal distribution
@@ -863,7 +863,7 @@ lines(density(random_values), col="blue", lwd=3)
 logistic_df <- merged_df |>
   mutate(legume_bi = ifelse(legume == 0, 1, 0))
 
-logistic_legume <- glm(legume_bi ~ sex + age1 + age2 + ethnicity + inc + region, 
+logistic_legume <- glm(legume_bi ~ sex + age1 + age2 + ethnicity + inc + region,
                           data = logistic_df,
                           family = binomial)
 summary(logistic_legume)
@@ -878,7 +878,7 @@ merged_legume <- merged_df[merged_df$legume>0, ]
 x 				<- merged_legume$legume / merged_legume$legume_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_legume 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'legume' and create a new variable 'new_x_exact'
@@ -907,7 +907,7 @@ plot(density(scale(reg_legume$residuals)), col="red", main="legume Residuals", l
 legume_transformed <- scale(reg_legume$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'legume' residuals and random values from a normal distribution
@@ -923,7 +923,7 @@ lines(density(random_values), col="blue", lwd=3)
 logistic_df <- merged_df |>
   mutate(red_meat_bi = ifelse(red_meat == 0, 1, 0))
 
-logistic_red_meat <- glm(red_meat_bi ~ sex + age1 + age2 + ethnicity + inc + region, 
+logistic_red_meat <- glm(red_meat_bi ~ sex + age1 + age2 + ethnicity + inc + region,
                           data = logistic_df,
                           family = binomial)
 summary(logistic_red_meat)
@@ -938,7 +938,7 @@ merged_redmeat <- merged_df[merged_df$red_meat>0, ]
 x 				<- merged_redmeat$red_meat / merged_redmeat$red_meat_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_red_meat 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'red_meat' and create a new variable 'new_x_exact'
@@ -967,7 +967,7 @@ plot(density(scale(reg_red_meat$residuals)), col="red", main="red_meat Residuals
 red_meat_transformed <- scale(reg_red_meat$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'red_meat' residuals and random values from a normal distribution
@@ -983,7 +983,7 @@ lines(density(random_values), col="blue", lwd=3)
 logistic_df <- merged_df |>
   mutate(proc_meat_bi = ifelse(proc_meat == 0, 1, 0))
 
-logistic_proc_meat <- glm(proc_meat_bi ~ sex + age1 + age2 + ethnicity + inc + region, 
+logistic_proc_meat <- glm(proc_meat_bi ~ sex + age1 + age2 + ethnicity + inc + region,
                           data = logistic_df,
                           family = binomial)
 summary(logistic_proc_meat)
@@ -998,7 +998,7 @@ merged_processedmeat <- merged_df[merged_df$proc_meat>0, ]
 x 				<- merged_processedmeat$proc_meat / merged_processedmeat$proc_meat_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_proc_meat 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'proc_meat' and create a new variable 'new_x_exact'
@@ -1027,7 +1027,7 @@ plot(density(scale(reg_proc_meat$residuals)), col="red", main="proc_meat Residua
 proc_meat_transformed <- scale(reg_proc_meat$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized 'proc_meat' residuals and random values from a normal distribution
@@ -1045,7 +1045,7 @@ lines(density(random_values), col="blue", lwd=3)
 x 				<- merged_df$calcium / merged_df$calcium_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_calcium 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation to 'calcium' and create a new variable 'new_x_exact'
@@ -1074,7 +1074,7 @@ plot(density(scale(reg_calcium$residuals)), col="red", main="Calcium Residuals",
 calcium_transformed <- scale(reg_calcium$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized residuals and random values from a normal distribution
@@ -1091,7 +1091,7 @@ lines(density(random_values), col="blue", lwd=3)
 x 				<- merged_df$iron / merged_df$iron_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_iron 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation and create a new variable 'new_x_exact'
@@ -1120,7 +1120,7 @@ plot(density(scale(reg_iron$residuals)), col="red", main="Iron Residuals", lwd=3
 iron_transformed <- scale(reg_iron$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized residuals and random values from a normal distribution
@@ -1136,7 +1136,7 @@ lines(density(random_values), col="blue", lwd=3)
 x 				<- merged_df$vitaminc / merged_df$vitaminc_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_vitaminc 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation and create a new variable 'new_x_exact'
@@ -1165,7 +1165,7 @@ plot(density(scale(reg_vitaminc$residuals)), col="red", main="VitaminC Residuals
 vitaminc_transformed <- scale(reg_vitaminc$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized residuals and random values from a normal distribution
@@ -1184,7 +1184,7 @@ merged_df$copper <- ifelse(merged_df$copper == 0, 0.00001, merged_df$copper)
 x 				<- merged_df$copper / merged_df$copper_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_copper 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation and create a new variable 'new_x_exact'
@@ -1212,7 +1212,7 @@ plot(density(scale(reg_copper$residuals)), col="red", main="Copper Residuals", l
 copper_transformed <- scale(reg_copper$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized residuals and random values from a normal distribution
@@ -1229,7 +1229,7 @@ merged_df$zinc <- ifelse(merged_df$zinc == 0, 0.0001, merged_df$zinc)
 x 				<- merged_df$zinc / merged_df$zinc_mean
 #plot(hist(x))
 lm(x ~ 1) ## this gives "linear model" expressing x as function of no other variables.
-boxcox_results 	<- boxcox(lm(x ~ 1)) 								
+boxcox_results 	<- boxcox(lm(x ~ 1))
 lambda_zinc 	<- boxcox_results$x[which.max(boxcox_results$y)]
 
 # Apply Box-Cox transformation and create a new variable 'new_x_exact'
@@ -1257,7 +1257,7 @@ plot(density(scale(reg_zinc$residuals)), col="red", main="Zinc Residuals", lwd=3
 zinc_transformed <- scale(reg_zinc$residuals)
 
 # Adjust the number of random values for comparison
-num_values <- 1000000  
+num_values <- 1000000
 random_values <- rnorm(num_values)
 
 # Plot the density distribution of standardized residuals and random values from a normal distribution
@@ -1386,29 +1386,29 @@ ConvertToHGPSname = function(OldName)
 ConvertBackToOldName = function(HGPSName)
 {
 	OldName = HGPSName ## default to old name.
-		 if (HGPSName ==  "Carbohydrate"              ) OldName = "carb"			
-	else if (HGPSName ==  "Fat"                       ) OldName = "fat"			
-	else if (HGPSName ==  "Protein"                   ) OldName = "protein"		
-	else if (HGPSName ==  "Alcohol"                   ) OldName = "alcohol"		
-	else if (HGPSName ==  "Sodium"                    ) OldName = "sodium"		
-	else if (HGPSName ==  "Fibre"                     ) OldName = "fibre"		
-	else if (HGPSName ==  "MonounsaturatedFat"        ) OldName = "monounsats"	
-	else if (HGPSName ==  "PolyunsaturatedFattyAcid"  ) OldName = "polyunsats"	
-	else if (HGPSName ==  "SaturatedFat"              ) OldName = "saturates"	
-	else if (HGPSName ==  "TotalSugar"                ) OldName = "totalsugar"	
-	else if (HGPSName ==  "AddedSugar"                ) OldName = "addedsugar"	
-	else if (HGPSName ==  "Fruit"                     ) OldName = "fruit"		
-	else if (HGPSName ==  "Vegetable"                 ) OldName = "vegetable"	
-	else if (HGPSName ==  "Legume"                    ) OldName = "legume"		
-	else if (HGPSName ==  "RedMeat"                   ) OldName = "red_meat"		
-	else if (HGPSName ==  "ProcessedMeat"             ) OldName = "proc_meat"	
-	else if (HGPSName ==  "Calcium"                   ) OldName = "calcium"		
-	else if (HGPSName ==  "Iron"                      ) OldName = "iron"			
-	else if (HGPSName ==  "VitaminC"                  ) OldName = "vitaminc"		
-	else if (HGPSName ==  "Copper"                    ) OldName = "copper"		
-	else if (HGPSName ==  "Zinc"                      ) OldName = "zinc"			
+		 if (HGPSName ==  "Carbohydrate"              ) OldName = "carb"
+	else if (HGPSName ==  "Fat"                       ) OldName = "fat"
+	else if (HGPSName ==  "Protein"                   ) OldName = "protein"
+	else if (HGPSName ==  "Alcohol"                   ) OldName = "alcohol"
+	else if (HGPSName ==  "Sodium"                    ) OldName = "sodium"
+	else if (HGPSName ==  "Fibre"                     ) OldName = "fibre"
+	else if (HGPSName ==  "MonounsaturatedFat"        ) OldName = "monounsats"
+	else if (HGPSName ==  "PolyunsaturatedFattyAcid"  ) OldName = "polyunsats"
+	else if (HGPSName ==  "SaturatedFat"              ) OldName = "saturates"
+	else if (HGPSName ==  "TotalSugar"                ) OldName = "totalsugar"
+	else if (HGPSName ==  "AddedSugar"                ) OldName = "addedsugar"
+	else if (HGPSName ==  "Fruit"                     ) OldName = "fruit"
+	else if (HGPSName ==  "Vegetable"                 ) OldName = "vegetable"
+	else if (HGPSName ==  "Legume"                    ) OldName = "legume"
+	else if (HGPSName ==  "RedMeat"                   ) OldName = "red_meat"
+	else if (HGPSName ==  "ProcessedMeat"             ) OldName = "proc_meat"
+	else if (HGPSName ==  "Calcium"                   ) OldName = "calcium"
+	else if (HGPSName ==  "Iron"                      ) OldName = "iron"
+	else if (HGPSName ==  "VitaminC"                  ) OldName = "vitaminc"
+	else if (HGPSName ==  "Copper"                    ) OldName = "copper"
+	else if (HGPSName ==  "Zinc"                      ) OldName = "zinc"
 	return(OldName)
-	
+
 }
 
 
@@ -1420,37 +1420,37 @@ setwd(file.path("C:", "healthgps-examples", "KevinHall_FINCH"))
 # Save the coefficients from regression models for transformed variables ('carb', 'fat', 'protein', 'sodium') using Box-Cox transformation
 
 BoxCoxCoeffs_Combined = data.frame(
-		
-		FoodCarbohydrate				= c(reg_carb$coefficients			,  stddev = sd_carb			,	lambda = lambda_carb		)	,   
-		FoodFat	 						= c(reg_fat$coefficients			,  stddev = sd_fat			,   lambda = lambda_fat			)	, 
-		FoodProtein	 					= c(reg_protein$coefficients		,  stddev = sd_protein		,   lambda = lambda_protein		)	, 
-		FoodSodium	 					= c(reg_sodium$coefficients			,  stddev = sd_sodium		,	lambda = lambda_sodium		)	,  
-		FoodAlcohol	 					= c(reg_alcohol$coefficients		,  stddev = sd_alcohol		,   lambda = lambda_alcohol		)	, 
-		FoodFibre	 					= c(reg_fibre$coefficients			,  stddev = sd_fibre		,	lambda = lambda_fibre		)	,   
-		FoodMonounsaturatedFat	 		= c(reg_monounsats$coefficients		,  stddev = sd_monounsats	,	lambda = lambda_monounsats	)	, 
-		FoodPolyunsaturatedFattyAcid	= c(reg_polyunsats$coefficients		,  stddev = sd_polyunsats	,	lambda = lambda_polyunsats	)	, 
-		FoodSaturatedFat	 			= c(reg_saturates$coefficients		,  stddev = sd_saturates	,	lambda = lambda_saturates	)	, 
-		FoodTotalSugar	 				= c(reg_totalsugar$coefficients		,  stddev = sd_totalsugar	,	lambda = lambda_totalsugar	)	, 
-		FoodAddedSugar	 				= c(reg_addedsugar$coefficients		,  stddev = sd_addedsugar	,	lambda = lambda_addedsugar	)	, 
-		FoodFruit	 					= c(reg_fruit$coefficients			,  stddev = sd_fruit		,	lambda = lambda_fruit		)	,   
-		FoodVegetable	 				= c(reg_vegetable$coefficients		,  stddev = sd_vegetable	,	lambda = lambda_vegetable	)	, 
-		FoodLegume	 					= c(reg_legume$coefficients			,  stddev = sd_legume		,	lambda = lambda_legume		)	,  
-		FoodRedMeat	 					= c(reg_red_meat$coefficients		,  stddev = sd_red_meat		,   lambda = lambda_red_meat	)	, 
-		FoodProcessedMeat				= c(reg_proc_meat$coefficients		,  stddev = sd_proc_meat	,	lambda = lambda_proc_meat	)	, 
-		FoodCalcium 					= c(reg_calcium$coefficients		,  stddev = sd_calcium		,   lambda = lambda_calcium		)	, 
-		FoodIron 						= c(reg_iron$coefficients			,  stddev = sd_iron			,   lambda = lambda_iron		)	, 
-		FoodVitaminC 					= c(reg_vitaminc$coefficients		,  stddev = sd_vitaminc		,   lambda = lambda_vitaminc	)	, 
-		FoodCopper 						= c(reg_copper$coefficients			,  stddev = sd_copper		,	lambda = lambda_copper		)	, 
-		FoodZinc 						= c(reg_zinc$coefficients			,  stddev = sd_zinc			,   lambda = lambda_zinc		)	)  
 
-# Get ranges in data of each nutrient, ensuring names match. 
+		FoodCarbohydrate				= c(reg_carb$coefficients			,  stddev = sd_carb			,	lambda = lambda_carb		)	,
+		FoodFat	 						= c(reg_fat$coefficients			,  stddev = sd_fat			,   lambda = lambda_fat			)	,
+		FoodProtein	 					= c(reg_protein$coefficients		,  stddev = sd_protein		,   lambda = lambda_protein		)	,
+		FoodSodium	 					= c(reg_sodium$coefficients			,  stddev = sd_sodium		,	lambda = lambda_sodium		)	,
+		FoodAlcohol	 					= c(reg_alcohol$coefficients		,  stddev = sd_alcohol		,   lambda = lambda_alcohol		)	,
+		FoodFibre	 					= c(reg_fibre$coefficients			,  stddev = sd_fibre		,	lambda = lambda_fibre		)	,
+		FoodMonounsaturatedFat	 		= c(reg_monounsats$coefficients		,  stddev = sd_monounsats	,	lambda = lambda_monounsats	)	,
+		FoodPolyunsaturatedFattyAcid	= c(reg_polyunsats$coefficients		,  stddev = sd_polyunsats	,	lambda = lambda_polyunsats	)	,
+		FoodSaturatedFat	 			= c(reg_saturates$coefficients		,  stddev = sd_saturates	,	lambda = lambda_saturates	)	,
+		FoodTotalSugar	 				= c(reg_totalsugar$coefficients		,  stddev = sd_totalsugar	,	lambda = lambda_totalsugar	)	,
+		FoodAddedSugar	 				= c(reg_addedsugar$coefficients		,  stddev = sd_addedsugar	,	lambda = lambda_addedsugar	)	,
+		FoodFruit	 					= c(reg_fruit$coefficients			,  stddev = sd_fruit		,	lambda = lambda_fruit		)	,
+		FoodVegetable	 				= c(reg_vegetable$coefficients		,  stddev = sd_vegetable	,	lambda = lambda_vegetable	)	,
+		FoodLegume	 					= c(reg_legume$coefficients			,  stddev = sd_legume		,	lambda = lambda_legume		)	,
+		FoodRedMeat	 					= c(reg_red_meat$coefficients		,  stddev = sd_red_meat		,   lambda = lambda_red_meat	)	,
+		FoodProcessedMeat				= c(reg_proc_meat$coefficients		,  stddev = sd_proc_meat	,	lambda = lambda_proc_meat	)	,
+		FoodCalcium 					= c(reg_calcium$coefficients		,  stddev = sd_calcium		,   lambda = lambda_calcium		)	,
+		FoodIron 						= c(reg_iron$coefficients			,  stddev = sd_iron			,   lambda = lambda_iron		)	,
+		FoodVitaminC 					= c(reg_vitaminc$coefficients		,  stddev = sd_vitaminc		,   lambda = lambda_vitaminc	)	,
+		FoodCopper 						= c(reg_copper$coefficients			,  stddev = sd_copper		,	lambda = lambda_copper		)	,
+		FoodZinc 						= c(reg_zinc$coefficients			,  stddev = sd_zinc			,   lambda = lambda_zinc		)	)
+
+# Get ranges in data of each nutrient, ensuring names match.
 NamesWithoutFoodPrefix 				= gsub("Food", "", colnames(BoxCoxCoeffs_Combined))
 OldNamesWithoutFoodPrefix 			= sapply(NamesWithoutFoodPrefix, ConvertBackToOldName)
 names(OldNamesWithoutFoodPrefix) 	= NULL
-ranges_nutrients 					= sapply(df[, OldNamesWithoutFoodPrefix], range)  
+ranges_nutrients 					= sapply(df[, OldNamesWithoutFoodPrefix], range)
 # check - should be TRUE
 all(paste0("Food", sapply(colnames(ranges_nutrients), ConvertToHGPSname)) == colnames(BoxCoxCoeffs_Combined))
-# reset old names to match new HGPS ones. 
+# reset old names to match new HGPS ones.
 colnames(ranges_nutrients) = colnames(BoxCoxCoeffs_Combined)
 rownames(ranges_nutrients) = c("min", "max")
 
@@ -1474,4 +1474,3 @@ write.csv(logistic_parameters, "logistic_regression.csv")
 rownames(correlation_matrix) = paste0("Food", sapply(rownames(correlation_matrix), ConvertToHGPSname))
 colnames(correlation_matrix) = paste0("Food", sapply(colnames(correlation_matrix), ConvertToHGPSname))
 write.csv(correlation_matrix, "Finch_residual_risk_factor_correlation.csv")
-

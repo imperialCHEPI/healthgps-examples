@@ -5,7 +5,7 @@ rm(list = ls())
 
 library('stargazer')
 library(ggplot2)
-library(dplyr) 
+library(dplyr)
 library(nnet)
 library(zoo)
 library(moments)
@@ -28,14 +28,14 @@ data <- read.csv("HealthGPS_HeightWeight.csv")
 weighting <- read.csv("region_proportion.csv")
 
 
-#Filter threshold 
-#rate_to_filter <- 0.01 
+#Filter threshold
+#rate_to_filter <- 0.01
 
-#Physical Activity Parameters: mean and pa 
+#Physical Activity Parameters: mean and pa
 #pa_mean = 1.6
 #pa_sd = 0.06
 
-#Weight Parameters 
+#Weight Parameters
 #num_weight_quantiles_to_sample = 10000
 #bounds = c(15.5,18.5,20,25,30,35,40,45)
 
@@ -75,7 +75,7 @@ summary(subdata)
 ######################## Filtering ##########################################################
 
 # Set upper and lower quantiles
-lower_q <- 0.01 
+lower_q <- 0.01
 upper_q <-1-lower_q
 
 # Filter 'subdata' based on conditions
@@ -104,7 +104,7 @@ long <- wide |>
     names_prefix = "prob",
     values_to = "prob"
   ) |>
-  mutate(region = as.integer(region)) 
+  mutate(region = as.integer(region))
 
 
 df <- left_join(df, long, by = c("age","female","region"))
@@ -159,7 +159,7 @@ file_name <- "C:/Users/jzhu5/OneDrive - Imperial College London/Health-GPS_SHARE
 data <- read.csv(file_name)
 
 ## Parameter pf pal sd
-pal_sd =  0.268662431506871 
+pal_sd =  0.268662431506871
 
 ## number of EPA quantiles to sample
 num_epa_quantiles_to_sample <- 10000
@@ -174,8 +174,8 @@ age <- data$age_person
 age1 <- data$age_person
 age2 <- data$age_person * data$age_person
 inc <- data$hhinc_pc # household income per equalised person
-ethnicity <- ifelse(data$ethnicity_person == 3, 2, 
-                    ifelse(data$ethnicity_person == 4, 3, 
+ethnicity <- ifelse(data$ethnicity_person == 3, 2,
+                    ifelse(data$ethnicity_person == 4, 3,
                            ifelse(data$ethnicity_person %in% c(2, 5), 4, data$ethnicity_person)))
 ethnicity <- as.factor(ethnicity)
 region <- data$country # Same as in HGPS, 1-EN 2-WA 3-SC 4-NI
@@ -216,18 +216,18 @@ coef_vector <- setNames(coef$V2, coef$V1)
 
 print(names(coef_vector))
 
-df$pal_predicted <- coef_vector["Intercept"] + 
-  coef_vector["age1"] * df$age + 
-  coef_vector["age2"] * df$age2 + 
-  coef_vector["gender2"] * df$female + 
-  coef_vector["income"] * df$inc + 
-  coef_vector["ethnicity2"] * df$ethnicity2 + 
-  coef_vector["ethnicity3"] * df$ethnicity3 + 
+df$pal_predicted <- coef_vector["Intercept"] +
+  coef_vector["age1"] * df$age +
+  coef_vector["age2"] * df$age2 +
+  coef_vector["gender2"] * df$female +
+  coef_vector["income"] * df$inc +
+  coef_vector["ethnicity2"] * df$ethnicity2 +
+  coef_vector["ethnicity3"] * df$ethnicity3 +
   coef_vector["ethnicity4"] * df$ethnicity4 +
-  coef_vector["region2"] * df$region2 + 
-  coef_vector["region3"] * df$region3 + 
+  coef_vector["region2"] * df$region2 +
+  coef_vector["region3"] * df$region3 +
   coef_vector["region4"] * df$region4
-  
+
 
 summary(df$pal_predicted)
 

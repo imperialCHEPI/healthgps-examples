@@ -5,7 +5,7 @@ rm(list = ls())
 
 library('stargazer')
 library(ggplot2)
-library(dplyr) 
+library(dplyr)
 library(nnet)
 library(zoo)
 library(moments)
@@ -29,8 +29,8 @@ file_name <- "HealthGPS_initial_population_2598hh.csv"
 country = "UK"
 rate_to_print <- 0.2
 
-#Filter threshold 
-rate_to_filter <- 0 
+#Filter threshold
+rate_to_filter <- 0
 
 #Smoothing parameters
 smoothing = TRUE
@@ -53,8 +53,8 @@ age1 <- data$age_person
 age2 <- data$age_person * data$age_person
 age3 <- data$age_person * data$age_person * data$age_person
 inc <- data$hhinc_pc # household income per equalised person
-ethnicity <- ifelse(data$ethnicity_person == 3, 2, 
-                    ifelse(data$ethnicity_person == 4, 3, 
+ethnicity <- ifelse(data$ethnicity_person == 3, 2,
+                    ifelse(data$ethnicity_person == 4, 3,
                            ifelse(data$ethnicity_person %in% c(2, 5), 4, data$ethnicity_person)))
 ethnicity <- as.factor(ethnicity)
 protein <- data$protein_w
@@ -91,7 +91,7 @@ energy <- 4 * carb + 9 * fat + 4 * protein + 7 * alcohol
 
 # Create 'subdata' dataframe
 subdata_all <- data.frame(gender, age, age1, age2, age3, inc, ethnicity, carb, fat, protein, alcohol,
-                          energy, sodium, polyunsats, saturates, monounsats, totalsugar, 
+                          energy, sodium, polyunsats, saturates, monounsats, totalsugar,
                           addedsugar, fibre, proc_meat, red_meat, fruit, vegetable, legume,
                           calcium, iron, vitaminc, copper, zinc)
 
@@ -110,7 +110,7 @@ subdata$energy <- 4 * subdata$carb + 9 * subdata$fat + 4 * subdata$protein + 7 *
 df <- subdata
 
 # Set upper and lower quantiles
-#lower_q <- rate_to_filter 
+#lower_q <- rate_to_filter
 #upper_q <-1-lower_q
 
 # Filter 'subdata' based on conditions
@@ -130,16 +130,16 @@ df <- subdata
 get_smooth_factor <- function(initial_factor, times) {
   if(times<1)
     return(initial_factor)
-  
+
   res <- initial_factor
-  
+
   for (j in 1:times) {
     tmp <- res
-    
+
     for (p in 1:length(res)) {
       tmp[p] <- res[p]
     }
-    
+
     sum <- 0
     for (i in 1:length(res)) {
       if (i == 1) {
@@ -149,11 +149,11 @@ get_smooth_factor <- function(initial_factor, times) {
       } else {
         res[i] <- (tmp[i - 1] + tmp[i] + tmp[i + 1]) / 3
       }
-      
+
       sum <- sum + res[i]
     }
   }
-  
+
   return(res)
 }
 
@@ -209,7 +209,7 @@ female_data <- result[result$gender == 1, ]
 # List of columns to smooth
 columns_to_smooth <- c("carb", "fat", "protein", "sodium","energyintake",
                        "polyunsats", "saturates", "monounsats",
-                       "totalsugar", "addedsugar", "fibre", "proc_meat", 
+                       "totalsugar", "addedsugar", "fibre", "proc_meat",
                        "red_meat", "fruit", "vegetable", "legume", "calcium",
                        "iron","vitaminc","copper","zinc")
 
@@ -220,7 +220,7 @@ female_data[, columns_to_smooth] <- lapply(female_data[, columns_to_smooth], get
 # Variables to plot
 variables_to_plot <- c("carb", "fat", "protein", "sodium", "energyintake",
                        "polyunsats", "saturates", "monounsats",
-                       "totalsugar", "addedsugar", "fibre", "proc_meat", 
+                       "totalsugar", "addedsugar", "fibre", "proc_meat",
                        "red_meat", "fruit", "vegetable", "legume",
                        "calcium","iron","vitaminc","copper","zinc")
 
@@ -228,10 +228,10 @@ variables_to_plot <- c("carb", "fat", "protein", "sodium", "energyintake",
 for (variable in variables_to_plot) {
   # Plotting male_data
   plot(male_data$age, male_data[[variable]], type="l", lwd=3, col="blue", main=paste("Average ", variable, " by sex and age"), xlab="Age", ylab=variable)
-  
+
   # Plotting female_data
   lines(female_data$age, female_data[[variable]], col="red", lwd=3)
-  
+
   # Adding legend
   legend("topright", legend=c("Male", "Female"), col=c("blue", "red"), lwd=3)
 }
@@ -258,7 +258,7 @@ extrapolation <- function(df, var) {
 ## Applying extrapolation
 columns_to_extra <- c("carb", "fat", "protein", "sodium",
                        "polyunsats", "saturates", "monounsats",
-                       "totalsugar", "addedsugar", "fibre", "proc_meat", 
+                       "totalsugar", "addedsugar", "fibre", "proc_meat",
                        "red_meat", "fruit", "vegetable", "legume",
                       "calcium","iron","vitaminc","copper","zinc")
 
@@ -273,7 +273,7 @@ for (var in columns_to_extra) {
 
 #file_name <- "C:/Users/jzhu5/OneDrive - Imperial College London/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ/ndns_rp_yr9-11a_personleveldietarydata_uk_20210831.dta"
 file_name <- "/Users/jasmine/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ/ndns_rp_yr9-11a_personleveldietarydata_uk_20210831.dta"
-  
+
 data <- read_dta(file_name)
 
 age <- data$AgeR
@@ -304,7 +304,7 @@ alcohol_impute <- function(data) {
     # Find nearest lower and higher non-NA values
     lower <- max(data$age[!is.na(data$alcohol_mean) & data$age < age_i], na.rm = TRUE)
     upper <- min(data$age[!is.na(data$alcohol_mean) & data$age > age_i], na.rm = TRUE)
-    
+
     if (is.finite(lower) && is.finite(upper)) {
       val_lower <- data$alcohol_mean[data$age == lower]
       val_upper <- data$alcohol_mean[data$age == upper]
@@ -314,7 +314,7 @@ alcohol_impute <- function(data) {
     } else if (is.finite(upper)) {
       data$alcohol_mean[i] <- data$alcohol_mean[data$age == upper]
     } else {
-      data$alcohol_mean[i] <- 0 
+      data$alcohol_mean[i] <- 0
     }
   }
   return(data[order(data$age), ])
@@ -380,11 +380,11 @@ ggplot(alcohol_female_full, aes(x = age)) +
 
 
 ## Add to factors mean files
-male_data <- left_join(male_data, 
+male_data <- left_join(male_data,
                        dplyr::select(alcohol_male_full, age, alcohol = alcohol_mean_smooth),
                        by = "age")
 
-female_data <- left_join(female_data, 
+female_data <- left_join(female_data,
                        dplyr::select(alcohol_female_full, age, alcohol = alcohol_mean_smooth),
                        by = "age")
 
@@ -446,18 +446,18 @@ pal_female_full <- pal_female_full %>%
 impute_pal_mean <- function(data, col = "pal") {
   # Make sure it's ordered by age
   data <- data[order(data$age), ]
-  
+
   # Loop through rows with NA in target column
   for (i in which(is.na(data[[col]]))) {
     age_i <- data$age[i]
-    
+
     # Find nearest lower and upper non-NA ages
     lower_ages <- data$age[!is.na(data[[col]]) & data$age < age_i]
     upper_ages <- data$age[!is.na(data[[col]]) & data$age > age_i]
-    
+
     lower <- if (length(lower_ages) > 0) max(lower_ages) else NA
     upper <- if (length(upper_ages) > 0) min(upper_ages) else NA
-    
+
     # Impute based on available values
     if (!is.na(lower) && !is.na(upper)) {
       val_lower <- data[[col]][data$age == lower]
@@ -471,7 +471,7 @@ impute_pal_mean <- function(data, col = "pal") {
       data[[col]][i] <- 0  # fallback default
     }
   }
-  
+
   return(data)
 }
 
@@ -491,11 +491,11 @@ ggplot(pal_male_full, aes(x = age)) +
 
 
 ## Add to factors mean files
-male_data <- left_join(male_data, 
+male_data <- left_join(male_data,
                        dplyr::select(pal_male_full, age, physicalactivity = pal_mean),
                        by = "age")
 
-female_data <- left_join(female_data, 
+female_data <- left_join(female_data,
                          dplyr::select(pal_female_full, age, physicalactivity = pal_mean),
                          by = "age")
 
@@ -608,7 +608,7 @@ ConvertToHGPSname <- function(old_names) {
     copper = "FoodCopper",
     zinc = "FoodZinc"
   )
-  
+
   return(ifelse(old_names %in% names(name_map), name_map[old_names], old_names))
 }
 
@@ -618,5 +618,3 @@ colnames(female_data) <- ConvertToHGPSname(colnames(female_data))
 
 write.csv(male_data, "Outputs/Finch.FactorsMean.Male.csv", row.names = FALSE)
 write.csv(female_data, "Outputs/Finch.FactorsMean.Female.csv", row.names = FALSE)
-
-

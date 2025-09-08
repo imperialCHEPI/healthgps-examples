@@ -5,7 +5,7 @@ rm(list = ls())
 
 library('stargazer')
 library(ggplot2)
-library(dplyr) 
+library(dplyr)
 library(nnet)
 library(zoo)
 library(moments)
@@ -52,8 +52,8 @@ ConvertToHGPSname = function(OldName)
 #file_name <- "C:/Users/jzhu5/OneDrive - Imperial College London/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ/HealthGPS_initial_population_2598hh.csv"
 #file_name <- "/Users/jasmine/Library/CloudStorage/OneDrive-ImperialCollegeLondon/Health-GPS_SHARED/FINCH/Parametres in healthgps-examples_JZ/HealthGPS_initial_population_2598hh.csv"
 file_name <- file.path(getwd(), "HealthGPS_initial_population_2598hh.csv")
-#Filter threshold 
-#filter <- 0.005 
+#Filter threshold
+#filter <- 0.005
 
 # Load the CSV data into a data frame
 data <- read.csv(file_name)
@@ -132,8 +132,8 @@ age1 <- data$age_person
 age2 <- data$age_person * data$age_person
 age3 <- data$age_person * data$age_person * data$age_person
 inc <- data$hhinc_pc # household income per equalised person
-ethnicity <- ifelse(data$ethnicity_person == 3, 2, 
-                    ifelse(data$ethnicity_person == 4, 3, 
+ethnicity <- ifelse(data$ethnicity_person == 3, 2,
+                    ifelse(data$ethnicity_person == 4, 3,
                            ifelse(data$ethnicity_person %in% c(2, 5), 4, data$ethnicity_person)))
 ethnicity <- as.factor(ethnicity)
 region <- as.factor(data$country)
@@ -206,7 +206,7 @@ subdata_all$zinc_effect <- ifelse(is.na(subdata_all$zinc_effect) & subdata_all$z
 colSums(is.na(subdata_all))
 
 ## Keep complete cases
-subdata <- subdata_all[complete.cases(subdata_all), ] 
+subdata <- subdata_all[complete.cases(subdata_all), ]
 # 135 obs deleted in s1
 # 140 in s2, 137 in s3, 155 in s4, 157 in s5
 # 146 in s6, 154 in s7
@@ -215,7 +215,7 @@ df <- subdata
 
 # Set upper and lower quantiles
 #upper_q <-1-filter
-#lower_q <- filter 
+#lower_q <- filter
 
 # Filter 'subdata' based on conditions
 #df <- subdata %>%
@@ -257,14 +257,14 @@ plot(density(df$alcohol_effect, na.rm = TRUE), col="red", lwd=3, main = "Alcohol
 
 # Calculate the percentage of remaining data after filtering
 #percentage = dim(df)[1] / dim(data)[1]
-#percentage 
+#percentage
 
 # Create dataframes for nutrients and effects
 nutrients = data.frame(df$carb, df$fat, df$protein, df$alcohol, df$sodium, df$fibre, df$saturates,
                        df$monounsats, df$polyunsats, df$totalsugar, df$addedsugar, df$fruit, df$vegetable,
                        df$legume, df$red_meat, df$proc_meat, df$calcium, df$iron,
                        df$vitaminc, df$copper, df$zinc)
-# Error in data.frame(df$carb, df$fat, df$protein, df$alcohol, df$sodium,  : 
+# Error in data.frame(df$carb, df$fat, df$protein, df$alcohol, df$sodium,  :
 #   arguments imply differing number of rows: 5999, 0
 
 str(df)
@@ -440,7 +440,7 @@ summary(reg_zinc)
 
 ############################################################################################
 # Residuals Analysis
-residuals_matrix = data.frame(reg_carb$residuals, reg_fat$residuals, reg_protein$residuals, 
+residuals_matrix = data.frame(reg_carb$residuals, reg_fat$residuals, reg_protein$residuals,
                               reg_alcohol$residuals, reg_sodium$residuals, reg_fibre$residuals,
                               reg_saturates$residuals, reg_monounsats$residuals, reg_polyunsats$residuals,
                               reg_totalsugar$residuals, reg_addedsugar$residuals, reg_fruit$residuals,
@@ -507,22 +507,22 @@ ConvertToHGPSname = function(OldName)
 }
 
 CombinedNutrientCoefficients = cbind(
-		
-	FoodCarbohydrate             = reg_carb$coefficients		,     	
-	FoodFat                      = reg_fat$coefficients			,      		
-	FoodProtein                  = reg_protein$coefficients		,   		
-	FoodAlcohol                  = reg_alcohol$coefficients		,   		
-	FoodSodium                   = reg_sodium$coefficients		,    		
-	FoodFibre                    = reg_fibre$coefficients		,     	
-	FoodMonounsaturatedFat       = reg_monounsats$coefficients	, 	
-	FoodPolyunsaturatedFattyAcid = reg_polyunsats$coefficients	, 	
-	FoodSaturatedFat             = reg_saturates$coefficients	,  	
-	FoodTotalSugar               = reg_totalsugar$coefficients	, 	
-	FoodAddedSugar               = reg_addedsugar$coefficients	, 		
-	FoodFruit	 				 = reg_fruit$coefficients		,	
-	FoodVegetable	 			 = reg_vegetable$coefficients		,	
-	FoodLegume	 				 = reg_legume$coefficients		,	
-	FoodRedMeat	 				 = reg_redmeat$coefficients		,	
+
+	FoodCarbohydrate             = reg_carb$coefficients		,
+	FoodFat                      = reg_fat$coefficients			,
+	FoodProtein                  = reg_protein$coefficients		,
+	FoodAlcohol                  = reg_alcohol$coefficients		,
+	FoodSodium                   = reg_sodium$coefficients		,
+	FoodFibre                    = reg_fibre$coefficients		,
+	FoodMonounsaturatedFat       = reg_monounsats$coefficients	,
+	FoodPolyunsaturatedFattyAcid = reg_polyunsats$coefficients	,
+	FoodSaturatedFat             = reg_saturates$coefficients	,
+	FoodTotalSugar               = reg_totalsugar$coefficients	,
+	FoodAddedSugar               = reg_addedsugar$coefficients	,
+	FoodFruit	 				 = reg_fruit$coefficients		,
+	FoodVegetable	 			 = reg_vegetable$coefficients		,
+	FoodLegume	 				 = reg_legume$coefficients		,
+	FoodRedMeat	 				 = reg_redmeat$coefficients		,
 	FoodProcessedMeat			 = reg_procmeat$coefficients,
 	FoodCalcium = reg_calcium$coefficients,
 	FoodIron = reg_iron$coefficients,
@@ -531,10 +531,10 @@ CombinedNutrientCoefficients = cbind(
 	FoodZinc = reg_zinc$coefficients
 )
 ## add in rows for min and max
-MinMaxDFrame = sapply(df[, c("carb_effect", "fat_effect", "protein_effect", "alcohol_effect", "sodium_effect", "fibre_effect", 
-						"monounsats_effect", "polyunsats_effect", "saturates_effect", "totalsugar_effect", "addedsugar_effect", 
+MinMaxDFrame = sapply(df[, c("carb_effect", "fat_effect", "protein_effect", "alcohol_effect", "sodium_effect", "fibre_effect",
+						"monounsats_effect", "polyunsats_effect", "saturates_effect", "totalsugar_effect", "addedsugar_effect",
 						"fruit_effect", "vegetable_effect", "legume_effect", "redmeat_effect", "procmeat_effect",
-						"calcium_effect","iron_effect","vitaminc_effect", "copper_effect", "zinc_effect")], range) 
+						"calcium_effect","iron_effect","vitaminc_effect", "copper_effect", "zinc_effect")], range)
 rownames(MinMaxDFrame) = c("min", "max")
 colnames(MinMaxDFrame) = paste0("Food", sapply(colnames(MinMaxDFrame), ConvertToHGPSname))
 colnames(MinMaxDFrame) == colnames(CombinedNutrientCoefficients)
@@ -555,17 +555,17 @@ write.csv(residuals_covariance, paste(scenario, sep = "_", "Finch_residual_polic
 # Calculate min and max values for policy effects
 
 #min_policy_effect = c(min(df$carb_effect), min(df$fat_effect), min(df$protein_effect), min(df$alcohol_effect), min(df$sodium_effect),
-                     # min(df$fibre_effect), min(df$saturates_effect), min(df$monounsats_effect), min(df$polyunsats_effect), 
+                     # min(df$fibre_effect), min(df$saturates_effect), min(df$monounsats_effect), min(df$polyunsats_effect),
                       #min(df$totalsugar_effect), min(df$addedsugar_effect), min(df$cals_effect))
 #max_policy_effect = c(max(df$carb_effect), max(df$fat_effect), max(df$protein_effect), max(df$alcohol_effect), max(df$sodium_effect),
-                      #max(df$fibre_effect), max(df$saturates_effect), max(df$monounsats_effect), max(df$polyunsats_effect), 
+                      #max(df$fibre_effect), max(df$saturates_effect), max(df$monounsats_effect), max(df$polyunsats_effect),
                       #max(df$totalsugar_effect), max(df$addedsugar_effect), max(df$cals_effect))
 
 # Create dataframes for boundaries of effects and nutrients
 #boundaries_effect = data.frame(min_policy_effect, max_policy_effect)
 #rownames(boundaries_effect) = c("carb", "fat", "protein", "alcohol", "sodium", "fibre", "saturates", "monounsats", "polyunsats",
  #                               "totalsugar", "addedsugar", "cals")
-						
+
 #						t(boundaries_effect)
 #write.csv(boundaries_effect, paste(scenario, sep = "_", "boundaries_effect.csv"))
 

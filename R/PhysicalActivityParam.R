@@ -8,7 +8,7 @@ rm(list = ls())
 
 library('stargazer')
 library(ggplot2)
-library(dplyr) 
+library(dplyr)
 library(nnet)
 library(zoo)
 library(moments)
@@ -22,16 +22,16 @@ library(haven)
 get_smooth_factor <- function(initial_factor, times) {
   if(times<1)
     return(initial_factor)
-  
+
   res <- initial_factor
-  
+
   for (j in 1:times) {
     tmp <- res
-    
+
     for (p in 1:length(res)) {
       tmp[p] <- res[p]
     }
-    
+
     sum <- 0
     for (i in 1:length(res)) {
       if (i == 1) {
@@ -41,11 +41,11 @@ get_smooth_factor <- function(initial_factor, times) {
       } else {
         res[i] <- (tmp[i - 1] + tmp[i] + tmp[i + 1]) / 3
       }
-      
+
       sum <- sum + res[i]
     }
   }
-  
+
   return(res)
 }
 

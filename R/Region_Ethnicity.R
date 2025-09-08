@@ -1,6 +1,6 @@
 ### Packages ###
 library(dplyr)
-library(tidyr) 
+library(tidyr)
 library(ggplot2)
 library(haven)
 
@@ -97,7 +97,7 @@ var_names <- sub("_baseline$", "", base_vars)  # Extract base variable names
 for (var in var_names) {
   base_col <- paste0(var, "_baseline")
   s1_col <- paste0(var, "_S1")
-  
+
   if (base_col %in% all_vars & s1_col %in% all_vars) {
     change_col <- paste0(var, "_S1_percentchange")
     lcfs_hh[[change_col]] <- (lcfs_hh[[s1_col]] - lcfs_hh[[base_col]])/lcfs_hh[[base_col]]
@@ -106,7 +106,7 @@ for (var in var_names) {
 for (var in var_names) {
   base_col <- paste0(var, "_baseline")
   s2_col <- paste0(var, "_S2")
-  
+
   if (base_col %in% all_vars & s2_col %in% all_vars) {
     change_col <- paste0(var, "_S2_percentchange")
     lcfs_hh[[change_col]] <- (lcfs_hh[[s2_col]] - lcfs_hh[[base_col]])/lcfs_hh[[base_col]]
@@ -129,8 +129,8 @@ lcfs_ind_more <- lcfs_ind_more |>
          log_fibre_w = log(fibre_w))
 
 lcfs_ind_more[lcfs_ind_more == -Inf] <- NA
-cals <- lm(data = lcfs_ind_more, 
-           fats_S1_percentchange ~ age_person + age_person_sq + age_person_cb + sex_person + 
+cals <- lm(data = lcfs_ind_more,
+           fats_S1_percentchange ~ age_person + age_person_sq + age_person_cb + sex_person +
              hhsize + ethnicity_person + log_fats_w + log_carbs_w + log_protein_w + log_fibre_w)
 summary(cals)
 
@@ -174,7 +174,7 @@ var_names <- sub("_baseline$", "", base_vars)  # Extract base variable names
 for (var in var_names) {
   base_col <- paste0(var, "_baseline")
   s1_col <- paste0(var, "_S1")
-  
+
   if (base_col %in% all_vars & s1_col %in% all_vars) {
     change_col <- paste0(var, "_S1_percentchange")
     demand_master[[change_col]] <- (demand_master[[s1_col]] - demand_master[[base_col]])/demand_master[[base_col]]
@@ -183,7 +183,7 @@ for (var in var_names) {
 for (var in var_names) {
   base_col <- paste0(var, "_baseline")
   s2_col <- paste0(var, "_S2")
-  
+
   if (base_col %in% all_vars & s2_col %in% all_vars) {
     change_col <- paste0(var, "_S2_percentchange")
     demand_master[[change_col]] <- (demand_master[[s2_col]] - demand_master[[base_col]])/demand_master[[base_col]]
@@ -192,7 +192,7 @@ for (var in var_names) {
 for (var in var_names) {
   base_col <- paste0(var, "_baseline")
   s3_col <- paste0(var, "_S3")
-  
+
   if (base_col %in% all_vars & s3_col %in% all_vars) {
     change_col <- paste0(var, "_S3_percentchange")
     demand_master[[change_col]] <- (demand_master[[s3_col]] - demand_master[[base_col]])/demand_master[[base_col]]
@@ -201,7 +201,7 @@ for (var in var_names) {
 for (var in var_names) {
   base_col <- paste0(var, "_baseline")
   s4_col <- paste0(var, "_S4")
-  
+
   if (base_col %in% all_vars & s4_col %in% all_vars) {
     change_col <- paste0(var, "_S4_percentchange")
     demand_master[[change_col]] <- (demand_master[[s4_col]] - demand_master[[base_col]])/demand_master[[base_col]]
@@ -210,7 +210,7 @@ for (var in var_names) {
 for (var in var_names) {
   base_col <- paste0(var, "_baseline")
   s5_col <- paste0(var, "_S5")
-  
+
   if (base_col %in% all_vars & s5_col %in% all_vars) {
     change_col <- paste0(var, "_S5_percentchange")
     demand_master[[change_col]] <- (demand_master[[s5_col]] - demand_master[[base_col]])/demand_master[[base_col]]
@@ -234,40 +234,40 @@ df <- data.frame(case, maffcode, quantity)
 # Create dummy variables based on maffcode conditions
 df$dum_fruit <- (df$maffcode >= 21001 & df$maffcode <= 24502)
 
-df$dum_vegetable <- ((df$maffcode >= 15501 & df$maffcode <= 18401 & 
-                  df$maffcode != 16801 & df$maffcode != 16901) | 
-                 df$maffcode %in% c(19101, 19501, 19602, 19801, 
+df$dum_vegetable <- ((df$maffcode >= 15501 & df$maffcode <= 18401 &
+                  df$maffcode != 16801 & df$maffcode != 16901) |
+                 df$maffcode %in% c(19101, 19501, 19602, 19801,
                                     19901, 20101, 20801))
 
-df$dum_legume <- df$maffcode %in% c(16801, 16901, 18501, 18803, 
+df$dum_legume <- df$maffcode %in% c(16801, 16901, 18501, 18803,
                                      19201, 20301, 20401)
 
-#df$dum_Bread <- ((df$maffcode >= 25102 & df$maffcode <= 26309 & 
+#df$dum_Bread <- ((df$maffcode >= 25102 & df$maffcode <= 26309 &
 #                  df$maffcode != 26303) | df$maffcode == 27101)
 
-#df$dum_Cereals <- df$maffcode %in% c(26401, 28702, 28703, 29502, 
+#df$dum_Cereals <- df$maffcode %in% c(26401, 28702, 28703, 29502,
 #                                    29919, 30101)
 
 df$dum_red_meat <- (df$maffcode >= 3102 & df$maffcode <= 4605)
 
-#df$dum_Meat_fresh <- (df$maffcode %in% c(4607, 5101) | 
+#df$dum_Meat_fresh <- (df$maffcode %in% c(4607, 5101) |
 #                        (df$maffcode >= 7401 & df$maffcode <= 7801))
 
-df$dum_proc_meat <- ((df$maffcode >= 5502 & df$maffcode <= 7102 & 
-                        df$maffcode != 5904) | 
-                       (df$maffcode >= 7901 & df$maffcode <= 9403 & 
+df$dum_proc_meat <- ((df$maffcode >= 5502 & df$maffcode <= 7102 &
+                        df$maffcode != 5904) |
+                       (df$maffcode >= 7901 & df$maffcode <= 9403 &
                           df$maffcode != 8901))
 
-#df$dum_Fish <- ((df$maffcode >= 10201 & df$maffcode <= 11703) | 
+#df$dum_Fish <- ((df$maffcode >= 10201 & df$maffcode <= 11703) |
 #                  df$maffcode == 11901 | df$maffcode == 12001)
 
-#df$dum_Milk <- ((df$maffcode >= 402 & df$maffcode <= 901) | 
-#                  df$maffcode %in% c(1201, 1502, 1503) | 
+#df$dum_Milk <- ((df$maffcode >= 402 & df$maffcode <= 901) |
+#                  df$maffcode %in% c(1201, 1502, 1503) |
 #                  (df$maffcode >= 1605 & df$maffcode <= 1608))
 
 #df$dum_Yoghurt <- df$maffcode %in% c(1301, 1302)
 
-#df$dum_DairyCheeseEggs <- ((df$maffcode >= 1701 & df$maffcode <= 2301) | 
+#df$dum_DairyCheeseEggs <- ((df$maffcode >= 1701 & df$maffcode <= 2301) |
 #                             df$maffcode == 12901)
 
 #df$dum_BreakCer_L <- df$maffcode %in% c(28101, 28202, 28203, 28205)
@@ -280,12 +280,12 @@ df$dum_proc_meat <- ((df$maffcode >= 5502 & df$maffcode <= 7102 &
 
 #df$dum_Confect_L <- df$maffcode %in% c(26303, 28502, 28503, 33303)
 
-#df$dum_Confect_H <- (df$maffcode %in% c(1603, 26701, 27001, 27402, 
-#                                        27702, 28601, 29402, 29907) | 
-#                       (df$maffcode >= 32901 & df$maffcode <= 33302) | 
+#df$dum_Confect_H <- (df$maffcode %in% c(1603, 26701, 27001, 27402,
+#                                        27702, 28601, 29402, 29907) |
+#                       (df$maffcode >= 32901 & df$maffcode <= 33302) |
 #                       (df$maffcode >= 35001 & df$maffcode <= 35401))
 
-#df$dum_ReadyM_L <- df$maffcode %in% c(8901, 12103, 18802, 29501, 
+#df$dum_ReadyM_L <- df$maffcode %in% c(8901, 12103, 18802, 29501,
 #                                      29601, 31801, 19702)
 
 #df$dum_ReadyM_H <- df$maffcode %in% c(20601, 31901)
@@ -296,26 +296,26 @@ df$dum_proc_meat <- ((df$maffcode >= 5502 & df$maffcode <= 7102 &
 
 #df$dum_NonAlcohol_H <- df$maffcode %in% c(31201, 31301, 34001, 34101)
 
-#df$dum_Alcohol_L <- ((df$maffcode >= 38102 & df$maffcode <= 38302) | 
+#df$dum_Alcohol_L <- ((df$maffcode >= 38102 & df$maffcode <= 38302) |
 #                       df$maffcode == 38403)
 
-#df$dum_Alcohol_H <- ((df$maffcode >= 38501 & df$maffcode <= 38901) | 
+#df$dum_Alcohol_H <- ((df$maffcode >= 38501 & df$maffcode <= 38901) |
 #                       df$maffcode == 38402)
 
-#df$dum_Miscell <- (df$maffcode %in% c(1102, 1103, 29001, 29101, 
-#                                      29915, 31501, 32801, 24503) | 
-#                     (df$maffcode >= 30401 & df$maffcode <= 30901) | 
-#                     (df$maffcode >= 32302 & df$maffcode <= 32703) | 
-#                     (df$maffcode >= 33401 & df$maffcode <= 33901) | 
+#df$dum_Miscell <- (df$maffcode %in% c(1102, 1103, 29001, 29101,
+#                                      29915, 31501, 32801, 24503) |
+#                     (df$maffcode >= 30401 & df$maffcode <= 30901) |
+#                     (df$maffcode >= 32302 & df$maffcode <= 32703) |
+#                     (df$maffcode >= 33401 & df$maffcode <= 33901) |
 #                     (df$maffcode >= 15001 & df$maffcode <= 15401))
 
-#df$dum_Takeaway_L <- df$maffcode %in% c(5904, 9505, 12305, 19703, 
-#                                        26311, 28704, 29503, 29602, 
+#df$dum_Takeaway_L <- df$maffcode %in% c(5904, 9505, 12305, 19703,
+#                                        26311, 28704, 29503, 29602,
 #                                        31001, 32001, 32201)
 
-#df$dum_Takeaway_H <- ((df$maffcode >= 9501 & df$maffcode <= 9504) | 
-#                        df$maffcode %in% c(9506, 11801, 12304, 20604, 
-#                                           26310, 27002, 29916, 32101, 
+#df$dum_Takeaway_H <- ((df$maffcode >= 9501 & df$maffcode <= 9504) |
+#                        df$maffcode %in% c(9506, 11801, 12304, 20604,
+#                                           26310, 27002, 29916, 32101,
 #                                           32704, 33304, 35501))
 
 # Aggregate expenditure for EO
@@ -342,5 +342,5 @@ write.csv(population_update, "HealthGPS_initial_population.csv")
 
 
 
-nutrient ~ age + age2 + age3 + sex + ethnicity + income + log_fat + log_carbs + 
+nutrient ~ age + age2 + age3 + sex + ethnicity + income + log_fat + log_carbs +
   log_protein + log_alcohol + log_nutrient
