@@ -15,219 +15,59 @@
             "Male": 0.0
         }
     ],
-    "RegionPrevalence": [
-        {
-            "Name": "Under18",
-            "Female": {
-                "England": 1.0,
-                "Wales": 0.0,
-                "Scotland": 0.0,
-                "NorthernIreland": 0.0
-            },
-            "Male": {
-                "England": 1.0,
-                "Wales": 0.0,
-                "Scotland": 0.0,
-                "NorthernIreland": 0.0
-            }
-        },
-        {
-            "Name": "Over18",
-            "Female": {
-                "England": 1.0,
-                "Wales": 0.0,
-                "Scotland": 0.0,
-                "NorthernIreland": 0.0
-            },
-            "Male": {
-                "England": 1.0,
-                "Wales": 0.0,
-                "Scotland": 0.0,
-                "NorthernIreland": 0.0
-            }
+    "RegionFile": {
+        "name": "region.csv",
+        "format": "csv",
+        "delimiter": ",",
+        "encoding": "ASCII",
+        "columns": {
+            "Age": "integer",
+            "Gender": "integer",
+            "England": "double",
+            "Wales": "double",
+            "Scotland": "double",
+            "Northern Ireland": "double"
         }
-    ],
-    "EthnicityPrevalence": [
-        {
-            "Name": "Under18",
-            "Female": {
-                "White": 0.749619681,
-                "Asian": 0.111977184,
-                "Black": 0.05100945,
-                "Others": 0.087393684
-            },
-            "Male": {
-                "White": 0.748859123,
-                "Asian": 0.112001554,
-                "Black": 0.051989487,
-                "Others": 0.087149836
-            }
-        },
-        {
-            "Name": "Over18",
-            "Female": {
-                "White": 0.852932903,
-                "Asian": 0.079101397,
-                "Black": 0.031788739,
-                "Others": 0.036176961
-            },
-            "Male": {
-                "White": 0.856113218,
-                "Asian": 0.076197005,
-                "Black": 0.033120629,
-                "Others": 0.034569148
-            }
+    },
+    "EthnicityFile": {
+        "name": "ethnicity.csv",
+        "format": "csv",
+        "delimiter": ",",
+        "encoding": "ASCII",
+        "columns": {
+            "adult": "integer",
+            "gender": "integer",
+            "ethnicity": "integer",
+            "England": "double",
+            "Wales": "double",
+            "Northern Ireland": "double",
+            "Scotland": "double"
         }
-    ],
+    },
     "IncomeModels": {
         "continuous": {
-            "Intercept": 409.3604814,
-            "Coefficients": {
-                "Gender": -26.21445067,
-                "Age": 9.305314696,
-                "Age2": -0.112970896,
-                "England": 0.0,
-                "Wales": 0.0,
-                "Scotland": 0.0,
-                "NorthernIreland": 0.0,
-                "White": 0.0,
-                "Asian": -45.38331165,
-                "Black": -108.2015578,
-                "Others": -40.05884512,
-                "Sector": 0.0,
-                "IncomeContinuousStdDev": 293.752576754905
+            "csv_file": "income_model.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
             }
         }
     },
     "PhysicalActivityModels": {
         "continuous": {
-            "Intercept": 1.710451556,
-            "Coefficients": {
-                "Gender": -0.008142608,
-                "Age": 0.005314357,
-                "Age2": -0.0000571912099924485,
-                "Age3": 0.0,
-                "Income": -0.000000306898468645247,
-                "England": 0.0,
-                "Wales": 0.0,
-                "Scotland": 0.0,
-                "NorthernIreland": 0.0,
-                "White": 0.0,
-                "Asian": -0.0611276153979725,
-                "Black": -0.0477024750529409,
-                "Others": -0.0536908560817608,
-                "Sector": 0.0
-            },
-            "StandardDeviation": 0.27510807
+            "csv_file": "physicalactivity_model.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
         }
     },
-    "Nutrients": [
-        {
-            "Name": "Carbohydrate",
-            "Range": [0.018864257, 1781.290527],
-            "Energy": 4.0
-        },
-        {
-            "Name": "Protein",
-            "Range": [0.008585715, 359.7049561],
-            "Energy": 4.0
-        },
-        {
-            "Name": "Fat",
-            "Range": [0, 1232.129272],
-            "Energy": 9.0
-        },
-        {
-            "Name": "Sodium",
-            "Range": [0.000200005, 16.34803581],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Alcohol",
-            "Range": [0.0, 306.9281311],
-            "Energy": 7.0
-        },
-        {
-            "Name": "ProcessedMeat",
-            "Range": [0.0, 932.5],
-            "Energy": 0.0
-        },
-        {
-            "Name": "RedMeat",
-            "Range": [0.0, 476.6325559],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Legume",
-            "Range": [0.0, 433.6983613],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Fruit",
-            "Range": [0.0, 1720.489525],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Vegetable",
-            "Range": [0.0, 2046.825704],
-            "Energy": 0.0
-        },
-        {
-            "Name": "AddedSugar",
-            "Range": [0.0, 758.3163452],
-            "Energy": 0.0
-        },
-        {
-            "Name": "TotalSugar",
-            "Range": [0.019693965, 819.5865479],
-            "Energy": 0.0
-        },
-        {
-            "Name": "MonounsaturatedFat",
-            "Range": [0.0, 483.5317688],
-            "Energy": 0.0
-        },
-        {
-            "Name": "PolyunsaturatedFattyAcid",
-            "Range": [0.0, 473.1528015],
-            "Energy": 0.0
-        },
-        {
-            "Name": "SaturatedFat",
-            "Range": [0.0, 276.9013672],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Fibre",
-            "Range": [0.0, 189.5542603],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Calcium",
-            "Range": [0.737887883, 6684.71119],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Iron",
-            "Range": [0.005067779, 98.2867514],
-            "Energy": 0.0
-        },
-        {
-            "Name": "VitaminC",
-            "Range": [0.007861946, 493.1192256],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Copper",
-            "Range": [0.0, 17.2348732],
-            "Energy": 0.0
-        },
-        {
-            "Name": "Zinc",
-            "Range": [0.0, 42.68661953],
-            "Energy": 0.0
-        }
-    ],
     "RiskFactorModels": {
         "FoodCarbohydrate": {
             "Lambda": 0.424242424,
