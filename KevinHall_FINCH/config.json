@@ -250,7 +250,7 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2026,
+        "stop_time": 2025,
         "trial_runs": 1,
         "sync_timeout_ms": 15000,
         "diseases": [
