@@ -4,7 +4,13 @@
     "trend_type": "income_trend",
     "data": {
         "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v1/data_PIF-v1.zip",
-        "checksum": "2b2e3d27275a92dd84f3e638c46cf373930650d7bbd640aae048bba20a186ec7"
+        "checksum": "08690deb04aea3bb317ecdcdfd50d0a712171d69c7f5536d31c0f270a2a4c06e"
+    },
+    "population_impact_fraction": {
+        "enabled": true,
+        "data_root_path": "${PIF_DATA_ROOT}/data",
+        "risk_factor": "Smoking",
+        "scenario": "Scenario1"
     },
     "inputs": {
         "dataset": {
