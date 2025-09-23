@@ -1348,7 +1348,7 @@ logistic_parameters <- data.frame(
   FoodVegetable = logistic_vegetable$coefficients,
   FoodLegume = logistic_legume$coefficients,
   FoodRedMeat = logistic_red_meat$coefficients,
-  FoodProcMeat = logistic_proc_meat$coefficients
+  FoodProcessedMeat = logistic_proc_meat$coefficients
 )
 
 
@@ -1418,7 +1418,6 @@ setwd(file.path("C:", "healthgps-examples", "KevinHall_FINCH"))
 
 
 # Save the coefficients from regression models for transformed variables ('carb', 'fat', 'protein', 'sodium') using Box-Cox transformation
-
 BoxCoxCoeffs_Combined = data.frame(
 
 		FoodCarbohydrate				= c(reg_carb$coefficients			,  stddev = sd_carb			,	lambda = lambda_carb		)	,
@@ -1465,6 +1464,8 @@ rownames(BoxCoxCoeffs_Combined) = gsub("sex2", "gender2", rownames(BoxCoxCoeffs_
 write.csv(BoxCoxCoeffs_Combined, "boxcox_coefficients.csv")
 
 # fix rownames of logistic coefficients
+all (colnames(logistic_parameters) %in% colnames(BoxCoxCoeffs_Combined))
+
 rownames(logistic_parameters) = gsub("\\(Intercept\\)", "Intercept", rownames(logistic_parameters))
 rownames(logistic_parameters) = gsub("inc", "income", rownames(logistic_parameters))
 rownames(logistic_parameters) = gsub("sex2", "gender2", rownames(logistic_parameters))
