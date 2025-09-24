@@ -52,19 +52,19 @@
                 "Income": 0.0809885669494078
             },
             "Policy": {
-                "Range": [-4.057, 0.205],
-                "Intercept": -0.477465098847005,
+                "Range": [0.0, 0.0],
+                "Intercept": 0,
                 "Coefficients": {
-                    "Gender": 0.010899759939465,
-                    "Age": 0.00129398029517946,
-                    "Sector": 0.126729351194926,
-                    "Income": -0.178338329766076
+                    "Gender": 0.0,
+                    "Age": 0.00,
+                    "Sector": 0.0,
+                    "Income": 0.0
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.3726413021901,
-                    "FoodFat": -0.383779240609951,
-                    "FoodProtein": -0.00711295623187747,
-                    "FoodSodium": -0.0553825982918182
+                    "FoodCarbohydrate": 0.0,
+                    "FoodFat": 0.0,
+                    "FoodProtein": 0.0,
+                    "FoodSodium": 0.0
                 }
             },
             "Trend": {
@@ -127,19 +127,19 @@
                 "Income": 0.255484551269212
             },
             "Policy": {
-                "Range": [-5.48, 0.267],
-                "Intercept": 1.45888361704005,
+                "Range": [0.0, 0.0],
+                "Intercept": 0.0,
                 "Coefficients": {
-                    "Gender": 0.0212702954008516,
-                    "Age": 0.0026627995748763,
-                    "Sector": 0.0802302773594716,
-                    "Income": -0.127573873852267
+                    "Gender": 0.0,
+                    "Age": 0.00,
+                    "Sector": 0.0,
+                    "Income": 0.0
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": -0.957255522274892,
-                    "FoodFat": 0.152124262225707,
-                    "FoodProtein": 0.835321031327847,
-                    "FoodSodium": -0.11407213170064
+                    "FoodCarbohydrate": 0.0,
+                    "FoodFat": 0.0,
+                    "FoodProtein": 0.0,
+                    "FoodSodium": 0.0
                 }
             },
             "Trend": {
@@ -202,19 +202,19 @@
                 "Income": 0.143685867265526
             },
             "Policy": {
-                "Range": [-4.621, 0.265],
-                "Intercept": -0.342858249631754,
+                "Range": [0.0, 0.0],
+                "Intercept": 0.0,
                 "Coefficients": {
-                    "Gender": 0.0174461221874917,
-                    "Age": 0.000769673249255971,
-                    "Sector": 0.106957096302722,
-                    "Income": -0.0935333083548104
+                    "Gender": 0.0,
+                    "Age": 0.00,
+                    "Sector": 0.0,
+                    "Income": 0.0
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": 0.444146068140181,
-                    "FoodFat": -0.195039810141995,
-                    "FoodProtein": -0.291878479395012,
-                    "FoodSodium": -0.100227744915835
+                    "FoodCarbohydrate": 0.0,
+                    "FoodFat": 0.0,
+                    "FoodProtein": 0.0,
+                    "FoodSodium": 0.0
                 }
             },
             "Trend": {
@@ -277,19 +277,19 @@
                 "Income": 0.104689483555819
             },
             "Policy": {
-                "Range": [-6.42, 0.231],
-                "Intercept": -2.36254786655729,
+                "Range": [0.0, 0.0],
+                "Intercept": 0.0,
                 "Coefficients": {
-                    "Gender": 0.0104897260513572,
-                    "Age": 0.00205016401243188,
-                    "Sector": 0.14148829274431,
-                    "Income": -0.157946503898685
+                    "Gender": 0.0,
+                    "Age": 0.00,
+                    "Sector": 0.0,
+                    "Income": 0.0
                 },
                 "LogCoefficients": {
-                    "FoodCarbohydrate": -0.481208576705622,
-                    "FoodFat": -0.349319270282021,
-                    "FoodProtein": 0.122997892521945,
-                    "FoodSodium": 0.657523396594267
+                    "FoodCarbohydrate": 0.0,
+                    "FoodFat": 0.0,
+                    "FoodProtein": 0.0,
+                    "FoodSodium": 0.0
                 }
             },
             "Trend": {
