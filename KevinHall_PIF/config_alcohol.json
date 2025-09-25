@@ -37,7 +37,7 @@
         },
         "settings": {
             "country_code": "IND",
-            "size_fraction": 0.0001,
+            "size_fraction": 0.01,
             "age_range": [0, 100]
         }
     },
@@ -150,7 +150,7 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2024,
+        "stop_time": 2050,
         "trial_runs": 1,
         "sync_timeout_ms": 15000,
         "diseases": [
