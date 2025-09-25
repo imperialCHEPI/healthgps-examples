@@ -9,7 +9,7 @@
     "population_impact_fraction": {
         "enabled": true,
         "data_root_path": "${PIF_DATA_ROOT}/data",
-        "risk_factor": "Smoking",
+        "risk_factor": "Alcohol",
         "scenario": "Scenario1"
     },
     "inputs": {
@@ -154,20 +154,17 @@
         "trial_runs": 1,
         "sync_timeout_ms": 15000,
         "diseases": [
-            "ischemicheartdisease",
-            "diabetes",
-            "intracerebralhemorrhage",
-            "ischemicstroke",
-            "asthma",
-            "subarachnoidhemorrhage",
-            "chronickidneydisease",
-            "pulmonary",
-            "trachealbronchuslungcancer",
+            "alcoholusedisorders",
+            "cirrhosis",
+            "lipandoralcavitycancer",
+            "livercancer",
             "otherpharynxcancer",
-            "lowerrespiratoryinfections",
-            "tuberculosis",
-            "stroke",
-            "cervicalcancer"
+            "roadinjuries",
+            "selfharm",
+            "intracerebralhemorrhage",
+            "subarachnoidhemorrhage",
+            "ischemicstroke",
+            "tuberculosis"
         ],
         "interventions": {
             "active_type_id": "simple",
