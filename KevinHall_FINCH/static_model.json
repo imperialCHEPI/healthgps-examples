@@ -44,17 +44,17 @@
             "region3": "double"
         }
     },
-    "IncomeModels": {
-        "continuous": {
-            "csv_file": "income_model.csv",
-            "format": "csv",
-            "delimiter": ",",
-            "encoding": "ASCII",
-            "columns": {
-                "Factor": "Factor",
-                "Coefficient": "Coefficient"
+  "IncomeModels": {
+            "continuous": {
+                "csv_file": "income_model.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "Factor": "Factor",
+                    "Coefficient": "Coefficient"
+                }
             }
-        }
     },
     "PhysicalActivityModels": {
         "continuous": {
