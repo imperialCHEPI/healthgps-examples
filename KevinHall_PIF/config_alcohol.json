@@ -3,8 +3,8 @@
     "version": 2,
     "trend_type": "null",
     "data": {
-        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v1/Data-PIF.zip",
-        "checksum": "72cf0b8d85f485ec12e002fe09d65b9e1defaea68cf3c5ed80f490140a3eab5c"
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v2/PIF-data.zip",
+        "checksum": "559864fdbf4f012f581d6afff5fb5e962bcb30c8793da9f2c0df8261881d1345"
     },
     "population_impact_fraction": {
         "enabled": true,
@@ -37,7 +37,7 @@
         },
         "settings": {
             "country_code": "IND",
-            "size_fraction": 0.01,
+            "size_fraction": 0.0001,
             "age_range": [0, 100]
         }
     },
@@ -150,7 +150,7 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2050,
+        "stop_time": 2025,
         "trial_runs": 1,
         "sync_timeout_ms": 15000,
         "diseases": [
