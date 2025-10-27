@@ -3,8 +3,8 @@
     "version": 2,
     "trend_type": "null",
     "data": {
-        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v3/pif-data-v3.zip",
-        "checksum": "0d32223d2497b1fc555cc6d2ea62c07724da90319f8294f5c7c820465bd71e49"
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v4/pif-data-v4.zip",
+        "checksum": "2f189da5bbcfd6bceb4752c1977de8012a20da43e90200cae5d74d43f657c353"
     },
     "population_impact_fraction": {
         "enabled": true,
