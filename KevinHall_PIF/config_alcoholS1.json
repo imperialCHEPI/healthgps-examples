@@ -9,7 +9,7 @@
     "population_impact_fraction": {
         "enabled": true,
         "data_root_path": "${PIF_DATA_ROOT}/data",
-        "risk_factor": "Smoking",
+        "risk_factor": "Alcohol",
         "scenario": "Scenario1"
     },
     "inputs": {
@@ -150,21 +150,21 @@
     "running": {
         "seed": [ 123456789 ],
         "start_time": 2022,
-        "stop_time": 2050,
+        "stop_time": 2052,
         "trial_runs": 1,
-        "sync_timeout_ms": 1500000000,
+        "sync_timeout_ms": 150000000,
         "diseases": [
-            "ischemicheartdisease",
-            "diabetes",
-            "asthma",
-            "pulmonary",
-            "trachealbronchuslungcancer",
+            "alcoholusedisorders",
+            "cirrhosis",
+            "lipandoralcavitycancer",
+            "livercancer",
             "otherpharynxcancer",
-            "lowerrespiratoryinfections",
-            "tuberculosis",
-            "stroke",
-            "cervicalcancer",
-            "larynxcancer"
+            "roadinjuries",
+            "selfharm",
+            "intracerebralhemorrhage",
+            "subarachnoidhemorrhage",
+            "ischemicstroke",
+            "tuberculosis"
         ],
         "interventions": {
             "active_type_id": "simple",
@@ -182,7 +182,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/india/smoking1/1%/longrun",
-        "file_name": "HealthGPS_Result_smoking1_{TIMESTAMP}.json"
+        "folder": "${HOME}/healthgps/results/india/alcohol1",
+        "file_name": "HealthGPS_Result_alcohol1_{TIMESTAMP}.json"
     }
 }
