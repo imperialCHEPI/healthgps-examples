@@ -45,7 +45,6 @@
         "ses_model": {
             "function_name": "normal",
             "function_parameters": [0.0, 1.0]
-        },
         "risk_factors": [
             {
                 "name": "Gender",
@@ -116,7 +115,7 @@
                 "name": "EnergyIntake",
                 "level": 2,
                 "range": [148.44214, 6783.8416544739]
-            },
+           },
             {
                 "name": "Weight",
                 "level": 3,
