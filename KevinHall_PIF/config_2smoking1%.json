@@ -10,7 +10,7 @@
         "enabled": true,
         "data_root_path": "${PIF_DATA_ROOT}/data",
         "risk_factor": "Smoking",
-        "scenario": "Scenario1"
+        "scenario": "Scenario2"
     },
     "inputs": {
         "dataset": {
@@ -150,17 +150,13 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2050,
+        "stop_time": 2052,
         "trial_runs": 1,
-        "sync_timeout_ms": 15000,
+        "sync_timeout_ms": 1500000000,
         "diseases": [
             "ischemicheartdisease",
             "diabetes",
-            "intracerebralhemorrhage",
-            "ischemicstroke",
             "asthma",
-            "subarachnoidhemorrhage",
-            "chronickidneydisease",
             "pulmonary",
             "trachealbronchuslungcancer",
             "otherpharynxcancer",
@@ -186,7 +182,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/india",
-        "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
+        "folder": "${HOME}/healthgps/results/india/smoking2/1%/longrun",
+        "file_name": "HealthGPS_Result_smoking2_{TIMESTAMP}.json"
     }
 }
