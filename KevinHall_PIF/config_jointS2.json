@@ -163,7 +163,8 @@
             "lowerrespiratoryinfections",
             "tuberculosis",
             "stroke",
-            "cervicalcancer"
+            "cervicalcancer",
+            "larynxcancer"
         ],
         "interventions": {
             "active_type_id": "simple",
