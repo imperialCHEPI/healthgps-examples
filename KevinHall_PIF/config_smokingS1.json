@@ -3,14 +3,14 @@
     "version": 2,
     "trend_type": "null",
     "data": {
-        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v5/pif-data-v5.zip",
-        "checksum": "a918e8525cd8c48cab6b13cceb08f51e8593cac80753a6782e4ea2a28d9e02ca"
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v7/pif-data-v7.zip",
+        "checksum": "329ba9598379eebdaa30662cb36c5b24442f23ece5bd4d1653e117cdf5d47b99"
     },
     "population_impact_fraction": {
         "enabled": true,
         "data_root_path": "${PIF_DATA_ROOT}/data",
         "risk_factor": "Smoking",
-        "scenario": "Scenario3"
+        "scenario": "Scenario1"
     },
     "inputs": {
         "dataset": {
@@ -150,7 +150,7 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2052,
+        "stop_time": 2050,
         "trial_runs": 1,
         "sync_timeout_ms": 1500000000,
         "diseases": [
@@ -160,7 +160,6 @@
             "pulmonary",
             "trachealbronchuslungcancer",
             "otherpharynxcancer",
-            "lowerrespiratoryinfections",
             "tuberculosis",
             "stroke",
             "cervicalcancer",
@@ -182,7 +181,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/india/smoking3/1%/longrun",
-        "file_name": "HealthGPS_Result_smoking3_{TIMESTAMP}.json"
+        "folder": "${HOME}/healthgps/results/PIF/smoking1",
+        "file_name": "HealthGPS_Result_smoking1_{TIMESTAMP}.json"
     }
 }
