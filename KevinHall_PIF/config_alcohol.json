@@ -182,7 +182,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/india/alcohol",
+        "folder": "${HOME}/healthgps/results/PIF/alcohol",
         "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
     }
 }
