@@ -148,7 +148,7 @@
         }
     },
     "running": {
-      "seed": [ 555363563 ],
+        "seed": [555363563],
         "start_time": 2022,
         "stop_time": 2052,
         "trial_runs": 1,

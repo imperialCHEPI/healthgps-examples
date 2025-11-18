@@ -148,7 +148,7 @@
         }
     },
     "running": {
-      "seed": [ 3675862732 ],
+        "seed": [3675862732],
         "start_time": 2022,
         "stop_time": 2052,
         "trial_runs": 1,
@@ -180,9 +180,9 @@
             }
         }
     },
-  "output": {
-    "comorbidities": 5,
-    "folder": "${HOME}/healthgps/results/PIF/alcohol3/seed2",
-    "file_name": "HealthGPS_Result_alcohol3_{TIMESTAMP}.json"
-  }
+    "output": {
+        "comorbidities": 5,
+        "folder": "${HOME}/healthgps/results/PIF/alcohol3/seed2",
+        "file_name": "HealthGPS_Result_alcohol3_{TIMESTAMP}.json"
+    }
 }
