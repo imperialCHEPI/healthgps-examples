@@ -38,99 +38,99 @@
         "settings": {
             "country_code": "IND",
             "size_fraction": 0.01,
-            "age_range": [ 0, 110 ]
+            "age_range": [0, 110]
         }
     },
     "modelling": {
         "ses_model": {
             "function_name": "normal",
-            "function_parameters": [ 0.0, 1.0 ]
+            "function_parameters": [0.0, 1.0]
         },
         "risk_factors": [
             {
                 "name": "Gender",
                 "level": 0,
-                "range": [ 0, 1 ]
+                "range": [0, 1]
             },
             {
                 "name": "Age",
                 "level": 0,
-                "range": [ 0, 100 ]
+                "range": [0, 100]
             },
             {
                 "name": "Sector",
                 "level": 0,
-                "range": [ 0, 1 ]
+                "range": [0, 1]
             },
             {
                 "name": "Income",
                 "level": 0,
-                "range": [ 1, 3 ]
+                "range": [1, 3]
             },
             {
                 "name": "FoodCarbohydrate",
                 "level": 1,
-                "range": [ 18.98039, 1314.469065984 ]
+                "range": [18.98039, 1314.469065984]
             },
             {
                 "name": "FoodFat",
                 "level": 1,
-                "range": [ 1.354973, 529.6070132192 ]
+                "range": [1.354973, 529.6070132192]
             },
             {
                 "name": "FoodProtein",
                 "level": 1,
-                "range": [ 4.091681, 445.473773784 ]
+                "range": [4.091681, 445.473773784]
             },
             {
                 "name": "FoodSodium",
                 "level": 1,
-                "range": [ 5.515374, 61238.5989752 ]
+                "range": [5.515374, 61238.5989752]
             },
             {
                 "name": "Carbohydrate",
                 "level": 1,
-                "range": [ 18.98039, 1314.469065984 ]
+                "range": [18.98039, 1314.469065984]
             },
             {
                 "name": "Fat",
                 "level": 1,
-                "range": [ 1.354973, 529.6070132192 ]
+                "range": [1.354973, 529.6070132192]
             },
             {
                 "name": "Protein",
                 "level": 1,
-                "range": [ 4.091681, 445.473773784 ]
+                "range": [4.091681, 445.473773784]
             },
             {
                 "name": "Sodium",
                 "level": 1,
-                "range": [ 5.515374, 61238.5989752 ]
+                "range": [5.515374, 61238.5989752]
             },
             {
                 "name": "PhysicalActivity",
                 "level": 2,
-                "range": [ 1.388473, 1.835487 ]
+                "range": [1.388473, 1.835487]
             },
             {
                 "name": "EnergyIntake",
                 "level": 2,
-                "range": [ 148.44214, 6783.8416544739 ]
+                "range": [148.44214, 6783.8416544739]
             },
             {
                 "name": "Weight",
                 "level": 3,
-                "range": [ 3.319358, 92.56391 ]
+                "range": [3.319358, 92.56391]
             },
             {
                 "name": "Height",
                 "level": 3,
-                "range": [ 51.87618, 189.5827 ]
+                "range": [51.87618, 189.5827]
             },
             {
                 "name": "BMI",
                 "level": 3,
-                "range": [ 13.88, 39.48983 ]
+                "range": [13.88, 39.48983]
             }
         ],
         "risk_factor_models": {
@@ -148,7 +148,7 @@
         }
     },
     "running": {
-        "seed": [ 7777777 ],
+        "seed": [7777777],
         "start_time": 2022,
         "stop_time": 2052,
         "trial_runs": 1,
