@@ -233,6 +233,21 @@
                 "FoodCopper": "double",
                 "FoodZinc": "double"
             }
+        },
+        "logistic_regression": {
+            "name": "logistic_regression.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "FoodAlcohol": "double",
+                "FoodAddedSugar": "double",
+                "FoodFruit": "double",
+                "FoodVegetable": "double",
+                "FoodLegume": "double",
+                "FoodRedMeat": "double",
+                "FoodProcessedMeat": "double"
+            }
         }
     },
     "RiskFactorCorrelationFile": {
