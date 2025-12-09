@@ -37,7 +37,7 @@
         },
         "settings": {
             "country_code": "IND",
-            "size_fraction": 0.01,
+            "size_fraction": 0.0001,
             "age_range": [0, 100]
         }
     },
