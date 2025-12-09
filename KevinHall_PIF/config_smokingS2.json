@@ -9,8 +9,8 @@
     "population_impact_fraction": {
         "enabled": true,
         "data_root_path": "${PIF_DATA_ROOT}/data",
-        "risk_factor": "Alcohol",
-        "scenario": "Scenario3"
+        "risk_factor": "Smoking",
+        "scenario": "Scenario2"
     },
     "inputs": {
         "dataset": {
@@ -152,19 +152,18 @@
         "start_time": 2022,
         "stop_time": 2052,
         "trial_runs": 1,
-        "sync_timeout_ms": 150000000,
+        "sync_timeout_ms": 1500000000,
         "diseases": [
-            "alcoholusedisorders",
-            "cirrhosis",
-            "lipandoralcavitycancer",
-            "livercancer",
+            "ischemicheartdisease",
+            "diabetes",
+            "asthma",
+            "pulmonary",
+            "trachealbronchuslungcancer",
             "otherpharynxcancer",
-            "roadinjuries",
-            "selfharm",
-            "intracerebralhemorrhage",
-            "subarachnoidhemorrhage",
-            "ischemicstroke",
-            "tuberculosis"
+            "tuberculosis",
+            "stroke",
+            "cervicalcancer",
+            "larynxcancer"
         ],
         "interventions": {
             "active_type_id": "simple",
@@ -182,7 +181,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/PIF/alcohol3",
-        "file_name": "HealthGPS_Result_alcohol3_{TIMESTAMP}.json"
+        "folder": "${HOME}/healthgps/results/PIF/smoking2",
+        "file_name": "HealthGPS_Result_smoking2_{TIMESTAMP}.json"
     }
 }

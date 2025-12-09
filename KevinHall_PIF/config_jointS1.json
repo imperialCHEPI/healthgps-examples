@@ -3,8 +3,8 @@
     "version": 2,
     "trend_type": "null",
     "data": {
-        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v6/pif-data-v6.zip",
-        "checksum": "e4f1fb6fa0d272142a26601d415d7b3ded51b67b0a2c3cc5f38b952cd605252d"
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/PIF-v7/pif-data-v7.zip",
+        "checksum": "329ba9598379eebdaa30662cb36c5b24442f23ece5bd4d1653e117cdf5d47b99"
     },
     "population_impact_fraction": {
         "enabled": true,
@@ -161,7 +161,6 @@
             "trachealbronchuslungcancer",
             "otherpharynxcancer",
             "asthma",
-            "lowerrespiratoryinfections",
             "tuberculosis",
             "stroke",
             "cervicalcancer",
@@ -191,7 +190,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/india/joint/1%",
+        "folder": "${HOME}/healthgps/results/PIF/joint1",
         "file_name": "HealthGPS_Result_smoking1_{TIMESTAMP}.json"
     }
 }
