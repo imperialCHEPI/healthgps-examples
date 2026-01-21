@@ -234,7 +234,7 @@
             }
         ],
         "risk_factor_models": {
-            "static": "static_model.json",
+            "static": "new_static_model.json",
             "dynamic": "dynamic_model.json"
         },
         "baseline_adjustments": {
