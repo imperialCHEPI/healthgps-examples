@@ -13,7 +13,7 @@
         "income": {
             "enabled": true/false,
             "type": "continuous" or "categorical",
-            "categories": "4" or "3", "NOTE":  Working on more categories like 5, 6,or 10 and more
+            "categories": "4" or "3", ("NOTE":  Working on more categories like 5, 6,or 10 and more)
             "adjust_to_factors_mean": true/false,
             "trended": true/false,
             "income_based_csv_output": true/false
@@ -28,7 +28,7 @@
             "adjust_to_factors_mean": true/false,
             "trended": true/false
         },
-        "trend": {
+        "trend": { 
             "enabled": true/false,
             "type": "null" or "UPF_trend" or "income_trend"
         },
@@ -39,7 +39,7 @@
 
     "data": {
         "source": "https://example.com/your-data/releases/download/v1/data.zip",
-        "checksum": "YOUR_SHA256_CHECKSUM" Eg- Mahima will provide this. Don't worry :)'
+        "checksum": "YOUR_SHA256_CHECKSUM" Eg- Mahima will provide this. Don't worry :)
     },
 
     "inputs": {
