@@ -28,7 +28,7 @@
             "adjust_to_factors_mean": true/false,
             "trended": true/false
         },
-        "trend": { 
+        "trend": {
             "enabled": true/false,
             "type": "null" or "UPF_trend" or "income_trend"
         },
