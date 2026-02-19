@@ -4,42 +4,61 @@
 
     "project_requirements": {
         "demographics": {
-            "age": true/false,
-            "gender": true/false,
-            "region": true/false,
-            "ethnicity": true/false,
-            "max_age_for_linear_models": null/an age number. Eg- 80, 75, 100
+            "age": "true/false",
+            "gender": "true/false",
+            "region": "true/false",
+            "ethnicity": "true/false",
+            "max_age_for_linear_models": "null/an",
+            "age" "number.",
+            "Eg-" 80,
+            75,
+            100
         },
         "income": {
-            "enabled": true/false,
-            "type": "continuous" or "categorical",
-            "categories": "4" or "3", ("NOTE":  Working on more categories like 5, 6,or 10 and more)
-            "adjust_to_factors_mean": true/false,
-            "trended": true/false,
-            "income_based_csv_output": true/false
+            "enabled": "true/false",
+            "type": "continuous",
+            "or" "categorical",
+            "categories": "4",
+            "or" "3",
+            "(\"NOTE\"": "Working",
+            "on" "more",
+            "categories" "like",
+            5,
+            6,
+            "or" 10,
+            "and" "more)",
+            "adjust_to_factors_mean": "true/false",
+            "trended": "true/false",
+            "income_based_csv_output": "true/false"
         },
         "physical_activity": {
-            "enabled": true/false,
-            "type": "continuous" or "simple",
-            "adjust_to_factors_mean": true/false,
-            "trended": true/false
+            "enabled": "true/false",
+            "type": "continuous",
+            "or" "simple",
+            "adjust_to_factors_mean": "true/false",
+            "trended": "true/false"
         },
         "risk_factors": {
-            "adjust_to_factors_mean": true/false,
-            "trended": true/false
+            "adjust_to_factors_mean": "true/false",
+            "trended": "true/false"
         },
         "trend": {
-            "enabled": true/false,
-            "type": "null" or "UPF_trend" or "income_trend"
+            "enabled": "true/false",
+            "type": "null",
+            "or" "UPF_trend",
+            "or" "income_trend"
         },
         "two_stage": {
-            "use_logistic": true/false
+            "use_logistic": "true/false"
         }
     },
 
     "data": {
         "source": "https://example.com/your-data/releases/download/v1/data.zip",
-        "checksum": "YOUR_SHA256_CHECKSUM" Eg- Mahima will provide this. Don't worry :)
+        "checksum": "YOUR_SHA256_CHECKSUM",
+        "Eg-" "Mahima",
+        "will" "provide",
+        "this." "Don't worry :)"
     },
 
     "inputs": {
@@ -62,16 +81,21 @@
         "settings": {
             "country_code": "XXX",
             "size_fraction": 0.001,
-            "age_range": [0, 110]
+            "age_range": [ 0, 110 ]
         }
     },
 
     "modelling": {
         "ses_model": {
             "function_name": "normal",
-            "function_parameters": [0.0, 1.0]
+            "function_parameters": [ 0.0, 1.0 ]
         },
-        "policy_start_year": 2022/2027/whatever year the user wants policy to be applied from,
+        "policy_start_year": "2022/2027/whatever",
+        "year" "the",
+        "user" "wants",
+        "policy" "to",
+        "be" "applied",
+        "from",
         "risk_factors": [
             {
                 "name": "Gender",
@@ -100,7 +124,7 @@
     },
 
     "running": {
-        "seed": [123457896],
+        "seed": [ 123457896 ],
         "start_time": 2020,
         "stop_time": 2030,
         "trial_runs": 1,
@@ -124,6 +148,17 @@
     "output": {
         "comorbidities": 5,
         "folder": "${HOME}/healthgps/results/your_project",
-        "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
+        "file_name": "HealthGPS_Result_{TIMESTAMP}.json",
+        "individual_id_tracking": {
+            "enabled": true/false,
+            "age_min": 13,
+            "age_max": 20,
+            "gender": "all", or "female" or "male"
+            "regions": [ "region1", "region3" ],
+            "ethnicities": [ "ethnicity1" ],
+            "risk_factors": [ "BMI", "Weight", "FoodCarbohydrate", "FoodAlcohol", "FoodLegume" ], "NOTE":  You can add more risk factors here
+            "years": [ 2024, 2025, 2026 ], "NOTE":  For how many ever years you would like to track the individuals, you can add those years here
+            "scenarios": "both" or "baseline" or "intervention"
+        }
     }
 }
