@@ -1,7 +1,42 @@
 {
     "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
     "version": 2,
+    "project_requirements": {
+        "demographics": {
+            "age": true,
+            "gender": true,
+            "region": true,
+            "ethnicity": true,
+            "max_age_for_linear_models": 80
+        },
+        "income": {
+            "enabled": true,
+            "type": "continuous",
+            "categories": "4",
+            "adjust_to_factors_mean": true,
+            "trended": false,
+            "income_based_csv_output": false
+        },
+        "physical_activity": {
+            "enabled": true,
+            "type": "continuous",
+            "adjust_to_factors_mean": true,
+            "trended": false
+        },
+        "risk_factors": {
+            "adjust_to_factors_mean": true,
+            "trended": true
+        },
+        "trend": {
+            "enabled": false,
+            "type": "null"
+        },
+        "two_stage": {
+            "use_logistic": false
+        }
+    },
     "trend_type": "null",
+    "income_categories": "4",
     "data": {
         "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/finch-v4/data.zip",
         "checksum": "b8bef3b1f916b5cdc6497550947ae140661d2294b9a3ff61d65ce4098d46ecfc"
@@ -50,7 +85,7 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.0001,
+            "size_fraction": 0.001,
             "age_range": [0, 110]
         }
     },
@@ -60,6 +95,7 @@
             "function_name": "normal",
             "function_parameters": [0.0, 1.0]
         },
+        "policy_start_year": 2024,
         "risk_factors": [
             {
                 "name": "Gender",
@@ -233,7 +269,7 @@
             }
         ],
         "risk_factor_models": {
-            "static": "static_model.json",
+            "static": "new_static_model.json",
             "dynamic": "dynamic_model.json"
         },
         "baseline_adjustments": {
@@ -250,9 +286,9 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2026,
+        "stop_time": 2025,
         "trial_runs": 1,
-        "sync_timeout_ms": 15000,
+        "sync_timeout_ms": 150000,
         "diseases": [
             "alzheimer",
             "asthma",
@@ -287,6 +323,23 @@
     "output": {
         "comorbidities": 5,
         "folder": "${HOME}/healthgps/results/finch",
-        "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
+        "file_name": "HealthGPS_Result_{TIMESTAMP}.json",
+        "individual_id_tracking": {
+            "enabled": true,
+            "age_min": 13,
+            "age_max": 20,
+            "gender": "all",
+            "regions": ["region1", "region3"],
+            "ethnicities": ["ethnicity1"],
+            "risk_factors": [
+                "BMI",
+                "Weight",
+                "FoodCarbohydrate",
+                "FoodAlcohol",
+                "FoodLegume"
+            ],
+            "years": [2024, 2025, 2026],
+            "scenarios": "both"
+        }
     }
 }
