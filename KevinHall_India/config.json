@@ -172,7 +172,7 @@
     },
     "output": {
         "comorbidities": 5,
-        "folder": "${HOME}/healthgps/results/india",
+        "folder": "${HOME}/healthgps/results/india/old/0.1%/4threads/runx",
         "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
     }
 }
