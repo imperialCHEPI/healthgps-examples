@@ -9,24 +9,13 @@
             "region": "true/false",
             "ethnicity": "true/false",
             "max_age_for_linear_models": "null/an",
-            "age" "number.",
-            "Eg-" 80,
-            75,
-            100
+            "age" "number","Eg-" 80, 75, 100
         },
         "income": {
             "enabled": "true/false",
-            "type": "continuous",
-            "or" "categorical",
-            "categories": "4",
-            "or" "3",
-            "(\"NOTE\"": "Working",
-            "on" "more",
-            "categories" "like",
-            5,
-            6,
-            "or" 10,
-            "and" "more)",
+            "type": "continuous/categorical",
+            "categories": "4/ 3",
+            "NOTE": "Working on more categories like 5, 6 or 10 and more"
             "adjust_to_factors_mean": "true/false",
             "trended": "true/false",
             "income_based_csv_output": "true/false"
@@ -55,10 +44,7 @@
 
     "data": {
         "source": "https://example.com/your-data/releases/download/v1/data.zip",
-        "checksum": "YOUR_SHA256_CHECKSUM",
-        "Eg-" "Mahima",
-        "will" "provide",
-        "this." "Don't worry :)"
+        "checksum": "YOUR_SHA256_CHECKSUM",Eg-Mahima will provide this.Don't worry :)
     },
 
     "inputs": {
@@ -91,11 +77,6 @@
             "function_parameters": [ 0.0, 1.0 ]
         },
         "policy_start_year": "2022/2027/whatever",
-        "year" "the",
-        "user" "wants",
-        "policy" "to",
-        "be" "applied",
-        "from",
         "risk_factors": [
             {
                 "name": "Gender",
@@ -117,8 +98,48 @@
             "delimiter": ",",
             "encoding": "ASCII",
             "file_names": {
-                "factorsmean_male": "FactorsMean.Male.csv",
-                "factorsmean_female": "FactorsMean.Female.csv"
+                "factorsmean_male": "YourProject.FactorsMean.Male.csv",
+                "factorsmean_female": "YourProject.FactorsMean.Female.csv"
+            },
+            "NOTES_on_factors_mean_files": {
+                "remove_this_entire_object_in_real_config": "This block is documentation only; delete it when copying to a real config — it is not part of the JSON schema.",
+                "overall_two_files": "Always required. Same CSV layout as today: first column Age, then one column per factor (names lowercased when read). Must include every risk factor column expected by static_model.json plus Income (and PhysicalActivity if used), same as a single-table FINCH run.",
+                "optional_stratum_block_below": "income_stratum_factors_mean — extra male/female CSV pairs for income-stratum factors-mean adjustment (e.g. by quintile). Omit the whole block or set enabled=false to use only the two overall files (legacy behaviour).",
+                "adjustment_vs_final_income": "adjustment_income_stratum_count + strata = how many rank buckets / which reference tables for calibration. project_requirements.income.categories (3 or 4) = final person.income buckets after the pipeline (can differ, e.g. 5 strata for adjustment, 4 final categories).",
+                "validation": "When enabled=true, paths must exist, adjustment_income_stratum_count must equal strata.length, each stratum needs id + factorsmean_male + factorsmean_female.",
+                "simulation": "Config loading validates paths; using these tables in adjust_risk_factors is Phase 2+ (see HealthGPS income-stratum factors-mean plan)."
+            },
+            "income_stratum_factors_mean": {
+                "NOTE": "Optional. When enabled=false or omitted, only file_names above are used (legacy). Final person.income buckets stay in project_requirements.income.categories (3 or 4).",
+                "enabled": "true/false",
+                "adjustment_income_stratum_count": "integer N >= 2; must equal the number of entries in strata below",
+                "strata": [
+                    {
+                        "id": "Quintile1",
+                        "factorsmean_male": "YourProject.FactorsMean.Male.Quintile1.csv",
+                        "factorsmean_female": "YourProject.FactorsMean.Female.Quintile1.csv"
+                    },
+                    {
+                        "id": "Quintile2",
+                        "factorsmean_male": "YourProject.FactorsMean.Male.Quintile2.csv",
+                        "factorsmean_female": "YourProject.FactorsMean.Female.Quintile2.csv"
+                    },
+                    {
+                        "id": "Quintile3",
+                        "factorsmean_male": "YourProject.FactorsMean.Male.Quintile3.csv",
+                        "factorsmean_female": "YourProject.FactorsMean.Female.Quintile3.csv"
+                    },
+                    {
+                        "id": "Quintile4",
+                        "factorsmean_male": "YourProject.FactorsMean.Male.Quintile4.csv",
+                        "factorsmean_female": "YourProject.FactorsMean.Female.Quintile4.csv"
+                    },
+                    {
+                        "id": "Quintile5",
+                        "factorsmean_male": "YourProject.FactorsMean.Male.Quintile5.csv",
+                        "factorsmean_female": "YourProject.FactorsMean.Female.Quintile5.csv"
+                    }
+                ]
             }
         }
     },
@@ -150,15 +171,15 @@
         "folder": "${HOME}/healthgps/results/your_project",
         "file_name": "HealthGPS_Result_{TIMESTAMP}.json",
         "individual_id_tracking": {
-            "enabled": true/false,
+            "enabled": "true/false",
             "age_min": 13,
             "age_max": 20,
-            "gender": "all", or "female" or "male"
+            "gender": "all"/"female",/"male",
             "regions": [ "region1", "region3" ],
             "ethnicities": [ "ethnicity1" ],
-            "risk_factors": [ "BMI", "Weight", "FoodCarbohydrate", "FoodAlcohol", "FoodLegume" ], "NOTE":  You can add more risk factors here
-            "years": [ 2024, 2025, 2026 ], "NOTE":  For how many ever years you would like to track the individuals, you can add those years here
-            "scenarios": "both" or "baseline" or "intervention"
+            "risk_factors": [ "BMI", "Weight", "FoodCarbohydrate", "FoodAlcohol", "FoodLegume" ], "NOTE": You can add more risk factors here
+            "years": [ 2024, 2025, 2026 ], "NOTE":  For how many ever years you would like to track the individuals you can add those years here
+            "scenarios": "both"/"baseline"/ "intervention"
         }
     }
 }
