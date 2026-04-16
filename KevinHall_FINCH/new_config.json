@@ -279,10 +279,40 @@
             "file_names": {
                 "factorsmean_male": "Finch.FactorsMean.Male.csv",
                 "factorsmean_female": "Finch.FactorsMean.Female.csv"
+            },
+            "income_stratum_factors_mean": {
+                "enabled": true,
+                "adjustment_income_stratum_count": 5,
+                "strata": [
+                    {
+                        "id": "Quintile1",
+                        "factorsmean_male": "Finch.FactorsMean.Male.Quintile1.csv",
+                        "factorsmean_female": "Finch.FactorsMean.Female.Quintile1.csv"
+                    },
+                    {
+                        "id": "Quintile2",
+                        "factorsmean_male": "Finch.FactorsMean.Male.Quintile2.csv",
+                        "factorsmean_female": "Finch.FactorsMean.Female.Quintile2.csv"
+                    },
+                    {
+                        "id": "Quintile3",
+                        "factorsmean_male": "Finch.FactorsMean.Male.Quintile3.csv",
+                        "factorsmean_female": "Finch.FactorsMean.Female.Quintile3.csv"
+                    },
+                    {
+                        "id": "Quintile4",
+                        "factorsmean_male": "Finch.FactorsMean.Male.Quintile4.csv",
+                        "factorsmean_female": "Finch.FactorsMean.Female.Quintile4.csv"
+                    },
+                    {
+                        "id": "Quintile5",
+                        "factorsmean_male": "Finch.FactorsMean.Male.Quintile5.csv",
+                        "factorsmean_female": "Finch.FactorsMean.Female.Quintile5.csv"
+                    }
+                ]
             }
         }
     },
-
     "running": {
         "seed": [123456789],
         "start_time": 2022,
