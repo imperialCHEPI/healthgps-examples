@@ -360,7 +360,12 @@
             "age_max": 110,
             "gender": "all",
             "regions": ["region1", "region3", "region3", "region4"],
-            "ethnicities": ["ethnicity1", "ethnicity2", "ethnicity3", "ethnicity4"],
+            "ethnicities": [
+                "ethnicity1",
+                "ethnicity2",
+                "ethnicity3",
+                "ethnicity4"
+            ],
             "risk_factors": [
                 "BMI",
                 "Height",
@@ -377,7 +382,7 @@
                 "Carb_factors_mean_delta",
                 "Carb_post_factors_mean"
             ],
-            "years": [2022,2023,2024,2025],
+            "years": [2022, 2023, 2024, 2025],
             "scenarios": "both"
         }
     }
