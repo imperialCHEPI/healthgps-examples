@@ -356,19 +356,33 @@
         "file_name": "HealthGPS_Result_{TIMESTAMP}.json",
         "individual_id_tracking": {
             "enabled": true,
-            "age_min": 13,
-            "age_max": 20,
+            "age_min": 80,
+            "age_max": 110,
             "gender": "all",
-            "regions": ["region1", "region3"],
-            "ethnicities": ["ethnicity1"],
+            "regions": ["region1", "region3", "region3", "region4"],
+            "ethnicities": [
+                "ethnicity1",
+                "ethnicity2",
+                "ethnicity3",
+                "ethnicity4"
+            ],
             "risk_factors": [
                 "BMI",
+                "Height",
                 "Weight",
+                "EnergyIntake",
+                "PhysicalActivity",
                 "FoodCarbohydrate",
-                "FoodAlcohol",
-                "FoodLegume"
+                "FoodSodium",
+                "Carbohydrate",
+                "Carbohydrate_previous",
+                "Carb_nutrient_current",
+                "Carb_nutrient_after_recompute",
+                "Carb_pre_factors_mean",
+                "Carb_factors_mean_delta",
+                "Carb_post_factors_mean"
             ],
-            "years": [2024, 2025, 2026],
+            "years": [2022, 2023, 2024, 2025],
             "scenarios": "both"
         }
     }

@@ -206,7 +206,7 @@
             }
         },
         "policy_coefficients": {
-            "name": "policyeffect_model.csv",
+            "name": "S1_policyeffect_model.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
@@ -280,7 +280,7 @@
         }
     },
     "PolicyCovarianceFile": {
-        "name": "Finch_residual_policy_covariance.csv",
+        "name": "S1_Finch_residual_policy_covariance.csv",
         "format": "csv",
         "delimiter": ",",
         "encoding": "ASCII",
