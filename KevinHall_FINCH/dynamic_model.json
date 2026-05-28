@@ -328,12 +328,26 @@
             "quantile": "double"
         }
     },
-    "HeightStdDev": {
-        "Female": 0.0628924471950273,
-        "Male": 0.0567175327223389
-    },
-    "HeightSlope": {
-        "Female": 0.224138825,
-        "Male": 0.268517056586274
+    "Height": {
+        "Female": {
+            "name": "height_female.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "slope": "double",
+                "std": "double"
+            }
+        },
+        "Male": {
+            "name": "height_male.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "slope": "double",
+                "std": "double"
+            }
+        }
     }
 }
