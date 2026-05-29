@@ -301,21 +301,97 @@
     ],
     "WeightQuantiles": {
         "Female": {
-            "name": "weight_quantiles_NCDRisk_female.csv",
-            "format": "csv",
-            "delimiter": ",",
-            "encoding": "ASCII",
-            "columns": {
-                "quantile": "double"
+            "Quintile1": {
+                "name": "weight_quantiles_NCDRisk_female_Quintile1.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile2": {
+                "name": "weight_quantiles_NCDRisk_female_Quintile2.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile3": {
+                "name": "weight_quantiles_NCDRisk_female_Quintile3.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile4": {
+                "name": "weight_quantiles_NCDRisk_female_Quintile4.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile5": {
+                "name": "weight_quantiles_NCDRisk_female_Quintile5.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
             }
         },
         "Male": {
-            "name": "weight_quantiles_NCDRisk_male.csv",
-            "format": "csv",
-            "delimiter": ",",
-            "encoding": "ASCII",
-            "columns": {
-                "quantile": "double"
+            "Quintile1": {
+                "name": "weight_quantiles_NCDRisk_male_Quintile1.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile2": {
+                "name": "weight_quantiles_NCDRisk_male_Quintile2.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile3": {
+                "name": "weight_quantiles_NCDRisk_male_Quintile3.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile4": {
+                "name": "weight_quantiles_NCDRisk_male_Quintile4.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
+            },
+            "Quintile5": {
+                "name": "weight_quantiles_NCDRisk_male_Quintile5.csv",
+                "format": "csv",
+                "delimiter": ",",
+                "encoding": "ASCII",
+                "columns": {
+                    "quantile": "double"
+                }
             }
         }
     },
