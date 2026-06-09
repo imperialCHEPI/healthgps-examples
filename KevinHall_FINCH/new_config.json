@@ -85,7 +85,7 @@
         },
         "settings": {
             "country_code": "GBR",
-            "size_fraction": 0.0001,
+            "size_fraction": 0.01,
             "age_range": [0, 110]
         }
     },
@@ -316,9 +316,9 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2025,
+        "stop_time": 2052,
         "trial_runs": 1,
-        "sync_timeout_ms": 150000,
+        "sync_timeout_ms": 15000000000000,
         "diseases": [
             "alzheimer",
             "asthma",
