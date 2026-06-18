@@ -7,7 +7,8 @@
             "gender": true,
             "region": true,
             "ethnicity": true,
-            "max_age_for_linear_models": 80
+            "max_age_for_linear_models": 80,
+            "gender2": "female"
         },
         "income": {
             "enabled": true,
