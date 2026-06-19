@@ -105,7 +105,7 @@
                 "remove_this_entire_object_in_real_config": "This block is documentation only; delete it when copying to a real config — it is not part of the JSON schema.",
                 "overall_two_files": "Always required. Same CSV layout as today: first column Age, then one column per factor (names lowercased when read). Must include every risk factor column expected by static_model.json plus Income (and PhysicalActivity if used), same as a single-table FINCH run.",
                 "optional_stratum_block_below": "income_stratum_factors_mean — extra male/female CSV pairs for income-stratum factors-mean adjustment (e.g. by quintile). Omit the whole block or set enabled=false to use only the two overall files (legacy behaviour).",
-                "adjustment_vs_final_income": "adjustment_income_stratum_count + strata = how many rank buckets / which reference tables for calibration. project_requirements.income.categories (3 or 4) = final person.income buckets after the pipeline (can differ, e.g. 5 strata for adjustment, 4 final categories).",
+                "adjustment_vs_final_income": "adjustment_income_stratum_count + strata = how many rank buckets / which reference tables for calibration. project_requirements.income.categories (3, 4, or 5) = final person.income buckets after the pipeline (can differ, e.g. 5 strata for adjustment, 4 final categories).",
                 "validation": "When enabled=true, paths must exist, adjustment_income_stratum_count must equal strata.length, each stratum needs id + factorsmean_male + factorsmean_female.",
                 "simulation": "Config loading validates paths; using these tables in adjust_risk_factors is Phase 2+ (see HealthGPS income-stratum factors-mean plan)."
             },
