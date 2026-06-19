@@ -13,7 +13,7 @@
         "income": {
             "enabled": true,
             "type": "continuous",
-            "categories": "5",
+            "categories": "4",
             "adjust_to_factors_mean": true,
             "trended": false,
             "income_based_csv_output": true
