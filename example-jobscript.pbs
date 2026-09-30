@@ -1,0 +1,26 @@
+#PBS -l walltime=5:00:00
+#PBS -l select=1:ncpus=64:mem=128gb
+
+# Load correct modules (becareful when changing).
+module purge
+module load tools/dev
+module load GCCcore/13.2.0
+
+# Point to healthgps directory as well as the input file
+hgps_dir=$RDS_PROJECT/healthgps/live/your_username/healthgps
+config_dir=$RDS_PROJECT/healthgps/live/your_username/healthgps-examples/KevinHall_India
+
+# Point to the new cache
+export XDG_CACHE_HOME=$HOME/scratch
+
+# Prepare temp space.
+tmp_hgps=$TMPDIR/healthgps_adb
+cp -r $hgps_dir $tmp_hgps
+tmp_config=$tmp_hgps/KevinHall_India
+cp -r $config_dir $tmp_config
+cd $tmp_hgpsa
+
+export OMP_THREAD_LIMIT=16
+
+# Run HGPS.
+$hgps_dir/out/install/linux-release/bin/HealthGPS.Console -f $tmp_config/config.json -T 16

@@ -1,7 +1,7 @@
 # Health-GPS example model configurations
 
 This repo contains example configurations for the [Health-GPS](../healthgps/) console program, which should cover all of the models currently implented.
-<img width="1097" height="497" alt="image" src="https://github.com/user-attachments/assets/4b86bdc4-15d6-4284-adfc-65313dc3fc4e" />
+![Health-GPS examples overview](https://github.com/user-attachments/assets/4b86bdc4-15d6-4284-adfc-65313dc3fc4e)
 
 ## Imperial HPC users
 
@@ -53,11 +53,11 @@ To get started, follow these instructions after logging into the HPC:
 1. Submit the job:
 
     ```sh
-    qsub some/model/folder/example-jobscript.sh
+    qsub some/model/folder/example-jobscript.pbs
     ```
 
 [CMake]: https://cmake.org
 [binary distribution on the CMake website]: https://cmake.org/download/
 [vcpkg]: https://vcpkg.io/en/
-[these instructions]: https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-cmd#1---set-up-vcpkg
-[^1]: The version installed on the HPC doesn't work at the time of writing.
+[these instructions]: https://learn.microsoft.com/en-us/vcpkg/get-started/get-started?pivots=shell-cmd#1---set-up-vcpkg
+[^1]: Any questions or issues, please reach out to Mahima :)
