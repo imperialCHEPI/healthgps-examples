@@ -53,7 +53,7 @@ To get started, follow these instructions after logging into the HPC:
 1. Submit the job:
 
     ```sh
-    qsub some/model/folder/example-jobscript.sh
+    qsub some/model/folder/example-jobscript.pbs
     ```
 
 [CMake]: https://cmake.org
