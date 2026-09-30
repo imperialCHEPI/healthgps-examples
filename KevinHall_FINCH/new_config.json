@@ -315,7 +315,7 @@
     "running": {
         "seed": [123456789],
         "start_time": 2022,
-        "stop_time": 2032,
+        "stop_time": 2027,
         "trial_runs": 1,
         "sync_timeout_ms": 150000,
         "diseases": [
