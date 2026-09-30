@@ -60,4 +60,4 @@ To get started, follow these instructions after logging into the HPC:
 [binary distribution on the CMake website]: https://cmake.org/download/
 [vcpkg]: https://vcpkg.io/en/
 [these instructions]: https://learn.microsoft.com/en-us/vcpkg/get-started/get-started?pivots=shell-cmd#1---set-up-vcpkg
-[^1]: The version installed on the HPC doesn't work at the time of writing.
+[^1]: Any questions or issues, please reach out to Mahima :)
