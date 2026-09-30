@@ -1,6 +1,7 @@
 # Health-GPS example model configurations
 
 This repo contains example configurations for the [Health-GPS](../healthgps/) console program, which should cover all of the models currently implented.
+<img width="1097" height="497" alt="image" src="https://github.com/user-attachments/assets/4b86bdc4-15d6-4284-adfc-65313dc3fc4e" />
 
 ## Imperial HPC users
 
