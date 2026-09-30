@@ -1,6 +1,7 @@
 # Health-GPS example model configurations
 
-This repo contains example configurations for the [Health-GPS](../healthgps/) console program, which should cover all of the models currently implented.
+This repo contains example configurations for the [Health-GPS](../healthgps/) console program, which should cover all of the models currently implemented.
+![Health-GPS examples overview](https://github.com/user-attachments/assets/4b86bdc4-15d6-4284-adfc-65313dc3fc4e)
 
 ## Imperial HPC users
 
@@ -58,5 +59,5 @@ To get started, follow these instructions after logging into the HPC:
 [CMake]: https://cmake.org
 [binary distribution on the CMake website]: https://cmake.org/download/
 [vcpkg]: https://vcpkg.io/en/
-[these instructions]: https://learn.microsoft.com/en-us/vcpkg/get_started/get-started?pivots=shell-cmd#1---set-up-vcpkg
+[these instructions]: https://learn.microsoft.com/en-us/vcpkg/get-started/get-started?pivots=shell-cmd#1---set-up-vcpkg
 [^1]: The version installed on the HPC doesn't work at the time of writing.
