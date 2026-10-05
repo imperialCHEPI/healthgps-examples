@@ -1,0 +1,111 @@
+{
+  "$comment": "Slovenia init slot — Part A education lookup + coef CSV slots for later ladder steps (files arrive when ready).",
+  "ModelName": "JacardiModel",
+  "Education": {
+    "method": "empirical_lifecycle_init",
+    "lookup": {
+      "name": "education_lookup.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "age": "integer",
+        "gender": "integer",
+        "education_id": "integer",
+        "probability": "double"
+      }
+    }
+  },
+  "Employment": {
+    "method": "logistic",
+    "coefficients": {
+      "name": "employment_coefs.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "Factor": "string",
+        "Coefficient": "double"
+      }
+    }
+  },
+  "HLS": {
+    "method": "linear",
+    "coefficients": {
+      "name": "hls_coefs.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "Factor": "string",
+        "Coefficient": "double"
+      }
+    }
+  },
+  "Smoking": {
+    "method": "multinomial",
+    "coefficients": {
+      "name": "smoking_coefs.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "Category": "string",
+        "Factor": "string",
+        "Coefficient": "double"
+      }
+    }
+  },
+  "PhysicalActivity": {
+    "method": "linear",
+    "coefficients": {
+      "name": "pa_coefs.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "Factor": "string",
+        "Coefficient": "double"
+      }
+    }
+  },
+  "BMI": {
+    "method": "linear",
+    "coefficients": {
+      "name": "bmi_coefs.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "Factor": "string",
+        "Coefficient": "double"
+      }
+    }
+  },
+  "MedicationAdherence": {
+    "method": "logistic",
+    "coefficients": {
+      "name": "medication_coefs.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "Factor": "string",
+        "Coefficient": "double"
+      }
+    }
+  },
+  "SBP": {
+    "method": "linear",
+    "coefficients": {
+      "name": "sbp_coefs.csv",
+      "format": "csv",
+      "delimiter": ",",
+      "encoding": "ASCII",
+      "columns": {
+        "Factor": "string",
+        "Coefficient": "double"
+      }
+    }
+  }
+}
