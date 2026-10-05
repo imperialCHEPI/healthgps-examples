@@ -27,6 +27,10 @@ Templates: [`../Jacardi_Template/`](../Jacardi_Template/).
 
 Education CSVs are on disk. Other coef CSVs are named in the JSON slots and arrive when partners deliver them.
 
+## Factors mean (baseline_adjustments)
+
+With `project_requirements.risk_factors.adjust_to_factors_mean: false`, JACARDI does not calibrate risk factors to population means — no `FactorsMean.*.csv` is needed. Omit `baseline_adjustments.file_names` entirely (do not use `"file_names": {}`; the config schema requires `factorsmean_male` / `factorsmean_female` if that object is present). HLM/FINCH packs still list those files because their loaders read them at init even when adjustment is off.
+
 ## Not runnable yet
 
 Engine does not yet register `JacardiModel` / `JacardiModelUpdate`. Fill `data.source` / `checksum` when the datastore zip is ready.

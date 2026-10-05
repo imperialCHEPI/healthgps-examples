@@ -32,7 +32,7 @@
             "type": "null"
         },
         "two_stage": {
-            "enabled": false
+            "use_logistic": false
         }
     },
     "data": {
@@ -90,8 +90,7 @@
         "baseline_adjustments": {
             "format": "csv",
             "delimiter": ",",
-            "encoding": "ASCII",
-            "file_names": {}
+            "encoding": "ASCII"
         }
     },
     "running": {
