@@ -1,116 +1,114 @@
 {
-  "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
-  "version": 2,
-  "project_requirements": {
-    "demographics": {
-      "age": true,
-      "gender": true,
-      "region": false,
-      "ethnicity": false,
-      "gender2": "male"
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
+    "version": 2,
+    "project_requirements": {
+        "demographics": {
+            "age": true,
+            "gender": true,
+            "region": false,
+            "ethnicity": false,
+            "gender2": "male"
+        },
+        "income": {
+            "enabled": false,
+            "type": "categorical",
+            "categories": "3",
+            "adjust_to_factors_mean": false,
+            "trended": false,
+            "income_based_csv_output": false
+        },
+        "physical_activity": {
+            "enabled": false,
+            "type": "simple",
+            "adjust_to_factors_mean": false,
+            "trended": false
+        },
+        "risk_factors": {
+            "adjust_to_factors_mean": false,
+            "trended": false
+        },
+        "trend": {
+            "enabled": false,
+            "type": "null"
+        },
+        "two_stage": {
+            "enabled": false
+        }
     },
-    "income": {
-      "enabled": false,
-      "type": "categorical",
-      "categories": "3",
-      "adjust_to_factors_mean": false,
-      "trended": false,
-      "income_based_csv_output": false
-    },
-    "physical_activity": {
-      "enabled": false,
-      "type": "simple",
-      "adjust_to_factors_mean": false,
-      "trended": false
-    },
-    "risk_factors": {
-      "adjust_to_factors_mean": false,
-      "trended": false
-    },
-    "trend": {
-      "enabled": false,
-      "type": "null"
-    },
-    "two_stage": {
-      "enabled": false
-    }
-  },
     "data": {
         "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/jacardiv1/7countriesdata.zip",
         "checksum": "fe291ff7d064ff859e1ccc2568a47b81ffc247346cf201db48ea8fb4a21c8d18"
     },
-  "inputs": {
-    "dataset": {
-      "name": "Slovenia.DataFile.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Gender": "integer",
-        "Age": "integer",
-        "Age2": "integer",
-        "Education": "integer",
-        "Employment": "integer",
-        "HLS": "double",
-        "Smoking": "integer",
-        "PhysicalActivity": "double",
-        "BMI": "double",
-        "MedicationAdherence": "integer",
-        "SBP": "double"
-      }
+    "inputs": {
+        "dataset": {
+            "name": "Slovenia.DataFile.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Gender": "integer",
+                "Age": "integer",
+                "Age2": "integer",
+                "Education": "integer",
+                "Employment": "integer",
+                "HLS": "double",
+                "Smoking": "integer",
+                "PhysicalActivity": "double",
+                "BMI": "double",
+                "MedicationAdherence": "integer",
+                "SBP": "double"
+            }
+        },
+        "settings": {
+            "country_code": "SVN",
+            "size_fraction": 0.0001,
+            "age_range": [0, 110]
+        }
     },
-    "settings": {
-      "country_code": "SVN",
-      "size_fraction": 0.0001,
-      "age_range": [0, 110]
-    }
-  },
-  "modelling": {
-    "ses_model": {
-      "function_name": "normal",
-      "function_parameters": [0.0, 1.0]
+    "modelling": {
+        "ses_model": {
+            "function_name": "normal",
+            "function_parameters": [0.0, 1.0]
+        },
+        "risk_factors": [
+            { "name": "Gender", "level": 0, "range": [0, 1] },
+            { "name": "Age", "level": 0, "range": [0, 110] },
+            { "name": "Age2", "level": 0, "range": [0, 12100] },
+            { "name": "Education", "level": 1, "range": [1, 7] },
+            { "name": "Employment", "level": 2, "range": [0, 1] },
+            { "name": "HLS", "level": 3, "range": [0, 50] },
+            { "name": "Smoking", "level": 4, "range": [0, 2] },
+            { "name": "PhysicalActivity", "level": 4, "range": [0, 7] },
+            { "name": "BMI", "level": 5, "range": [10, 60] },
+            { "name": "MedicationAdherence", "level": 5, "range": [0, 1] },
+            { "name": "SBP", "level": 6, "range": [70, 250] }
+        ],
+        "risk_factor_models": {
+            "static": "jacardi_model.json",
+            "dynamic": "jacardi_model_update.json"
+        },
+        "baseline_adjustments": {
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "file_names": {}
+        }
     },
-    "risk_factors": [
-      { "name": "Gender", "level": 0, "range": [0, 1] },
-      { "name": "Age", "level": 0, "range": [0, 110] },
-      { "name": "Age2", "level": 0, "range": [0, 12100] },
-      { "name": "Education", "level": 1, "range": [1, 7] },
-      { "name": "Employment", "level": 2, "range": [0, 1] },
-      { "name": "HLS", "level": 3, "range": [0, 50] },
-      { "name": "Smoking", "level": 4, "range": [0, 2] },
-      { "name": "PhysicalActivity", "level": 4, "range": [0, 7] },
-      { "name": "BMI", "level": 5, "range": [10, 60] },
-      { "name": "MedicationAdherence", "level": 5, "range": [0, 1] },
-      { "name": "SBP", "level": 6, "range": [70, 250] }
-    ],
-    "risk_factor_models": {
-      "static": "jacardi_model.json",
-      "dynamic": "jacardi_model_update.json"
+    "running": {
+        "seed": [123456789],
+        "start_time": 2025,
+        "stop_time": 2055,
+        "trial_runs": 1,
+        "sync_timeout_ms": 15000,
+        "diseases": ["myocardial"],
+        "interventions": {
+            "active_type_id": null,
+            "types": {}
+        }
     },
-    "baseline_adjustments": {
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "file_names": {}
+    "output": {
+        "comorbidities": 5,
+        "folder": "${HOME}/healthgps/results/jacardi/slovenia",
+        "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
     }
-  },
-  "running": {
-    "seed": [123456789],
-    "start_time": 2025,
-    "stop_time": 2055,
-    "trial_runs": 1,
-    "sync_timeout_ms": 15000,
-    "diseases": [
-      "myocardial"
-    ],
-    "interventions": {
-      "active_type_id": null,
-      "types": {}
-    }
-  },
-  "output": {
-    "comorbidities": 5,
-    "folder": "${HOME}/healthgps/results/jacardi/slovenia",
-    "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
-  }
 }

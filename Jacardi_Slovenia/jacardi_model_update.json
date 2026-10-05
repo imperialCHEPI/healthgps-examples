@@ -1,125 +1,125 @@
 {
-  "$comment": "Slovenia update slot — education Part B filled; other ladder vars have update coef slots (drop filenames when partners deliver).",
-  "ModelName": "JacardiModelUpdate",
-  "Education": {
-    "method": "empirical_lifecycle_update",
-    "draw_at_22": {
-      "name": "education_draw_at_22_ssp2.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "year": "integer",
-        "gender": "integer",
-        "education_id": "integer",
-        "probability": "double"
-      }
+    "$comment": "Slovenia update slot — education Part B filled; other ladder vars have update coef slots (drop filenames when partners deliver).",
+    "ModelName": "JacardiModelUpdate",
+    "Education": {
+        "method": "empirical_lifecycle_update",
+        "draw_at_22": {
+            "name": "education_draw_at_22_ssp2.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "gender": "integer",
+                "education_id": "integer",
+                "probability": "double"
+            }
+        },
+        "upgrade_transitions": {
+            "name": "education_upgrade_transitions_ssp2.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "age": "integer",
+                "gender": "integer",
+                "from_id": "integer",
+                "to_id": "integer",
+                "probability": "double"
+            }
+        }
     },
-    "upgrade_transitions": {
-      "name": "education_upgrade_transitions_ssp2.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "year": "integer",
-        "age": "integer",
-        "gender": "integer",
-        "from_id": "integer",
-        "to_id": "integer",
-        "probability": "double"
-      }
+    "Employment": {
+        "method": "logistic",
+        "coefficients": {
+            "name": "employment_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "HLS": {
+        "method": "linear",
+        "coefficients": {
+            "name": "hls_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "Smoking": {
+        "method": "multinomial",
+        "coefficients": {
+            "name": "smoking_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Category": "string",
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "PhysicalActivity": {
+        "method": "linear",
+        "coefficients": {
+            "name": "pa_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "BMI": {
+        "method": "linear",
+        "coefficients": {
+            "name": "bmi_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "MedicationAdherence": {
+        "method": "logistic",
+        "coefficients": {
+            "name": "medication_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "SBP": {
+        "method": "linear",
+        "coefficients": {
+            "name": "sbp_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
     }
-  },
-  "Employment": {
-    "method": "logistic",
-    "coefficients": {
-      "name": "employment_update_coefs.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Factor": "string",
-        "Coefficient": "double"
-      }
-    }
-  },
-  "HLS": {
-    "method": "linear",
-    "coefficients": {
-      "name": "hls_update_coefs.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Factor": "string",
-        "Coefficient": "double"
-      }
-    }
-  },
-  "Smoking": {
-    "method": "multinomial",
-    "coefficients": {
-      "name": "smoking_update_coefs.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Category": "string",
-        "Factor": "string",
-        "Coefficient": "double"
-      }
-    }
-  },
-  "PhysicalActivity": {
-    "method": "linear",
-    "coefficients": {
-      "name": "pa_update_coefs.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Factor": "string",
-        "Coefficient": "double"
-      }
-    }
-  },
-  "BMI": {
-    "method": "linear",
-    "coefficients": {
-      "name": "bmi_update_coefs.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Factor": "string",
-        "Coefficient": "double"
-      }
-    }
-  },
-  "MedicationAdherence": {
-    "method": "logistic",
-    "coefficients": {
-      "name": "medication_update_coefs.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Factor": "string",
-        "Coefficient": "double"
-      }
-    }
-  },
-  "SBP": {
-    "method": "linear",
-    "coefficients": {
-      "name": "sbp_update_coefs.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "Factor": "string",
-        "Coefficient": "double"
-      }
-    }
-  }
 }
