@@ -1,33 +1,33 @@
 {
-  "$comment": "JACARDI dynamic / update slot. Yearly-update CSV paths only (not init lookup). Education Part B tables here; add yearly coefs later if needed.",
-  "ModelName": "JacardiModelUpdate",
-  "Education": {
-    "method": "empirical_lifecycle_update",
-    "draw_at_22": {
-      "name": "REPLACE_education_draw_at_22.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "year": "integer",
-        "gender": "integer",
-        "education_id": "integer",
-        "probability": "double"
-      }
-    },
-    "upgrade_transitions": {
-      "name": "REPLACE_education_upgrade_transitions.csv",
-      "format": "csv",
-      "delimiter": ",",
-      "encoding": "ASCII",
-      "columns": {
-        "year": "integer",
-        "age": "integer",
-        "gender": "integer",
-        "from_id": "integer",
-        "to_id": "integer",
-        "probability": "double"
-      }
+    "$comment": "JACARDI dynamic / update slot. Yearly-update CSV paths only (not init lookup). Education Part B tables here; add yearly coefs later if needed.",
+    "ModelName": "JacardiModelUpdate",
+    "Education": {
+        "method": "empirical_lifecycle_update",
+        "draw_at_22": {
+            "name": "REPLACE_education_draw_at_22.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "gender": "integer",
+                "education_id": "integer",
+                "probability": "double"
+            }
+        },
+        "upgrade_transitions": {
+            "name": "REPLACE_education_upgrade_transitions.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "age": "integer",
+                "gender": "integer",
+                "from_id": "integer",
+                "to_id": "integer",
+                "probability": "double"
+            }
+        }
     }
-  }
 }
