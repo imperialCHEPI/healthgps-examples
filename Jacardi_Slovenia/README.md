@@ -31,6 +31,10 @@ Education CSVs are on disk. Other coef CSVs are named in the JSON slots and arri
 
 With `project_requirements.risk_factors.adjust_to_factors_mean: false`, JACARDI does not calibrate risk factors to population means — no `FactorsMean.*.csv` is needed. Omit `baseline_adjustments.file_names` entirely (do not use `"file_names": {}`; the config schema requires `factorsmean_male` / `factorsmean_female` if that object is present). HLM/FINCH packs still list those files because their loaders read them at init even when adjustment is off.
 
+## SES noise (`ses_model`)
+
+Omit `modelling.ses_model`. JACARDI does not use continuous `Person.ses` noise; socioeconomic pathways go through Education / Employment / … India/HLM packs that still need SES keep the block (or set `"enabled": true`). If a leftover block is present, set `"enabled": false` to ignore it.
+
 ## Not runnable yet
 
 Engine does not yet register `JacardiModel` / `JacardiModelUpdate`. Fill `data.source` / `checksum` when the datastore zip is ready.

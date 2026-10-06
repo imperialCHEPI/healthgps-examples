@@ -29,6 +29,7 @@ Template files use `REPLACE_*` filenames until you copy them into a country pack
 - No `schedule.csv` — order of inclusion is `modelling.risk_factors[].level` in `config.json`.
 - Copy the three templates into a country folder, rename (drop `.template`), fill `REPLACE_*`.
 - Do **not** add an `education` block under `project_requirements` until the schema allows it.
+- Omit `modelling.ses_model` (optional in schema; unused for JACARDI).
 
 See also: Health-GPS plan `documentation/technical/plans/JACARDI-7-countries-implementation-plan.md`.
 For any issues, please reach out to Mahima.

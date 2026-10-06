@@ -66,10 +66,6 @@
         }
     },
     "modelling": {
-        "ses_model": {
-            "function_name": "normal",
-            "function_parameters": [0.0, 1.0]
-        },
         "risk_factors": [
             { "name": "Gender", "level": 0, "range": [0, 1] },
             { "name": "Age", "level": 0, "range": [0, 110] },
