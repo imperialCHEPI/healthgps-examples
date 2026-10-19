@@ -3,8 +3,20 @@
     "ModelName": "JacardiModelUpdate",
     "Education": {
         "method": "empirical_lifecycle_update",
-        "draw_at_22": {
-            "name": "education_draw_at_22_ssp2.csv",
+        "lookup": {
+            "name": "education_lookup.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "age": "integer",
+                "gender": "integer",
+                "education_id": "integer",
+                "probability": "double"
+            }
+        },
+        "draw_at_19": {
+            "name": "education_draw_at_19_ssp2.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
