@@ -7,6 +7,7 @@
             "gender": true,
             "region": false,
             "ethnicity": false,
+            "education": true,
             "gender2": "male"
         },
         "income": {
@@ -140,7 +141,7 @@
         "stop_time": 2055,
         "trial_runs": 1,
         "sync_timeout_ms": 15000,
-        "diseases": ["myocardial"],
+        "diseases": ["colorectalcancer", "cervicalcancer"],
         "interventions": {
             "active_type_id": null,
             "types": {}
