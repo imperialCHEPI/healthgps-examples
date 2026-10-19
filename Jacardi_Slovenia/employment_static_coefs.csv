@@ -1,0 +1,107 @@
+Category,CategoryName,Factor,Coefficient
+1,Employed,Intercept,0
+2,Unemployed,Intercept,2.76053434659311
+2,Unemployed,Gender,-1.36670016248892
+2,Unemployed,Age,-0.189776352124164
+2,Unemployed,AgeRcs1,11.7972081029681
+2,Unemployed,AgeRcs2,-22.6944869992702
+2,Unemployed,AgeRcs3,11.6449329746989
+2,Unemployed,AgeRcs4,0.25592259482939
+2,Unemployed,AgeRcs5,-4.24271550962379
+2,Unemployed,EducationISCED01,1.65676092718699
+2,Unemployed,EducationISCED2,1.05771662240145
+2,Unemployed,EducationISCED5,-0.548190782567848
+2,Unemployed,EducationISCED6,-0.672676473081466
+2,Unemployed,EducationISCED7,-0.969590558193789
+2,Unemployed,EducationISCED8,-1.27662755069696
+2,Unemployed,EducationISCED2*SchoolFade,0.831662271232426
+2,Unemployed,Age*Gender,0.0295168386953809
+2,Unemployed,AgeRcs1*Gender,-5.15675436858098
+2,Unemployed,AgeRcs2*Gender,11.6271988807263
+2,Unemployed,AgeRcs3*Gender,-7.48823398505094
+2,Unemployed,AgeRcs4*Gender,1.51244346113118
+2,Unemployed,AgeRcs5*Gender,-1.60717798898374
+3,Retired,Intercept,2.63118079372915
+3,Retired,Gender,-4.38895341903951
+3,Retired,Age,-0.39465702655718
+3,Retired,AgeRcs1,34.276047645842
+3,Retired,AgeRcs2,-62.3035762477274
+3,Retired,AgeRcs3,28.5649365301129
+3,Retired,AgeRcs4,2.52459793978608
+3,Retired,AgeRcs5,-9.22295297092545
+3,Retired,EducationISCED01,1.10403731259275
+3,Retired,EducationISCED2,0.35528549307623
+3,Retired,EducationISCED5,-0.738057998757679
+3,Retired,EducationISCED6,-1.10542724267887
+3,Retired,EducationISCED7,-1.91051191756957
+3,Retired,EducationISCED8,-2.22939151632024
+3,Retired,EducationISCED2*SchoolFade,1.55561362252536
+3,Retired,Age*Gender,0.210076184653697
+3,Retired,AgeRcs1*Gender,-25.6785466266147
+3,Retired,AgeRcs2*Gender,50.1191147996207
+3,Retired,AgeRcs3*Gender,-26.0279136312843
+3,Retired,AgeRcs4*Gender,1.4984884156666
+3,Retired,AgeRcs5*Gender,0.79553215129609
+4,Unable to work due to long-standing health problems,Intercept,-4.25542510052678
+4,Unable to work due to long-standing health problems,Gender,0.344678558378706
+4,Unable to work due to long-standing health problems,Age,0.0291370070907822
+4,Unable to work due to long-standing health problems,AgeRcs1,-6.30796185328372
+4,Unable to work due to long-standing health problems,AgeRcs2,12.8740361816848
+4,Unable to work due to long-standing health problems,AgeRcs3,-7.33697225642552
+4,Unable to work due to long-standing health problems,AgeRcs4,2.39284670753706
+4,Unable to work due to long-standing health problems,AgeRcs5,-3.6258410641166
+4,Unable to work due to long-standing health problems,EducationISCED01,4.78045918730626
+4,Unable to work due to long-standing health problems,EducationISCED2,1.87468005530472
+4,Unable to work due to long-standing health problems,EducationISCED5,-1.68905621330566
+4,Unable to work due to long-standing health problems,EducationISCED6,-2.0632842788138
+4,Unable to work due to long-standing health problems,EducationISCED7,-2.53502418718558
+4,Unable to work due to long-standing health problems,EducationISCED8,-3.93645126696228
+4,Unable to work due to long-standing health problems,EducationISCED2*SchoolFade,1.79272969489194
+4,Unable to work due to long-standing health problems,Age*Gender,-0.0557727795502408
+4,Unable to work due to long-standing health problems,AgeRcs1*Gender,10.9423073143846
+4,Unable to work due to long-standing health problems,AgeRcs2*Gender,-21.5937213352151
+4,Unable to work due to long-standing health problems,AgeRcs3*Gender,11.3875948082616
+4,Unable to work due to long-standing health problems,AgeRcs4*Gender,-0.939212324946582
+4,Unable to work due to long-standing health problems,AgeRcs5*Gender,-0.361257488618593
+5,"Student, pupil",Intercept,11.1839332162502
+5,"Student, pupil",Gender,-1.15486827771472
+5,"Student, pupil",Age,-0.458915636496969
+5,"Student, pupil",AgeRcs1,-34.662808592368
+5,"Student, pupil",AgeRcs2,82.6215119803483
+5,"Student, pupil",AgeRcs3,-56.5019128897615
+5,"Student, pupil",AgeRcs4,16.9844200802789
+5,"Student, pupil",AgeRcs5,-16.3250598501103
+5,"Student, pupil",EducationISCED01,-1.06020603560701
+5,"Student, pupil",EducationISCED2,-1.06017867075414
+5,"Student, pupil",EducationISCED5,-0.393338576608801
+5,"Student, pupil",EducationISCED6,1.03701185338436
+5,"Student, pupil",EducationISCED7,-0.605437192339931
+5,"Student, pupil",EducationISCED8,1.161629974849
+5,"Student, pupil",EducationISCED2*SchoolFade,2.19428379872054
+5,"Student, pupil",Age*Gender,0.00762151516140969
+5,"Student, pupil",AgeRcs1*Gender,11.6026081696787
+5,"Student, pupil",AgeRcs2*Gender,-28.7037134191682
+5,"Student, pupil",AgeRcs3*Gender,21.0069026949347
+5,"Student, pupil",AgeRcs4*Gender,-8.12089936832076
+5,"Student, pupil",AgeRcs5*Gender,8.80430553401277
+6,Domestic tasks and other inactive,Intercept,-10.4001713994985
+6,Domestic tasks and other inactive,Gender,8.05675400931438
+6,Domestic tasks and other inactive,Age,0.317766223888668
+6,Domestic tasks and other inactive,AgeRcs1,-20.5069213781968
+6,Domestic tasks and other inactive,AgeRcs2,37.9346454074025
+6,Domestic tasks and other inactive,AgeRcs3,-18.6551209326794
+6,Domestic tasks and other inactive,AgeRcs4,4.19147060595925
+6,Domestic tasks and other inactive,AgeRcs5,-6.16197489501702
+6,Domestic tasks and other inactive,EducationISCED01,3.22500977066108
+6,Domestic tasks and other inactive,EducationISCED2,1.77558134090158
+6,Domestic tasks and other inactive,EducationISCED5,-1.28775921368385
+6,Domestic tasks and other inactive,EducationISCED6,-1.02578989230925
+6,Domestic tasks and other inactive,EducationISCED7,-1.43048501807881
+6,Domestic tasks and other inactive,EducationISCED8,-1.61155291114347
+6,Domestic tasks and other inactive,EducationISCED2*SchoolFade,0.680456575349708
+6,Domestic tasks and other inactive,Age*Gender,-0.491717809974125
+6,Domestic tasks and other inactive,AgeRcs1*Gender,37.4919913181915
+6,Domestic tasks and other inactive,AgeRcs2*Gender,-71.0556383126782
+6,Domestic tasks and other inactive,AgeRcs3*Gender,36.0637211881349
+6,Domestic tasks and other inactive,AgeRcs4*Gender,-5.1323694841151
+6,Domestic tasks and other inactive,AgeRcs5*Gender,4.48735923030643
