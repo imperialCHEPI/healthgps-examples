@@ -1,5 +1,5 @@
 {
-    "$comment": "Slovenia init slot — Part A education lookup + coef CSV slots for later ladder steps (files arrive when ready).",
+    "$comment": "Slovenia init slot — Part A education lookup + employment static (16 Oct 2026) + coef CSV slots for later ladder steps.",
     "ModelName": "JacardiModel",
     "Education": {
         "method": "empirical_lifecycle_init",
@@ -17,15 +17,25 @@
         }
     },
     "Employment": {
-        "method": "logistic",
+        "method": "multinomial_static",
         "coefficients": {
-            "name": "employment_coefs.csv",
+            "name": "employment_static_coefs.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
             "columns": {
-                "Factor": "string",
+                "Category": "integer",
                 "Coefficient": "double"
+            }
+        },
+        "recode": {
+            "name": "employment_4cat_recode.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "employment_id": "integer",
+                "employment4_id": "integer"
             }
         }
     },

@@ -1,5 +1,5 @@
 {
-    "$comment": "Slovenia update slot — education Part B filled; other ladder vars have update coef slots (drop filenames when partners deliver).",
+    "$comment": "Slovenia update slot — education Part B + employment static Part B (first draw at 19 / temporary hold) + yearly coef slots for later ladder steps.",
     "ModelName": "JacardiModelUpdate",
     "Education": {
         "method": "empirical_lifecycle_update",
@@ -43,15 +43,25 @@
         }
     },
     "Employment": {
-        "method": "logistic",
+        "method": "multinomial_static",
         "coefficients": {
-            "name": "employment_update_coefs.csv",
+            "name": "employment_static_coefs.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
             "columns": {
-                "Factor": "string",
+                "Category": "integer",
                 "Coefficient": "double"
+            }
+        },
+        "recode": {
+            "name": "employment_4cat_recode.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "employment_id": "integer",
+                "employment4_id": "integer"
             }
         }
     },

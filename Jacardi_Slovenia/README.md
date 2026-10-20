@@ -9,9 +9,13 @@ Country pack for JACARDI Slovenia (ISO3 `SVN`). Horizon: **2025–2055**.
 | File | Role |
 | --- | --- |
 | `config.json` | Host; `risk_factors` levels = ladder order |
-| `jacardi_model.json` | Init — education lookup + init coef slots (employment…SBP) |
-| `jacardi_model_update.json` | Update — education Part B + yearly coef slots (employment…SBP) |
+| `jacardi_model.json` | Init — education lookup + employment static + later coef slots |
+| `jacardi_model_update.json` | Update — education Part B + employment static Part B + later yearly slots |
 | `education_*.csv` | Delivered education tables (lookup / draw19 / upgrades; algo 15 Oct 2026) |
+| `employment_static_coefs.csv` | Multinomial SCORE coefs (16 Oct 2026) |
+| `employment_4cat_recode.csv` | Map employment_id 1–6 → employment4_id 1–4 |
+| `employment_static_check.csv` | Golden SCORE probs (tests only; not a runtime slot) |
+| `EMPLOYMENT_STATIC_ALGORITHM.md` | Partner employment static rules |
 | `Slovenia.DataFile.csv` | Minimal dataset stub |
 
 Templates: [`../Jacardi_Template/`](../Jacardi_Template/).
@@ -22,10 +26,11 @@ Templates: [`../Jacardi_Template/`](../Jacardi_Template/).
 | --- | --- | --- | --- |
 | 0 | Age, Sex | UNDB / DemographicModule | ageing in DemographicModule |
 | 1 | Education | `education_lookup.csv` | `education_draw_at_19_ssp2.csv` + `education_upgrade_transitions_ssp2.csv` |
-| 2–6 | Employment … SBP | `*_coefs.csv` slots in `jacardi_model.json` | `*_update_coefs.csv` slots in `jacardi_model_update.json` |
+| 2 | EmploymentDetailed (1–6) + Employment (1–4) | `employment_static_coefs.csv` + `employment_4cat_recode.csv` | Same CSVs (first draw at 19; temporary hold until yearly package) |
+| 3–6 | HLS … SBP | `*_coefs.csv` slots in `jacardi_model.json` | `*_update_coefs.csv` slots in `jacardi_model_update.json` |
 | 7 | MI | `running.diseases: myocardial` + datastore RRs | DiseaseModule |
 
-Education CSVs are on disk. Other coef CSVs are named in the JSON slots and arrive when partners deliver them.
+Education and employment static CSVs are on disk. HLS…SBP coef CSVs are named in the JSON slots and arrive when partners deliver them.
 
 ## Factors mean (baseline_adjustments)
 
