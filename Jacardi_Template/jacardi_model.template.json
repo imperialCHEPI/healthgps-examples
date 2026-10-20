@@ -17,15 +17,25 @@
         }
     },
     "Employment": {
-        "method": "logistic",
+        "method": "multinomial_static",
         "coefficients": {
-            "name": "REPLACE_employment_coefs.csv",
+            "name": "REPLACE_employment_static_coefs.csv",
             "format": "csv",
             "delimiter": ",",
             "encoding": "ASCII",
             "columns": {
-                "Factor": "string",
+                "Category": "integer",
                 "Coefficient": "double"
+            }
+        },
+        "recode": {
+            "name": "REPLACE_employment_4cat_recode.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "employment_id": "integer",
+                "employment4_id": "integer"
             }
         }
     },
