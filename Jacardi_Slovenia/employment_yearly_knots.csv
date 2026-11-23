@@ -1,0 +1,7 @@
+From,FromName,n_knots,knot_1,knot_2,knot_3,knot_4,knot_5,n_spline_factors
+1,Employed,5,19,37,46,53,80,3
+2,Unemployed,0,,,,,,0
+3,Retired,5,24,66,71,77,80,3
+4,Unable to work due to long-standing health problems,0,,,,,,0
+5,"Student, pupil",3,19,21,80,,,1
+6,Domestic tasks and other inactive,0,,,,,,0
