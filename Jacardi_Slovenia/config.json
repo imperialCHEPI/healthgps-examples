@@ -8,6 +8,7 @@
             "region": false,
             "ethnicity": false,
             "education": true,
+            "employment": true,
             "gender2": "male"
         },
         "income": {

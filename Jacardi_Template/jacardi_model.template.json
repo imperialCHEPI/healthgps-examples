@@ -25,6 +25,7 @@
             "encoding": "ASCII",
             "columns": {
                 "Category": "integer",
+                "Factor": "string",
                 "Coefficient": "double"
             }
         },
