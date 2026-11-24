@@ -12,26 +12,17 @@
             "gender2": "male"
         },
         "income": {
-            "enabled": false,
-            "type": "categorical",
-            "categories": "3",
-            "adjust_to_factors_mean": false,
-            "trended": false,
-            "income_based_csv_output": false
+            "enabled": false
         },
         "physical_activity": {
-            "enabled": false,
-            "type": "simple",
-            "adjust_to_factors_mean": false,
-            "trended": false
+            "enabled": false
         },
         "risk_factors": {
             "adjust_to_factors_mean": false,
             "trended": false
         },
         "trend": {
-            "enabled": false,
-            "type": "null"
+            "enabled": false
         },
         "two_stage": {
             "use_logistic": false

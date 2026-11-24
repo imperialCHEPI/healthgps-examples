@@ -26,7 +26,7 @@ static knots + pension step; employment **yearly** package on disk.
 | `employment_pension_step_ages.csv` | `PensionStep` ages (BE: female/male 65) |
 | `employment_4cat_recode.csv` | Map employment_id 1–6 → employment4_id 1–4 |
 | `employment_yearly_*.csv` / `employment_education_map.csv` / `employment_start_duration_shares.csv` / `statutory_retirement_by_year.csv` | Yearly employment (replaces hold) |
-| `Belgium.DataFile.csv` | Dataset stub — **add when available** |
+| *(no DataFile)* | `inputs.dataset` omitted — UNDB population only |
 
 Templates: [`../Jacardi_Template/`](../Jacardi_Template/).
 
@@ -60,7 +60,7 @@ Same as Slovenia: `adjust_to_factors_mean: false` — omit `baseline_adjustments
 
 ## Not fully runnable yet
 
-- No `Belgium.DataFile.csv` in this folder yet (JSON name reserved).
+- `inputs.dataset` is omitted on purpose (no Belgium DataFile); engine accepts that and uses an empty input table + UNDB sizing.
 - Pack JSON slots for mother, education equations, knots, pension step, and yearly employment are **ahead of** current Health-GPS schemas/loaders (SI still uses lookup + static hold). Engine/schema catch-up is a separate step.
 - `*_check*.csv` golden files are not in this pack (keep local / tests only).
 

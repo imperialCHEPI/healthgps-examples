@@ -12,26 +12,17 @@
             "gender2": "male"
         },
         "income": {
-            "enabled": false,
-            "type": "categorical",
-            "categories": "3",
-            "adjust_to_factors_mean": false,
-            "trended": false,
-            "income_based_csv_output": false
+            "enabled": false
         },
         "physical_activity": {
-            "enabled": false,
-            "type": "simple",
-            "adjust_to_factors_mean": false,
-            "trended": false
+            "enabled": false
         },
         "risk_factors": {
             "adjust_to_factors_mean": false,
             "trended": false
         },
         "trend": {
-            "enabled": false,
-            "type": "null"
+            "enabled": false
         },
         "two_stage": {
             "use_logistic": false
@@ -42,25 +33,6 @@
         "checksum": "fe291ff7d064ff859e1ccc2568a47b81ffc247346cf201db48ea8fb4a21c8d18"
     },
     "inputs": {
-        "dataset": {
-            "name": "Belgium.DataFile.csv",
-            "format": "csv",
-            "delimiter": ",",
-            "encoding": "ASCII",
-            "columns": {
-                "Gender": "integer",
-                "Age": "integer",
-                "Age2": "integer",
-                "Education": "integer",
-                "Employment": "integer",
-                "HLS": "double",
-                "Smoking": "integer",
-                "PhysicalActivity": "double",
-                "BMI": "double",
-                "MedicationAdherence": "integer",
-                "SBP": "double"
-            }
-        },
         "settings": {
             "country_code": "BEL",
             "size_fraction": 0.0001,
