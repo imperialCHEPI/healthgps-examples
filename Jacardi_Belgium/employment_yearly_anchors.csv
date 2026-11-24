@@ -1,0 +1,59 @@
+anchor,Category,CategoryName,gender,age_used,age_from,age_to,education_id,condition,value
+delta_E,1,Employed,0,equation,19,24,,below statutory age,-0.196643989257204
+delta_E,1,Employed,0,equation,25,29,,below statutory age,-0.0823137771139876
+delta_E,1,Employed,0,equation,30,39,,below statutory age,-0.224559455509614
+delta_E,1,Employed,0,equation,40,49,,below statutory age,0.184505674606814
+delta_E,1,Employed,0,equation,50,54,,below statutory age,0.0763630192027289
+delta_E,1,Employed,0,equation,55,59,,below statutory age,0.103801939635649
+delta_E,1,Employed,0,equation,60,64,,below statutory age,-0.0177436199187905
+delta_E,1,Employed,1,equation,19,24,,below statutory age,-0.213199623588288
+delta_E,1,Employed,1,equation,25,29,,below statutory age,-0.120436202731458
+delta_E,1,Employed,1,equation,30,39,,below statutory age,-0.0357313172336627
+delta_E,1,Employed,1,equation,40,49,,below statutory age,0.0628071960521785
+delta_E,1,Employed,1,equation,50,54,,below statutory age,0.0252499604398989
+delta_E,1,Employed,1,equation,55,59,,below statutory age,0.0729486891214621
+delta_E,1,Employed,1,equation,60,64,,below statutory age,-0.0319142044669344
+delta_R,3,Retired,0,actual,19,24,,below statutory age,0.161807475202975
+delta_R,3,Retired,0,actual,25,29,,below statutory age,-1.79208664968853
+delta_R,3,Retired,0,actual,30,39,,below statutory age,-2.34825628722205
+delta_R,3,Retired,0,actual,40,49,,below statutory age,-0.907634058978802
+delta_R,3,Retired,0,actual,50,54,,below statutory age,-1.40564036463965
+delta_R,3,Retired,0,actual,55,59,,below statutory age,-1.1980714493192
+delta_R,3,Retired,1,actual,19,24,,below statutory age,-2.8048126605321
+delta_R,3,Retired,1,actual,25,29,,below statutory age,-3.31411395307646
+delta_R,3,Retired,1,actual,30,39,,below statutory age,-2.77310237757975
+delta_R,3,Retired,1,actual,40,49,,below statutory age,-0.610463937406731
+delta_R,3,Retired,1,actual,50,54,,below statutory age,-1.06620358658813
+delta_R,3,Retired,1,actual,55,59,,below statutory age,-0.818770884783789
+delta_Un,4,Unable to work due to long-standing health problems,0,actual,19,24,,below statutory age,0.782843166028281
+delta_Un,4,Unable to work due to long-standing health problems,0,actual,25,29,,below statutory age,0.196004172785174
+delta_Un,4,Unable to work due to long-standing health problems,0,actual,30,39,,below statutory age,-0.0233812575715945
+delta_Un,4,Unable to work due to long-standing health problems,0,actual,40,49,,below statutory age,0.097705650361081
+delta_Un,4,Unable to work due to long-standing health problems,0,actual,50,54,,below statutory age,-0.11817448719184
+delta_Un,4,Unable to work due to long-standing health problems,0,actual,55,59,,below statutory age,-0.160372663061706
+delta_Un,4,Unable to work due to long-standing health problems,0,actual,60,64,,below statutory age,0.152567913906025
+delta_Un,4,Unable to work due to long-standing health problems,1,actual,19,24,,below statutory age,0.356591173225752
+delta_Un,4,Unable to work due to long-standing health problems,1,actual,25,29,,below statutory age,0.0773323933401757
+delta_Un,4,Unable to work due to long-standing health problems,1,actual,30,39,,below statutory age,0.0823211044482385
+delta_Un,4,Unable to work due to long-standing health problems,1,actual,40,49,,below statutory age,-0.0269627571975279
+delta_Un,4,Unable to work due to long-standing health problems,1,actual,50,54,,below statutory age,0.245202507269106
+delta_Un,4,Unable to work due to long-standing health problems,1,actual,55,59,,below statutory age,0.0531737265327247
+delta_Un,4,Unable to work due to long-standing health problems,1,actual,60,64,,below statutory age,0.338664107546576
+k,1,Employed,0,actual,19,110,1,always,-0.33791552032797
+k,1,Employed,0,actual,19,110,2,always,0.124756575821647
+k,1,Employed,0,actual,19,110,3,always,-0.0172027418454002
+k,1,Employed,0,actual,19,110,4,always,0.452741683124822
+k,1,Employed,0,actual,19,110,5,always,-0.437260371019795
+k,1,Employed,0,actual,19,110,6,always,-0.212465405590029
+k,1,Employed,0,actual,19,110,7,always,-0.0409375215291896
+k,1,Employed,0,actual,19,110,8,always,0.109011648409981
+k,1,Employed,1,actual,19,110,1,always,-0.0584763929644014
+k,1,Employed,1,actual,19,110,2,always,0.300291508884245
+k,1,Employed,1,actual,19,110,3,always,0.106372807880191
+k,1,Employed,1,actual,19,110,4,always,0.502362415509705
+k,1,Employed,1,actual,19,110,5,always,-0.345050817816523
+k,1,Employed,1,actual,19,110,6,always,-0.10831716915604
+k,1,Employed,1,actual,19,110,7,always,0.140065730351801
+k,1,Employed,1,actual,19,110,8,always,0.251227931758633
+u01,4,Unable to work due to long-standing health problems,0,actual,19,110,1,below statutory age,0.0730521098575214
+u01,4,Unable to work due to long-standing health problems,1,actual,19,110,1,below statutory age,0.0598521061712281

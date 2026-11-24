@@ -1,0 +1,147 @@
+Category,CategoryName,Factor,Coefficient
+1,Employed,Intercept,0
+2,Unemployed,Intercept,4.04866544369341
+2,Unemployed,Gender,-3.10586258909892
+2,Unemployed,Age,-0.250780779770795
+2,Unemployed,AgeRcs1,14.2517404310574
+2,Unemployed,AgeRcs2,-26.9574652004377
+2,Unemployed,AgeRcs3,13.8171688475452
+2,Unemployed,AgeRcs4,-2.90076204943176
+2,Unemployed,AgeRcs5,25.0826918320227
+2,Unemployed,AgeRcs6,-138.763857183629
+2,Unemployed,AgeRcs7,286.03745602668
+2,Unemployed,AgeRcs8,-282.580625735915
+2,Unemployed,EducationISCED01,1.19431220283775
+2,Unemployed,EducationISCED2,0.781253779393628
+2,Unemployed,EducationISCED4,-0.629756121773563
+2,Unemployed,EducationISCED5,-0.597053097390562
+2,Unemployed,EducationISCED6,-0.76983517637627
+2,Unemployed,EducationISCED7,-0.745074346866455
+2,Unemployed,EducationISCED8,-0.536931769452134
+2,Unemployed,EducationISCED2*SchoolFade,0.15162671549809
+2,Unemployed,PensionStep,-0.848576056257756
+2,Unemployed,Age*Gender,0.139164276113004
+2,Unemployed,AgeRcs1*Gender,-14.0215021302223
+2,Unemployed,AgeRcs2*Gender,27.4610318256662
+2,Unemployed,AgeRcs3*Gender,-14.6178374458573
+2,Unemployed,AgeRcs4*Gender,2.72529732141565
+2,Unemployed,AgeRcs5*Gender,-15.1700581391828
+2,Unemployed,AgeRcs6*Gender,94.0464987434009
+2,Unemployed,AgeRcs7*Gender,-271.419016464231
+2,Unemployed,AgeRcs8*Gender,133.688203016803
+3,Retired,Intercept,-1.9437017783889
+3,Retired,Gender,-21.5945531905128
+3,Retired,Age,-0.166714496835278
+3,Retired,AgeRcs1,-4.9447227863662
+3,Retired,AgeRcs2,17.145738124801
+3,Retired,AgeRcs3,-15.5830387636781
+3,Retired,AgeRcs4,8.31748766968572
+3,Retired,AgeRcs5,-2.6939984471008
+3,Retired,AgeRcs6,-51.9367202801923
+3,Retired,AgeRcs7,67.8306395179977
+3,Retired,AgeRcs8,-8.2588682154845
+3,Retired,EducationISCED01,0.967316024623849
+3,Retired,EducationISCED2,0.505095024465812
+3,Retired,EducationISCED4,-0.437368353122316
+3,Retired,EducationISCED5,-0.261386725606318
+3,Retired,EducationISCED6,-0.767917170469488
+3,Retired,EducationISCED7,-1.608542906786
+3,Retired,EducationISCED8,-2.23175996772053
+3,Retired,EducationISCED2*SchoolFade,-29.6228552827732
+3,Retired,PensionStep,1.55596582813979
+3,Retired,Age*Gender,0.816709054779917
+3,Retired,AgeRcs1*Gender,-41.6949507140123
+3,Retired,AgeRcs2*Gender,73.4862847401307
+3,Retired,AgeRcs3*Gender,-32.2603831975791
+3,Retired,AgeRcs4*Gender,1.69948886414698
+3,Retired,AgeRcs5*Gender,-9.9173572826354
+3,Retired,AgeRcs6*Gender,17.2425601591358
+3,Retired,AgeRcs7*Gender,1.86277650151285
+3,Retired,AgeRcs8*Gender,-16.5730345035107
+4,Unable to work due to long-standing health problems,Intercept,-1.21866428017523
+4,Unable to work due to long-standing health problems,Gender,-0.368143392353964
+4,Unable to work due to long-standing health problems,Age,-0.0703693904879086
+4,Unable to work due to long-standing health problems,AgeRcs1,9.94483666127896
+4,Unable to work due to long-standing health problems,AgeRcs2,-18.6174509656027
+4,Unable to work due to long-standing health problems,AgeRcs3,9.01514468902336
+4,Unable to work due to long-standing health problems,AgeRcs4,-0.37591786782813
+4,Unable to work due to long-standing health problems,AgeRcs5,7.35871050905765
+4,Unable to work due to long-standing health problems,AgeRcs6,-36.7517481527142
+4,Unable to work due to long-standing health problems,AgeRcs7,56.2449928583282
+4,Unable to work due to long-standing health problems,AgeRcs8,-39.0707266943386
+4,Unable to work due to long-standing health problems,EducationISCED01,1.65050324278686
+4,Unable to work due to long-standing health problems,EducationISCED2,0.761544874041932
+4,Unable to work due to long-standing health problems,EducationISCED4,-0.724457607871905
+4,Unable to work due to long-standing health problems,EducationISCED5,-0.24011348630932
+4,Unable to work due to long-standing health problems,EducationISCED6,-1.14041040923468
+4,Unable to work due to long-standing health problems,EducationISCED7,-1.79134210442026
+4,Unable to work due to long-standing health problems,EducationISCED8,-3.16242469535071
+4,Unable to work due to long-standing health problems,EducationISCED2*SchoolFade,0.0241837000613225
+4,Unable to work due to long-standing health problems,PensionStep,-1.31658325630209
+4,Unable to work due to long-standing health problems,Age*Gender,0.0032655199830596
+4,Unable to work due to long-standing health problems,AgeRcs1*Gender,-1.93501076050052
+4,Unable to work due to long-standing health problems,AgeRcs2*Gender,2.89435641615761
+4,Unable to work due to long-standing health problems,AgeRcs3*Gender,-0.428311745694822
+4,Unable to work due to long-standing health problems,AgeRcs4*Gender,-1.5686069938472
+4,Unable to work due to long-standing health problems,AgeRcs5*Gender,3.67269261511855
+4,Unable to work due to long-standing health problems,AgeRcs6*Gender,-16.596065727492
+4,Unable to work due to long-standing health problems,AgeRcs7*Gender,30.0398148423798
+4,Unable to work due to long-standing health problems,AgeRcs8*Gender,-20.0437365095974
+5,"Student, pupil",Intercept,16.6824373946999
+5,"Student, pupil",Gender,-4.19352565315566
+5,"Student, pupil",Age,-0.725356026711389
+5,"Student, pupil",AgeRcs1,9.83946705495332
+5,"Student, pupil",AgeRcs2,-7.2895021754295
+5,"Student, pupil",AgeRcs3,-6.3648683913093
+5,"Student, pupil",AgeRcs4,8.8827962349573
+5,"Student, pupil",AgeRcs5,-79.189345724602
+5,"Student, pupil",AgeRcs6,199.2506192828
+5,"Student, pupil",AgeRcs7,-22.9645648520164
+5,"Student, pupil",AgeRcs8,-197.567636927909
+5,"Student, pupil",EducationISCED01,-1.21533138816787
+5,"Student, pupil",EducationISCED2,-0.894381066459084
+5,"Student, pupil",EducationISCED4,-1.82080091398421
+5,"Student, pupil",EducationISCED5,-1.01954736375936
+5,"Student, pupil",EducationISCED6,0.123582064938948
+5,"Student, pupil",EducationISCED7,-0.264519923723768
+5,"Student, pupil",EducationISCED8,0.0506514064399274
+5,"Student, pupil",EducationISCED2*SchoolFade,0.793175937202089
+5,"Student, pupil",PensionStep,11.9289250247352
+5,"Student, pupil",Age*Gender,0.170283873263123
+5,"Student, pupil",AgeRcs1*Gender,-16.5083366511531
+5,"Student, pupil",AgeRcs2*Gender,34.6909586066936
+5,"Student, pupil",AgeRcs3*Gender,-21.8658672769908
+5,"Student, pupil",AgeRcs4*Gender,12.3920628674054
+5,"Student, pupil",AgeRcs5*Gender,-43.198696484655
+5,"Student, pupil",AgeRcs6*Gender,72.9866063837616
+5,"Student, pupil",AgeRcs7*Gender,-23.0996574646364
+5,"Student, pupil",AgeRcs8*Gender,-42.8366750247621
+6,Domestic tasks and other inactive,Intercept,0.37955174523388
+6,Domestic tasks and other inactive,Gender,-2.56791064483214
+6,Domestic tasks and other inactive,Age,-0.113544282553198
+6,Domestic tasks and other inactive,AgeRcs1,12.6713423699378
+6,Domestic tasks and other inactive,AgeRcs2,-24.9410042707426
+6,Domestic tasks and other inactive,AgeRcs3,13.2160274411154
+6,Domestic tasks and other inactive,AgeRcs4,-0.91347862497368
+6,Domestic tasks and other inactive,AgeRcs5,6.13448820823926
+6,Domestic tasks and other inactive,AgeRcs6,-10.0768326877705
+6,Domestic tasks and other inactive,AgeRcs7,-17.758934252191
+6,Domestic tasks and other inactive,AgeRcs8,32.3531720748185
+6,Domestic tasks and other inactive,EducationISCED01,2.18482972982299
+6,Domestic tasks and other inactive,EducationISCED2,1.09785102745447
+6,Domestic tasks and other inactive,EducationISCED4,-1.16046197815443
+6,Domestic tasks and other inactive,EducationISCED5,-1.22685243121206
+6,Domestic tasks and other inactive,EducationISCED6,-1.26669706471282
+6,Domestic tasks and other inactive,EducationISCED7,-1.08595941929644
+6,Domestic tasks and other inactive,EducationISCED8,-1.41077327648188
+6,Domestic tasks and other inactive,EducationISCED2*SchoolFade,0.917841962961396
+6,Domestic tasks and other inactive,PensionStep,0.146395806439816
+6,Domestic tasks and other inactive,Age*Gender,0.0861536563670961
+6,Domestic tasks and other inactive,AgeRcs1*Gender,-21.2760785657223
+6,Domestic tasks and other inactive,AgeRcs2*Gender,43.5526514167403
+6,Domestic tasks and other inactive,AgeRcs3*Gender,-24.4749179982745
+6,Domestic tasks and other inactive,AgeRcs4*Gender,3.07053408867432
+6,Domestic tasks and other inactive,AgeRcs5*Gender,-2.67006107773933
+6,Domestic tasks and other inactive,AgeRcs6*Gender,14.4306242421554
+6,Domestic tasks and other inactive,AgeRcs7*Gender,-50.5596212978402
+6,Domestic tasks and other inactive,AgeRcs8*Gender,63.1622763255725

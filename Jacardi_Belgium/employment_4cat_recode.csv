@@ -1,0 +1,7 @@
+employment_id,employment_name,employment4_id,employment4_name
+1,Employed,1,Employed
+2,Unemployed,2,Unemployed
+3,Retired,4,Not in labour force
+4,Unable to work due to long-standing health problems,4,Not in labour force
+5,"Student, pupil",3,Student
+6,Domestic tasks and other inactive,4,Not in labour force

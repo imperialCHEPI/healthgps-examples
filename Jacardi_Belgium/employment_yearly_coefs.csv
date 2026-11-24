@@ -1,0 +1,156 @@
+From,FromName,Category,CategoryName,Factor,Coefficient
+1,Employed,1,Employed,Intercept,0
+1,Employed,2,Unemployed,Intercept,-1.70293592093379
+1,Employed,2,Unemployed,Age,-0.063575091872279
+1,Employed,2,Unemployed,Gender,0.302436565107749
+1,Employed,2,Unemployed,EducationISCED02,0.641401678882947
+1,Employed,2,Unemployed,EducationTertiary,-0.717479702761635
+1,Employed,2,Unemployed,AgeSpline1,-0.00504783503789931
+1,Employed,2,Unemployed,AgeSpline2,0.585542909457882
+1,Employed,2,Unemployed,AgeSpline3,-1.04895009439978
+1,Employed,3,Retired,Intercept,-20.8630912631205
+1,Employed,3,Retired,Age,0.595717206238604
+1,Employed,3,Retired,Gender,0.19048713023706
+1,Employed,3,Retired,EducationISCED02,0.491551124023548
+1,Employed,3,Retired,EducationTertiary,-0.802759943586408
+1,Employed,3,Retired,AgeSpline1,-4.74560185207105
+1,Employed,3,Retired,AgeSpline2,22.6025451413601
+1,Employed,3,Retired,AgeSpline3,-27.8367627721561
+1,Employed,4,Unable to work due to long-standing health problems,Intercept,-7.43710091641943
+1,Employed,4,Unable to work due to long-standing health problems,Age,0.120821648305418
+1,Employed,4,Unable to work due to long-standing health problems,Gender,-0.895367093957153
+1,Employed,4,Unable to work due to long-standing health problems,EducationISCED02,0.296886928656461
+1,Employed,4,Unable to work due to long-standing health problems,EducationTertiary,-0.867965311416035
+1,Employed,4,Unable to work due to long-standing health problems,AgeSpline1,-0.450177091072007
+1,Employed,4,Unable to work due to long-standing health problems,AgeSpline2,1.28429131355536
+1,Employed,4,Unable to work due to long-standing health problems,AgeSpline3,-0.640000998781745
+1,Employed,5,"Student, pupil",Intercept,8.87016058285288
+1,Employed,5,"Student, pupil",Age,-0.555500583416974
+1,Employed,5,"Student, pupil",Gender,0.128076789150219
+1,Employed,5,"Student, pupil",EducationISCED02,0.0420211226860005
+1,Employed,5,"Student, pupil",EducationTertiary,0.315307497866447
+1,Employed,5,"Student, pupil",AgeSpline1,2.55692370712403
+1,Employed,5,"Student, pupil",AgeSpline2,-10.3149558278124
+1,Employed,5,"Student, pupil",AgeSpline3,10.2961710695936
+1,Employed,6,Domestic tasks and other inactive,Intercept,1.89458726497414
+1,Employed,6,Domestic tasks and other inactive,Age,-0.226038572521022
+1,Employed,6,Domestic tasks and other inactive,Gender,-0.790474159148161
+1,Employed,6,Domestic tasks and other inactive,EducationISCED02,0.92582349317873
+1,Employed,6,Domestic tasks and other inactive,EducationTertiary,-0.723597227411199
+1,Employed,6,Domestic tasks and other inactive,AgeSpline1,1.28261682447099
+1,Employed,6,Domestic tasks and other inactive,AgeSpline2,-5.55951976034303
+1,Employed,6,Domestic tasks and other inactive,AgeSpline3,8.13237777765928
+2,Unemployed,1,Employed,Intercept,-0.202243023067136
+2,Unemployed,1,Employed,Age,-0.0173331704642351
+2,Unemployed,1,Employed,Gender,0.140982919515011
+2,Unemployed,1,Employed,EducationScore,0.396200616525319
+2,Unemployed,1,Employed,Duration1plus,-0.356032361392376
+2,Unemployed,1,Employed,Duration2plus,-1.45518456510946
+2,Unemployed,2,Unemployed,Intercept,0
+2,Unemployed,3,Retired,Intercept,-5.20682450945236
+2,Unemployed,3,Retired,Age,0.0607741876132047
+2,Unemployed,3,Retired,Gender,-0.319915255220918
+2,Unemployed,3,Retired,EducationScore,0.0611001540553264
+2,Unemployed,3,Retired,Duration1plus,-0.189933272031847
+2,Unemployed,3,Retired,Duration2plus,0.804327235011727
+2,Unemployed,4,Unable to work due to long-standing health problems,Intercept,-2.98485990623456
+2,Unemployed,4,Unable to work due to long-standing health problems,Age,0.0262221878939866
+2,Unemployed,4,Unable to work due to long-standing health problems,Gender,-0.116110679540855
+2,Unemployed,4,Unable to work due to long-standing health problems,EducationScore,-0.160367077055687
+2,Unemployed,4,Unable to work due to long-standing health problems,Duration1plus,-1.24710134318391
+2,Unemployed,4,Unable to work due to long-standing health problems,Duration2plus,0.688487406121736
+2,Unemployed,5,"Student, pupil",Intercept,1.01330951688046
+2,Unemployed,5,"Student, pupil",Age,-0.11371915163357
+2,Unemployed,5,"Student, pupil",Gender,0.117771928273894
+2,Unemployed,5,"Student, pupil",EducationScore,-0.107990008558981
+2,Unemployed,5,"Student, pupil",Duration1plus,0.209319709667328
+2,Unemployed,5,"Student, pupil",Duration2plus,-22.136121814886
+2,Unemployed,6,Domestic tasks and other inactive,Intercept,-0.46971100375503
+2,Unemployed,6,Domestic tasks and other inactive,Age,-0.0239167550297015
+2,Unemployed,6,Domestic tasks and other inactive,Gender,-0.0255511661965309
+2,Unemployed,6,Domestic tasks and other inactive,EducationScore,-0.0592713685818106
+2,Unemployed,6,Domestic tasks and other inactive,Duration1plus,-0.0264089754344399
+2,Unemployed,6,Domestic tasks and other inactive,Duration2plus,-1.01419170032896
+3,Retired,1,Employed,Intercept,1.54408713749054
+3,Retired,1,Employed,Age,-0.0404006699912607
+3,Retired,1,Employed,Gender,0.622324325936177
+3,Retired,1,Employed,EducationScore,0.383308919841267
+3,Retired,1,Employed,AgeSpline1,-0.192532290020254
+3,Retired,1,Employed,AgeSpline2,32.5792772102653
+3,Retired,1,Employed,AgeSpline3,-250.885321116994
+3,Retired,2,Unemployed,Intercept,2.72427462530303
+3,Retired,2,Unemployed,Age,-0.00521617975513035
+3,Retired,2,Unemployed,Gender,-0.558129999358312
+3,Retired,2,Unemployed,EducationScore,-0.0873986693298862
+3,Retired,2,Unemployed,AgeSpline1,-0.386032826738603
+3,Retired,2,Unemployed,AgeSpline2,-5639.80039221987
+3,Retired,2,Unemployed,AgeSpline3,-28.229682519674
+3,Retired,3,Retired,Intercept,0
+3,Retired,4,Unable to work due to long-standing health problems,Intercept,2.37429615842523
+3,Retired,4,Unable to work due to long-standing health problems,Age,-0.0267305748608782
+3,Retired,4,Unable to work due to long-standing health problems,Gender,-0.376268890842734
+3,Retired,4,Unable to work due to long-standing health problems,EducationScore,-0.367626764162685
+3,Retired,4,Unable to work due to long-standing health problems,AgeSpline1,-0.210989819513752
+3,Retired,4,Unable to work due to long-standing health problems,AgeSpline2,-15097.2590103493
+3,Retired,4,Unable to work due to long-standing health problems,AgeSpline3,-28.2378991339989
+3,Retired,6,Domestic tasks and other inactive,Intercept,8.41816850101641
+3,Retired,6,Domestic tasks and other inactive,Age,-0.215515462236472
+3,Retired,6,Domestic tasks and other inactive,Gender,-2.71996682642854
+3,Retired,6,Domestic tasks and other inactive,EducationScore,-0.334257882290161
+3,Retired,6,Domestic tasks and other inactive,AgeSpline1,0.0929472043194139
+3,Retired,6,Domestic tasks and other inactive,AgeSpline2,2.08141777720868
+3,Retired,6,Domestic tasks and other inactive,AgeSpline3,-5.20435652964318
+4,Unable to work due to long-standing health problems,1,Employed,Intercept,-1.31519100220005
+4,Unable to work due to long-standing health problems,1,Employed,Age,-0.0881049622931266
+4,Unable to work due to long-standing health problems,1,Employed,Gender,0.0776723777404197
+4,Unable to work due to long-standing health problems,1,Employed,EducationScore,1.30892278510565
+4,Unable to work due to long-standing health problems,2,Unemployed,Intercept,-0.51036646320182
+4,Unable to work due to long-standing health problems,2,Unemployed,Age,-0.0953751277728991
+4,Unable to work due to long-standing health problems,2,Unemployed,Gender,-0.50632778467871
+4,Unable to work due to long-standing health problems,2,Unemployed,EducationScore,0.536104497588737
+4,Unable to work due to long-standing health problems,3,Retired,Intercept,-15.591724321973
+4,Unable to work due to long-standing health problems,3,Retired,Age,0.233882716841359
+4,Unable to work due to long-standing health problems,3,Retired,Gender,0.204356025983372
+4,Unable to work due to long-standing health problems,3,Retired,EducationScore,-0.222527662026811
+4,Unable to work due to long-standing health problems,4,Unable to work due to long-standing health problems,Intercept,0
+4,Unable to work due to long-standing health problems,6,Domestic tasks and other inactive,Intercept,0.192720626355429
+4,Unable to work due to long-standing health problems,6,Domestic tasks and other inactive,Age,-0.0689111373474148
+4,Unable to work due to long-standing health problems,6,Domestic tasks and other inactive,Gender,-0.282264080114119
+4,Unable to work due to long-standing health problems,6,Domestic tasks and other inactive,EducationScore,0.240459349399303
+5,"Student, pupil",1,Employed,Intercept,-10.943326083952
+5,"Student, pupil",1,Employed,Age,0.440404370726095
+5,"Student, pupil",1,Employed,Gender,0.0456638694858477
+5,"Student, pupil",1,Employed,EducationScore,0.0268980500104263
+5,"Student, pupil",1,Employed,AgeSpline1,-4.11500441150057
+5,"Student, pupil",2,Unemployed,Intercept,-13.5822613097992
+5,"Student, pupil",2,Unemployed,Age,0.592293493360268
+5,"Student, pupil",2,Unemployed,Gender,0.858397379705333
+5,"Student, pupil",2,Unemployed,EducationScore,-1.34756309748171
+5,"Student, pupil",2,Unemployed,AgeSpline1,-4.97091957559002
+5,"Student, pupil",5,"Student, pupil",Intercept,0
+5,"Student, pupil",6,Domestic tasks and other inactive,Intercept,-11.4323585802036
+5,"Student, pupil",6,Domestic tasks and other inactive,Age,0.500532421215477
+5,"Student, pupil",6,Domestic tasks and other inactive,Gender,0.0401785288000532
+5,"Student, pupil",6,Domestic tasks and other inactive,EducationScore,-1.03913687525771
+5,"Student, pupil",6,Domestic tasks and other inactive,AgeSpline1,-4.2362270693158
+6,Domestic tasks and other inactive,1,Employed,Intercept,-0.934539664003574
+6,Domestic tasks and other inactive,1,Employed,Age,-0.0491677740308285
+6,Domestic tasks and other inactive,1,Employed,Gender,0.410778540855267
+6,Domestic tasks and other inactive,1,Employed,EducationScore,0.536994937041103
+6,Domestic tasks and other inactive,2,Unemployed,Intercept,-1.73647594373228
+6,Domestic tasks and other inactive,2,Unemployed,Age,-0.058268939796243
+6,Domestic tasks and other inactive,2,Unemployed,Gender,0.738137293021854
+6,Domestic tasks and other inactive,2,Unemployed,EducationScore,0.536862812585217
+6,Domestic tasks and other inactive,3,Retired,Intercept,-8.98064934586878
+6,Domestic tasks and other inactive,3,Retired,Age,0.108367104508642
+6,Domestic tasks and other inactive,3,Retired,Gender,-0.502893749251615
+6,Domestic tasks and other inactive,3,Retired,EducationScore,0.155937764600017
+6,Domestic tasks and other inactive,4,Unable to work due to long-standing health problems,Intercept,-3.28690624382975
+6,Domestic tasks and other inactive,4,Unable to work due to long-standing health problems,Age,-0.00571662138412137
+6,Domestic tasks and other inactive,4,Unable to work due to long-standing health problems,Gender,1.40336253682478
+6,Domestic tasks and other inactive,4,Unable to work due to long-standing health problems,EducationScore,0.28942845130394
+6,Domestic tasks and other inactive,5,"Student, pupil",Intercept,2.92059284641549
+6,Domestic tasks and other inactive,5,"Student, pupil",Age,-0.272179386327069
+6,Domestic tasks and other inactive,5,"Student, pupil",Gender,0.0521007919840113
+6,Domestic tasks and other inactive,5,"Student, pupil",EducationScore,1.10123744475578
+6,Domestic tasks and other inactive,6,Domestic tasks and other inactive,Intercept,0

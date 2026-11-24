@@ -1,0 +1,138 @@
+{
+    "$schema": "https://raw.githubusercontent.com/imperialCHEPI/healthgps/main/schemas/v1/config.json",
+    "version": 2,
+    "project_requirements": {
+        "demographics": {
+            "age": true,
+            "gender": true,
+            "region": false,
+            "ethnicity": false,
+            "education": true,
+            "employment": true,
+            "gender2": "male"
+        },
+        "income": {
+            "enabled": false
+        },
+        "physical_activity": {
+            "enabled": false
+        },
+        "risk_factors": {
+            "adjust_to_factors_mean": false,
+            "trended": false
+        },
+        "trend": {
+            "enabled": false
+        },
+        "two_stage": {
+            "use_logistic": false
+        }
+    },
+    "data": {
+        "source": "https://github.com/imperialCHEPI/healthgps-data/releases/download/jacardiv1/7countriesdata.zip",
+        "checksum": "fe291ff7d064ff859e1ccc2568a47b81ffc247346cf201db48ea8fb4a21c8d18"
+    },
+    "inputs": {
+        "settings": {
+            "country_code": "BEL",
+            "size_fraction": 0.0001,
+            "age_range": [0, 110]
+        }
+    },
+    "modelling": {
+        "policy_start_year": 2027,
+        "risk_factors": [
+            {
+                "name": "Gender",
+                "level": 0,
+                "range": [0, 1]
+            },
+            {
+                "name": "Age",
+                "level": 0,
+                "range": [0, 110]
+            },
+            {
+                "name": "Age2",
+                "level": 0,
+                "range": [0, 12100]
+            },
+            {
+                "name": "MotherGroup",
+                "level": 1,
+                "range": [1, 3]
+            },
+            {
+                "name": "Education",
+                "level": 1,
+                "range": [1, 8]
+            },
+            {
+                "name": "EmploymentDetailed",
+                "level": 2,
+                "range": [1, 6]
+            },
+            {
+                "name": "Employment",
+                "level": 2,
+                "range": [1, 4]
+            },
+            {
+                "name": "HLS",
+                "level": 3,
+                "range": [0, 50]
+            },
+            {
+                "name": "Smoking",
+                "level": 4,
+                "range": [0, 2]
+            },
+            {
+                "name": "PhysicalActivity",
+                "level": 4,
+                "range": [0, 7]
+            },
+            {
+                "name": "BMI",
+                "level": 5,
+                "range": [10, 60]
+            },
+            {
+                "name": "MedicationAdherence",
+                "level": 5,
+                "range": [0, 1]
+            },
+            {
+                "name": "SBP",
+                "level": 6,
+                "range": [70, 250]
+            }
+        ],
+        "risk_factor_models": {
+            "static": "jacardi_model.json",
+            "dynamic": "jacardi_model_update.json"
+        },
+        "baseline_adjustments": {
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII"
+        }
+    },
+    "running": {
+        "seed": [123456789],
+        "start_time": 2025,
+        "stop_time": 2055,
+        "trial_runs": 1,
+        "sync_timeout_ms": 15000,
+        "diseases": ["colorectalcancer", "cervicalcancer"],
+        "interventions": {
+            "active_type_id": null,
+            "types": {}
+        }
+    },
+    "output": {
+        "comorbidities": 5,
+        "folder": "${HOME}/healthgps/results/jacardi/belgium",
+        "file_name": "HealthGPS_Result_{TIMESTAMP}.json"
+    }
+}
