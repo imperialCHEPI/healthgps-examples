@@ -1,0 +1,284 @@
+{
+    "$comment": "Belgium update — education Part B (draw19/upgrades + mother-stratified tables) + employment first-at-19 static + yearly employment slots + later ladder yearly slots. Pack layout ahead of engine/schema for mother + yearly employment.",
+    "ModelName": "JacardiModelUpdate",
+    "Education": {
+        "method": "empirical_lifecycle_update",
+        "draw_at_19": {
+            "name": "education_draw_at_19_ssp2.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "gender": "integer",
+                "education_id": "integer",
+                "probability": "double"
+            }
+        },
+        "upgrade_transitions": {
+            "name": "education_upgrade_transitions_ssp2.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "age": "integer",
+                "gender": "integer",
+                "from_id": "integer",
+                "to_id": "integer",
+                "probability": "double"
+            }
+        }
+    },
+    "MotherGroup": {
+        "method": "empirical_mother_group_update",
+        "newborn": {
+            "name": "mother_group_newborn_by_year_ssp2.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "gender": "integer",
+                "mother_group_id": "integer",
+                "probability": "double"
+            }
+        },
+        "draw_at_19_by_mother": {
+            "name": "education_draw_at_19_by_mother_ssp2.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "gender": "integer",
+                "mother_group_id": "integer",
+                "education_id": "integer",
+                "probability": "double"
+            }
+        },
+        "upgrade_transitions_by_mother": {
+            "name": "education_upgrade_transitions_by_mother_ssp2.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "age": "integer",
+                "gender": "integer",
+                "mother_group_id": "integer",
+                "from_id": "integer",
+                "to_id": "integer",
+                "probability": "double"
+            }
+        }
+    },
+    "Employment": {
+        "method": "multinomial_yearly",
+        "coefficients": {
+            "name": "employment_static_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Category": "integer",
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        },
+        "knots": {
+            "name": "employment_static_knots.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "knot": "integer",
+                "age": "integer"
+            }
+        },
+        "pension_step": {
+            "name": "employment_pension_step_ages.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "gender": "integer",
+                "pension_age": "integer"
+            }
+        },
+        "recode": {
+            "name": "employment_4cat_recode.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "employment_id": "integer",
+                "employment4_id": "integer"
+            }
+        },
+        "yearly_coefficients": {
+            "name": "employment_yearly_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "From": "integer",
+                "Category": "integer",
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        },
+        "yearly_knots": {
+            "name": "employment_yearly_knots.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "From": "integer",
+                "n_knots": "integer",
+                "knot_1": "double",
+                "knot_2": "double",
+                "knot_3": "double",
+                "knot_4": "double",
+                "knot_5": "double",
+                "n_spline_factors": "integer"
+            }
+        },
+        "yearly_anchors": {
+            "name": "employment_yearly_anchors.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "anchor": "string",
+                "Category": "integer",
+                "gender": "integer",
+                "age_used": "string",
+                "age_from": "integer",
+                "age_to": "integer",
+                "education_id": "integer",
+                "condition": "string",
+                "value": "double"
+            }
+        },
+        "education_map": {
+            "name": "employment_education_map.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "education_id": "integer",
+                "EducationScore": "integer",
+                "EducationISCED02": "integer",
+                "EducationTertiary": "integer"
+            }
+        },
+        "start_duration_shares": {
+            "name": "employment_start_duration_shares.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "age_from": "integer",
+                "age_to": "integer",
+                "gender": "integer",
+                "D0": "double",
+                "D1": "double",
+                "D2": "double"
+            }
+        },
+        "statutory_retirement": {
+            "name": "statutory_retirement_by_year.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "year": "integer",
+                "gender": "integer",
+                "statutory_age": "double",
+                "shift": "double",
+                "threshold_age": "integer",
+                "retired_share_at_threshold": "double"
+            }
+        }
+    },
+    "HLS": {
+        "method": "linear",
+        "coefficients": {
+            "name": "hls_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "Smoking": {
+        "method": "multinomial",
+        "coefficients": {
+            "name": "smoking_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Category": "string",
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "PhysicalActivity": {
+        "method": "linear",
+        "coefficients": {
+            "name": "pa_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "BMI": {
+        "method": "linear",
+        "coefficients": {
+            "name": "bmi_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "MedicationAdherence": {
+        "method": "logistic",
+        "coefficients": {
+            "name": "medication_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    },
+    "SBP": {
+        "method": "linear",
+        "coefficients": {
+            "name": "sbp_update_coefs.csv",
+            "format": "csv",
+            "delimiter": ",",
+            "encoding": "ASCII",
+            "columns": {
+                "Factor": "string",
+                "Coefficient": "double"
+            }
+        }
+    }
+}
