@@ -1,0 +1,8 @@
+education_id,education,EducationScore,EducationISCED02,EducationTertiary
+1,ISCED 0-1,1,1,0
+2,ISCED 2,1,1,0
+3,ISCED 3,2,0,0
+4,ISCED 5,3,0,1
+5,ISCED 6,3,0,1
+6,ISCED 7,3,0,1
+7,ISCED 8,3,0,1

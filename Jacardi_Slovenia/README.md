@@ -14,8 +14,9 @@ Country pack for JACARDI Slovenia (ISO3 `SVN`). Horizon: **2025–2055**.
 | `education_*.csv` | Delivered education tables (lookup / draw19 / upgrades; algo 15 Oct 2026) |
 | `employment_static_coefs.csv` | Multinomial SCORE coefs (16 Oct 2026) |
 | `employment_4cat_recode.csv` | Map employment_id 1–6 → employment4_id 1–4 |
-| `employment_static_check.csv` | Golden SCORE probs (tests only; not a runtime slot) |
 | `EMPLOYMENT_STATIC_ALGORITHM.md` | Partner employment static rules |
+
+Golden SCORE check CSV lives in the HealthGPS repo under `src/HealthGPS.Tests/data/jacardi/employment/` (not required in this pack).
 | `Slovenia.DataFile.csv` | Minimal dataset stub |
 
 Templates: [`../Jacardi_Template/`](../Jacardi_Template/).
